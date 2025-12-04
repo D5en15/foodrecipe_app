@@ -1,0 +1,47 @@
+[
+  {
+    "id": "maincourse",
+    "name": "อาหารจานหลัก",
+    "image": "assets/images/categories/maincourse/main.jpg"
+  },
+  {
+    "id": "dessert",
+    "name": "ขนมหวาน",
+    "image": "assets/images/categories/dessert/main.jpg"
+  },
+  {
+    "id": "soap_and_curry",
+    "name": "ซุปและแกง",
+    "image": "assets/images/categories/soap_and_curry/main.jpg"
+  },
+  {
+    "id": "drink",
+    "name": "เครื่องดื่ม",
+    "image": "assets/images/categories/drink/main.jpg"
+  },
+  {
+    "id": "salad_and_healthy",
+    "name": "สลัดและอาหารเพื่อสุขภาพ",
+    "image": "assets/images/categories/salad_and_healthy/main.jpg"
+  },
+  {
+    "id": "snack_and_appetizers",
+    "name": "ของว่าง",
+    "image": "assets/images/categories/snack_and_appetizers/main.jpg"
+  },
+  {
+    "id": "noodles",
+    "name": "ประเภทเส้น",
+    "image": "assets/images/categories/noodles/main.jpg"
+  },
+  {
+    "id": "protein",
+    "name": "เนื้อสัตว์",
+    "image": "assets/images/categories/protein/main.jpg"
+  },
+  {
+    "id": "seafood",
+    "name": "อาหารทะเล",
+    "image": "assets/images/categories/seafood/main.jpg"
+  }
+]

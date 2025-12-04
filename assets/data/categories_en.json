@@ -1,0 +1,47 @@
+[
+  {
+    "id": "maincourse",
+    "name": "Main Course",
+    "image": "assets/images/categories/maincourse/main.jpg"
+  },
+  {
+    "id": "dessert",
+    "name": "Dessert",
+    "image": "assets/images/categories/dessert/main.jpg"
+  },
+  {
+    "id": "soap_and_curry",
+    "name": "Soup & Curry",
+    "image": "assets/images/categories/soap_and_curry/main.jpg"
+  },
+  {
+    "id": "drink",
+    "name": "Drinks",
+    "image": "assets/images/categories/drink/main.jpg"
+  },
+  {
+    "id": "salad_and_healthy",
+    "name": "Salad & Healthy",
+    "image": "assets/images/categories/salad_and_healthy/main.jpg"
+  },
+  {
+    "id": "snack_and_appetizers",
+    "name": "Snacks",
+    "image": "assets/images/categories/snack_and_appetizers/main.jpg"
+  },
+  {
+    "id": "noodles",
+    "name": "Noodles",
+    "image": "assets/images/categories/noodles/main.jpg"
+  },
+  {
+    "id": "protein",
+    "name": "Meat",
+    "image": "assets/images/categories/protein/main.jpg"
+  },
+  {
+    "id": "seafood",
+    "name": "Seafood",
+    "image": "assets/images/categories/seafood/main.jpg"
+  }
+]

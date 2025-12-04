@@ -1,0 +1,60 @@
+name: foodrecipe_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  provider: ^6.0.0
+  flutter_local_notifications: ^19.5.0
+  sqflite: ^2.4.2
+  sqflite_common_ffi_web: ^0.4.2
+  path: ^1.9.1
+  audioplayers: ^5.2.1
+  vibration: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # 🔥 Localization
+    - assets/lang/
+
+    # 🔥 หมวดหมู่ (สำคัญมาก ต้องประกาศ)
+    - assets/data/
+
+    # 🔥 Recipes ทั้งหมด (คุณมีหลายไฟล์ในหมวดต่าง ๆ)
+    - assets/data/recipes_th/
+    - assets/data/recipes_en/
+
+    # 🔥 รูปภาพทั้งหมด
+    - assets/images/
+    - assets/images/categories/
+    - assets/images/categories/maincourse/
+    - assets/images/categories/dessert/
+    - assets/images/categories/drink/
+    - assets/images/categories/noodles/
+    - assets/images/categories/protein/
+    - assets/images/categories/salad_and_healthy/
+    - assets/images/categories/seafood/
+    - assets/images/categories/snack_and_appetizers/
+    - assets/images/categories/soap_and_curry/
+
+    # 🔥 เสียง
+    - assets/sounds/alert.mp3
+

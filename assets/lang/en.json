@@ -1,0 +1,64 @@
+{
+  "welcome_title": "WELCOME",
+  "welcome_message": "find many recipes here",
+  "welcome_button_start": "Get start",
+
+  "home_hero_title": "Discover over",
+  "home_hero_count": "1000 Recipes",
+  "home_hero_subtitle": "Find the food you love here!",
+  "home_search_hint": "Search recipes and drinks",
+  
+  "home_section_categories": "Categories",
+  "home_section_popular": "Recipes",
+  "home_section_favorites": "Favorites",
+  "home_button_view_all_categories": "View all",
+  "home_button_discover": "Discover",
+  "language_th": "Thai",
+  "language_en": "English",
+  "home_section_completed": "Completed",
+  "timer": "Timer",
+  "start": "Start",
+  "pause": "Pause",
+  "reset": "Reset",
+  "set_time": "Set Time",
+  "minutes": "Minutes",
+  "seconds": "Seconds",
+  "hours": "Hours",
+  "resume": "Resume",
+  "detail_timer_label": "Cooking Timer",
+  "timer_done_title": "Timer Finished",
+  "timer_done_body": "Your countdown has ended.",
+  "completed_page_title": "Completed",
+
+  "category_page_title": "Categories",
+
+  "list_tab_all": "All",
+  "list_tab_recipes": "Recipes",
+  "list_tab_users": "Users",
+
+  "filter_sort_title": "Sort recipes",
+  "filter_sort_description": "Choose how you want to order the list.",
+  "filter_option_recommended": "Recommended",
+  "filter_option_alphabetical": "Alphabetical (A-Z)",
+  "filter_option_time_short": "Shortest total time",
+  "filter_option_time_long": "Longest total time",
+
+  "detail_time_total": "Total Time",
+  "detail_time_prep": "Prep",
+  "detail_time_cooking": "Cook",
+  "recipe_ingredients": "Ingredients",
+  "recipe_steps": "Instructions",
+  "detail_button_finish": "Finish Cooking",
+
+  "completion_title": "Well Done!",
+  "completion_message": "You have successfully finished cooking.",
+  "completion_button_done": "Done",
+
+  "favorite_page_title": "Favorites",
+
+  "empty_state_title": "No items yet!",
+  "empty_state_message": "Please add your favorite\nrecipes first.",
+  "common_back": "Back",
+  "common_add_item": "Add Item",
+  "common_ok": "OK"
+}

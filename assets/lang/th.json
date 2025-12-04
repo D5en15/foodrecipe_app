@@ -1,0 +1,64 @@
+{
+  "welcome_title": "ยินดีต้อนรับ",
+  "welcome_message": "ค้นหาสูตรอาหารมากมายได้ที่นี่",
+  "welcome_button_start": "เริ่มต้น",
+
+  "home_hero_title": "รวมสูตรอาหารมากกว่า",
+  "home_hero_count": "1000 เมนู",
+  "home_hero_subtitle": "ค้นหาเมนูอาหารที่ชื่นชอบได้เลย!",
+  "home_search_hint": "ค้นหาสูตรอาหารและเครื่องดื่ม",
+  
+  "home_section_categories": "ประเภท",
+  "home_section_popular": "รายการอาหาร",
+  "home_section_favorites": "รายการโปรด",
+  "home_button_view_all_categories": "ดูทั้งหมด",
+  "home_button_discover": "สำรวจ",
+  "language_th": "ไทย",
+  "language_en": "อังกฤษ",
+  "home_section_completed": "ทำเสร็จแล้ว",
+  "timer": "จับเวลา",
+  "start": "เริ่ม",
+  "pause": "พัก",
+  "reset": "รีเซ็ต",
+  "set_time": "ตั้งเวลา",
+  "minutes": "นาที",
+  "seconds": "วินาที",
+  "hours": "ชั่วโมง",
+  "resume": "ต่อ",
+  "detail_timer_label": "จับเวลาทำอาหาร",
+  "timer_done_title": "หมดเวลาแล้ว",
+  "timer_done_body": "ตัวจับเวลาสิ้นสุดแล้ว",
+  "completed_page_title": "ทำเสร็จแล้ว",
+
+  "category_page_title": "ประเภท",
+
+  "list_tab_all": "ทั้งหมด",
+  "list_tab_recipes": "สูตรอาหาร",
+  "list_tab_users": "ผู้ใช้งาน",
+
+  "filter_sort_title": "จัดเรียงเมนู",
+  "filter_sort_description": "เลือกวิธีการเรียงลำดับรายการ",
+  "filter_option_recommended": "แนะนำ",
+  "filter_option_alphabetical": "เรียงตามตัวอักษร",
+  "filter_option_time_short": "เวลารวมสั้นที่สุด",
+  "filter_option_time_long": "เวลารวมนานที่สุด",
+
+  "detail_time_total": "เวลาทำรวม",
+  "detail_time_prep": "เวลาเตรียม",
+  "detail_time_cooking": "เวลาทำ",
+  "recipe_ingredients": "วัตถุดิบ",
+  "recipe_steps": "ขั้นตอน",
+  "detail_button_finish": "เสร็จสิ้น",
+
+  "completion_title": "ยินดีด้วย!",
+  "completion_message": "คุณทำอาหารเสร็จเรียบร้อยแล้ว",
+  "completion_button_done": "เสร็จสิ้น",
+
+  "favorite_page_title": "ชื่นชอบ",
+
+  "empty_state_title": "ยังไม่มีรายการ!",
+  "empty_state_message": "กรุณาเพิ่มรายการอาหาร\nที่ชื่นชอบก่อน",
+  "common_back": "ย้อนกลับ",
+  "common_add_item": "เพิ่มรายการ",
+  "common_ok": "ตกลง"
+}

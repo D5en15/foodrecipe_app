@@ -1,0 +1,110 @@
+[
+  {
+    "id": "iced_lemon_tea",
+    "title": "Iced Lemon Tea",
+    "prep_time": "10 mins",
+    "cook_time": null,
+    "total_time": "1 hr 10 mins",
+    "image": "assets/images/categories/drink/iced_lemon_tea.jpg",
+    "ingredients": [
+      "1 Black tea bag",
+      "150ml Hot water",
+      "1 tbsp Lemon juice",
+      "Syrup (to taste)",
+      "Ice",
+      "Lemon slices"
+    ],
+    "steps": [
+      "Brew the tea: Pour 150ml of freshly boiled hot water into a heatproof mug or jug. Add the black tea bag and steep for 3–5 minutes (steep longer for a stronger flavour, but not more than 7 minutes to avoid bitterness). Remove the tea bag and let the tea cool at room temperature for about 10–15 minutes.",
+      "Flavour the tea: Once the tea is warm rather than hot, add 1 tbsp lemon juice and stir to combine. Add syrup a little at a time (start with 1 tbsp) and stir until dissolved. Taste and adjust the sweetness and sourness to your liking.",
+      "Chill: Transfer the sweet lemon tea to a bottle or jug with a lid, cover, and refrigerate for about 1 hour, or until thoroughly chilled.",
+      "Serve: Fill a serving glass with ice. Pour the chilled lemon tea over the ice until almost full. Garnish with a lemon slice on the rim or floating in the glass. Taste and adjust with a little more lemon juice or syrup if desired before drinking."
+    ]
+  },
+  {
+    "id": "mango_smoothie",
+    "title": "Mango Smoothie",
+    "prep_time": "5 mins",
+    "cook_time": null,
+    "total_time": "5 mins",
+    "image": "assets/images/categories/drink/mango_smoothie.jpg",
+    "ingredients": [
+      "2 cups Frozen mango",
+      "1 Banana, sliced",
+      "1/2 cup Greek yogurt",
+      "1/2 cup Milk",
+      "1 tbsp Honey (or to taste)",
+      "1 tsp Lime juice"
+    ],
+    "steps": [
+      "Prepare the ingredients: If using fresh mango, peel and dice it, then freeze until firm so the smoothie will be thick and cold. Peel the banana and slice it into chunks.",
+      "Blend the smoothie: Add the frozen mango (2 cups), sliced banana, Greek yogurt (1/2 cup), milk (1/2 cup), honey (1 tbsp), and lime juice (1 tsp) to a blender. Secure the lid and blend on high for 30–60 seconds, or until completely smooth and thick.",
+      "Adjust texture and taste: Remove the lid and taste. If you want it sweeter, add a little more honey and blend again. If the smoothie is too thick, add a splash more milk and blend until you reach your preferred consistency.",
+      "Serve: Pour the smoothie into a glass and serve immediately while cold. You can top with a few cubes of fresh mango or banana slices as a garnish."
+    ]
+  },
+  {
+    "id": "iced_caramel_latte",
+    "title": "Iced Caramel Latte",
+    "prep_time": "2 mins",
+    "cook_time": "3 mins",
+    "total_time": "5 mins",
+    "image": "assets/images/categories/drink/iced_caramel_latte.jpg",
+    "ingredients": [
+      "1/2 cup Strong coffee (such as espresso or strong brewed coffee)",
+      "1 tbsp Caramel sauce",
+      "Sugar (to taste)",
+      "1/2 cup Milk",
+      "Whipping cream (optional)",
+      "Ice"
+    ],
+    "steps": [
+      "Prepare the coffee: Brew about 1/2 cup of strong coffee (for example, 1–2 shots of espresso or strong drip coffee). If the coffee is very hot, let it cool for 2–3 minutes so it doesn’t melt the ice too quickly.",
+      "Sweeten with caramel: In a small jug or glass, add 1 tbsp caramel sauce and a little sugar (about 1 tsp to start, or according to your taste). Pour the warm coffee over the caramel mixture and stir until the caramel and sugar are fully dissolved. Let the coffee mixture cool slightly.",
+      "Fill the glass: Fill a serving glass about 3/4 full with ice.",
+      "Add coffee and milk: Pour the caramel coffee mixture over the ice. Add 1/2 cup milk and stir gently to combine. Taste and adjust the sweetness by adding more caramel sauce or sugar if desired, then stir again.",
+      "Top and serve: If using, top the drink with whipped cream and drizzle extra caramel sauce on top in a swirl. Serve immediately."
+    ]
+  },
+  {
+    "id": "strawberry_milkshake",
+    "title": "Strawberry Milkshake",
+    "prep_time": "5 mins",
+    "cook_time": null,
+    "total_time": "5 mins",
+    "image": "assets/images/categories/drink/strawberry_milkshake.jpg",
+    "ingredients": [
+      "1/2 cup Strawberries (fresh or frozen)",
+      "120ml Milk",
+      "1 scoop Vanilla ice cream (a generous scoop)",
+      "Sugar (to taste)"
+    ],
+    "steps": [
+      "Prepare the strawberries: Rinse the strawberries and remove the stems. If they are large, cut them into smaller pieces so they blend more easily. If using frozen strawberries, there is no need to defrost; they will help chill and thicken the milkshake.",
+      "Blend the milkshake: Add the strawberries, milk (120ml), and a generous scoop of vanilla ice cream to a blender. Secure the lid and blend on high for 30–45 seconds until smooth and creamy. If you like an extra cold, thicker milkshake, you can add a few ice cubes before blending.",
+      "Adjust the sweetness: Taste the milkshake. If you prefer it sweeter, add sugar 1 tsp at a time and blend again until the sweetness is to your liking.",
+      "Serve: Pour the milkshake into a glass. Garnish with a halved strawberry on the rim or sprinkle crushed cookies or sprinkles on top if you like. Serve immediately."
+    ]
+  },
+  {
+    "id": "lime_soda",
+    "title": "Lime Soda",
+    "prep_time": "10 mins",
+    "cook_time": null,
+    "total_time": "10 mins",
+    "image": "assets/images/categories/drink/lime_soda.jpg",
+    "ingredients": [
+      "1 tbsp Lime juice",
+      "1–2 tbsp Syrup",
+      "150ml Soda water",
+      "Ice",
+      "Lime slices/Mint leaves"
+    ],
+    "steps": [
+      "Prepare the glass: Fill a serving glass about 3/4 full with ice cubes.",
+      "Make the lime base: In a separate glass or directly in the serving glass, combine the lime juice (1 tbsp) with 1–2 tbsp syrup (start with 1 tbsp and add more if you like it sweeter). Stir well until the syrup is fully mixed with the lime juice.",
+      "Add the soda: Pour the lime-syrup mixture over the ice, then gently top up with about 150ml soda water. Stir very gently once or twice so the flavours combine without losing too much carbonation.",
+      "Garnish and serve: Garnish with a lime slice or a few mint leaves on top. Taste and adjust with a little extra lime juice or syrup if needed, stirring lightly. Serve immediately while the drink is still fizzy."
+    ]
+  }
+]
