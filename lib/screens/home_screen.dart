@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'dart:convert';
 import '../app_router.dart';
 import '../l10n/app_localizations.dart';
 import '../services/recipe_service.dart';
 import '../models/recipe_model.dart';
 import '../theme/app_colors.dart';
 import '../database/app_database.dart';
+import '../services/category_service.dart';
+import '../models/category_model.dart';
 
 // ----------------------
 // Category Model
@@ -83,13 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
         (localeOverride ?? context.read<AppLanguage>().appLocale).languageCode;
 
     try {
-      final jsonString =
-          await rootBundle.loadString("assets/data/categories_$lang.json");
+      final List<CategoryModel> models =
+          await CategoryService.loadCategories(lang);
 
-      final List data = json.decode(jsonString);
-
-      List<CategoryItem> loaded =
-          data.map((item) => CategoryItem.fromJson(item)).toList();
+      List<CategoryItem> loaded = models
+          .map((model) => CategoryItem(
+                id: model.id,
+                name: model.name,
+                image: model.image,
+              ))
+          .toList();
 
       loaded.shuffle();
       loaded = loaded.take(4).toList();
@@ -231,21 +235,22 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     try {
-      final all = await RecipeService.loadAllRecipesWithFile(lang);
+      final entries = await RecipeService.loadAllRecipeEntries(lang);
+      final lookup = {
+        for (final entry in entries) entry.recipe.id: entry,
+      };
       final List<_HomeRecipeCardData> cards = [];
-      for (final entry in all) {
-        final recipe = entry["recipe"] as RecipeModel;
-        if (favIds.contains(recipe.id)) {
-          final catId = entry["file"]
-              .toString()
-              .replaceAll(".json", "");
-          cards.add(_HomeRecipeCardData(
-            id: recipe.id,
-            title: recipe.displayTitle(locale),
-            image: recipe.image,
-            categoryId: catId,
-          ));
-        }
+      for (final favId in favIds) {
+        final entry = lookup[favId];
+        if (entry == null) continue;
+        final catId =
+            entry.categoryIds.isNotEmpty ? entry.categoryIds.first : 'maincourse';
+        cards.add(_HomeRecipeCardData(
+          id: entry.recipe.id,
+          title: entry.recipe.displayTitle(locale),
+          image: entry.recipe.image,
+          categoryId: catId,
+        ));
       }
 
       if (!mounted) return;
@@ -263,15 +268,18 @@ class _HomeScreenState extends State<HomeScreen> {
     final locale = Locale(lang);
 
     try {
-      final all = await RecipeService.loadAllRecipesWithFile(lang);
-      all.shuffle();
-      final cards = all.take(10).map((entry) {
-        final recipe = entry["recipe"] as RecipeModel;
-        final catId = entry["file"].toString().replaceAll(".json", "");
+      final samples = await RecipeService.loadSampleEntries(
+        languageCode: lang,
+        count: 10,
+      );
+      final cards = samples.map((entry) {
+        final catId = entry.categoryIds.isNotEmpty
+            ? entry.categoryIds.first
+            : 'maincourse';
         return _HomeRecipeCardData(
-          id: recipe.id,
-          title: recipe.displayTitle(locale),
-          image: recipe.image,
+          id: entry.recipe.id,
+          title: entry.recipe.displayTitle(locale),
+          image: entry.recipe.image,
           categoryId: catId,
         );
       }).toList();
@@ -282,6 +290,10 @@ class _HomeScreenState extends State<HomeScreen> {
       });
     } catch (e) {
       print("❌ ERROR loading popular for home: $e");
+      if (!mounted) return;
+      setState(() {
+        _popularCards = [];
+      });
     }
   }
 
@@ -300,19 +312,22 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     try {
-      final all = await RecipeService.loadAllRecipesWithFile(lang);
+      final entries = await RecipeService.loadAllRecipeEntries(lang);
+      final lookup = {
+        for (final entry in entries) entry.recipe.id: entry,
+      };
       final List<_HomeRecipeCardData> cards = [];
-      for (final entry in all) {
-        final recipe = entry["recipe"] as RecipeModel;
-        if (compIds.contains(recipe.id)) {
-          final catId = entry["file"].toString().replaceAll(".json", "");
-          cards.add(_HomeRecipeCardData(
-            id: recipe.id,
-            title: recipe.displayTitle(locale),
-            image: recipe.image,
-            categoryId: catId,
-          ));
-        }
+      for (final compId in compIds) {
+        final entry = lookup[compId];
+        if (entry == null) continue;
+        final catId =
+            entry.categoryIds.isNotEmpty ? entry.categoryIds.first : 'maincourse';
+        cards.add(_HomeRecipeCardData(
+          id: entry.recipe.id,
+          title: entry.recipe.displayTitle(locale),
+          image: entry.recipe.image,
+          categoryId: catId,
+        ));
       }
 
       if (!mounted) return;

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "thai",
+    "image": "assets/images/cuisines/thai/main.jpg",
+    "translations": {
+      "en": { "name": "Thai" },
+      "th": { "name": "ไทย" }
+    }
+  },
+  {
+    "id": "japanese",
+    "image": "assets/images/cuisines/japanese/main.jpg",
+    "translations": {
+      "en": { "name": "Japanese" },
+      "th": { "name": "ญี่ปุ่น" }
+    }
+  },
+  {
+    "id": "korean",
+    "image": "assets/images/cuisines/korean/main.jpg",
+    "translations": {
+      "en": { "name": "Korean" },
+      "th": { "name": "เกาหลี" }
+    }
+  },
+  {
+    "id": "chinese",
+    "image": "assets/images/cuisines/chinese/main.jpg",
+    "translations": {
+      "en": { "name": "Chinese" },
+      "th": { "name": "จีน" }
+    }
+  }
+]

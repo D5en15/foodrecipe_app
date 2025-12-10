@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +7,7 @@ import '../models/recipe_model.dart';
 import '../services/recipe_service.dart';
 import '../theme/app_colors.dart';
 import '../database/app_database.dart';
+import '../services/category_service.dart';
 
 class RecipeDetailScreen extends StatefulWidget {
   const RecipeDetailScreen({super.key});
@@ -62,24 +61,13 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
   Future<void> _loadCategoryNames(String lang) async {
     if (_categoryNamesLang == lang && _categoryNames.isNotEmpty) return;
     try {
-      final jsonString =
-          await DefaultAssetBundle.of(context).loadString(
-        "assets/data/categories_$lang.json",
-      );
-      final List data = json.decode(jsonString);
-      _categoryNames = {
-        for (final item in data)
-          if (item["id"] != null && item["name"] != null)
-            item["id"].toString(): item["name"].toString()
-      };
+      _categoryNames = await CategoryService.loadCategoryNameMap(lang);
       _categoryNamesLang = lang;
     } catch (_) {
       _categoryNames = {};
       _categoryNamesLang = null;
     }
   }
-
-  String _categoryIdFromFile(String file) => file.replaceAll(".json", "");
 
   void _resetChecklistForRecipe() {
     _checkedIngredients = {};
@@ -149,12 +137,12 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
       }
 
       if (found == null) {
-        final all = await RecipeService.loadAllRecipesWithFile(lang);
+        final all = await RecipeService.loadAllRecipesWithCategories(lang);
         for (final entry in all) {
           final r = entry["recipe"] as RecipeModel;
           if (r.id == recipeId) {
             found = r;
-            resolvedCategoryId = _categoryIdFromFile(entry["file"] as String);
+            resolvedCategoryId = entry["categoryId"] as String?;
             break;
           }
         }

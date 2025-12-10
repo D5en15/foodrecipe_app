@@ -21,7 +21,8 @@ dependencies:
   sqflite_common_ffi_web: ^0.4.2
   path: ^1.9.1
   audioplayers: ^5.2.1
-  vibration: ^1.9.0
+  vibration:
+    path: packages/vibration
 
 dev_dependencies:
   flutter_test:
@@ -37,24 +38,16 @@ flutter:
 
     # 🔥 หมวดหมู่ (สำคัญมาก ต้องประกาศ)
     - assets/data/
-
-    # 🔥 Recipes ทั้งหมด (คุณมีหลายไฟล์ในหมวดต่าง ๆ)
-    - assets/data/recipes_th/
-    - assets/data/recipes_en/
+    - assets/data/country/
 
     # 🔥 รูปภาพทั้งหมด
     - assets/images/
     - assets/images/categories/
-    - assets/images/categories/maincourse/
-    - assets/images/categories/dessert/
-    - assets/images/categories/drink/
-    - assets/images/categories/noodles/
-    - assets/images/categories/protein/
-    - assets/images/categories/salad_and_healthy/
-    - assets/images/categories/seafood/
-    - assets/images/categories/snack_and_appetizers/
-    - assets/images/categories/soap_and_curry/
+    - assets/images/cuisines/
+    - assets/images/cuisines/chinese/
+    - assets/images/cuisines/japanese/
+    - assets/images/cuisines/korean/
+    - assets/images/cuisines/thai/
 
     # 🔥 เสียง
     - assets/sounds/alert.mp3
-

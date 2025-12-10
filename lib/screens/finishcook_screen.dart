@@ -38,10 +38,13 @@ class _FinishCookScreenState extends State<FinishCookScreen> {
     }
 
     try {
-      final all = await RecipeService.loadAllRecipesWithFile(lang);
-      final recipes = all
-          .map((e) => e["recipe"] as RecipeModel)
-          .where((r) => ids.contains(r.id))
+      final entries = await RecipeService.loadAllRecipeEntries(lang);
+      final lookup = {
+        for (final entry in entries) entry.recipe.id: entry.recipe,
+      };
+      final recipes = ids
+          .map((id) => lookup[id])
+          .whereType<RecipeModel>()
           .toList();
       setState(() {
         completedRecipes = recipes;

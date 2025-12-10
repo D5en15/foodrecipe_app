@@ -1,12 +1,11 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../l10n/app_localizations.dart';
 import '../models/recipe_model.dart';
 import '../app_router.dart';
 import '../theme/app_colors.dart';
 import '../database/app_database.dart';
+import '../services/recipe_service.dart';
 
 class FavoritesScreen extends StatefulWidget {
   const FavoritesScreen({super.key});
@@ -18,18 +17,6 @@ class FavoritesScreen extends StatefulWidget {
 class _FavoritesScreenState extends State<FavoritesScreen> {
   List<_FavoriteItem> favoriteRecipes = [];
   bool isLoading = true;
-
-  final List<String> categories = [
-    "maincourse",
-    "dessert",
-    "drink",
-    "noodles",
-    "protein",
-    "salad_and_healthy",
-    "seafood",
-    "snack_and_appetizers",
-    "soap_and_curry",
-  ];
 
   @override
   void didChangeDependencies() {
@@ -43,23 +30,29 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     final strings = AppLocalizations.of(context);
     final lang = strings?.locale.languageCode ?? "th";
 
-    List<_FavoriteItem> loaded = [];
+    final List<_FavoriteItem> loaded = [];
 
-    for (final cat in categories) {
-      final path = "assets/data/recipes_$lang/$cat.json";
-      final jsonStr = await rootBundle.loadString(path);
-      final List data = json.decode(jsonStr);
+    try {
+      final entries = await RecipeService.loadAllRecipeEntries(lang);
+      final lookup = {
+        for (final entry in entries) entry.recipe.id: entry,
+      };
 
-      for (final item in data) {
-        if (favIds.contains(item["id"])) {
-          loaded.add(
-            _FavoriteItem(
-              recipe: RecipeModel.fromJson(item),
-              categoryId: cat,
-            ),
-          );
-        }
+      for (final favId in favIds) {
+        final entry = lookup[favId];
+        if (entry == null) continue;
+        final categoryId = entry.categoryIds.isNotEmpty
+            ? entry.categoryIds.first
+            : 'maincourse';
+        loaded.add(
+          _FavoriteItem(
+            recipe: entry.recipe,
+            categoryId: categoryId,
+          ),
+        );
       }
+    } catch (e) {
+      print("❌ ERROR loading favorite recipes: $e");
     }
 
     setState(() {

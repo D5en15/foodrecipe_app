@@ -12,6 +12,7 @@ class RecipeModel {
   final String? totalTime;
   final List<String> ingredients;
   final List<String> steps;
+  final List<String> categories;
 
   RecipeModel({
     required this.id,
@@ -22,6 +23,7 @@ class RecipeModel {
     required this.totalTime,
     required this.ingredients,
     required this.steps,
+    required this.categories,
     this.titleEn,
     this.titleTh,
   });
@@ -41,6 +43,10 @@ class RecipeModel {
           : <String>[],
       steps: json['steps'] != null
           ? List<String>.from(json['steps'])
+          : <String>[],
+      categories: json['categories'] != null
+          ? List<String>.from(
+              (json['categories'] as List).map((e) => e.toString()))
           : <String>[],
     );
   }

@@ -1,7 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../app_router.dart';
@@ -9,6 +6,7 @@ import '../l10n/app_localizations.dart';
 import '../models/recipe_model.dart';
 import '../services/recipe_service.dart';
 import '../theme/app_colors.dart';
+import '../services/category_service.dart';
 
 // -----------------------------------------------------
 // Recipes List Screen
@@ -117,15 +115,7 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
     if (_categoryNamesLang == lang && _categoryNames.isNotEmpty) return;
 
     try {
-      final jsonString =
-          await rootBundle.loadString("assets/data/categories_$lang.json");
-      final List data = json.decode(jsonString);
-
-      _categoryNames = {
-        for (final item in data)
-          if (item["id"] != null && item["name"] != null)
-            item["id"].toString(): item["name"].toString()
-      };
+      _categoryNames = await CategoryService.loadCategoryNameMap(lang);
       _categoryNamesLang = lang;
     } catch (e) {
       print("❌ ERROR loading category names: $e");
@@ -133,8 +123,6 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
       _categoryNamesLang = null;
     }
   }
-
-  String _categoryIdFromFile(String file) => file.replaceAll(".json", "");
 
   String _displayCategoryName(String id) {
     return _categoryNames[id] ?? fileNameToCategoryName(id);
@@ -149,11 +137,10 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
       List<_TaggedRecipe> loaded = [];
 
       if (categoryId == null || categoryId == "all") {
-        final all = await RecipeService.loadAllRecipesWithFile(lang);
+        final all = await RecipeService.loadAllRecipesWithCategories(lang);
 
         loaded = all.map((entry) {
-          final file = entry["file"] as String;
-          final catId = _categoryIdFromFile(file);
+          final catId = entry["categoryId"] as String;
           final recipe = entry["recipe"] as RecipeModel;
           final categoryName = _displayCategoryName(catId);
           return _TaggedRecipe(recipe, categoryName, catId);
@@ -166,6 +153,10 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
         final catName = _displayCategoryName(categoryId!);
         loaded =
             items.map((r) => _TaggedRecipe(r, catName, categoryId!)).toList();
+      }
+
+      if (loaded.isEmpty) {
+        loaded = await _loadFallbackRecipes(lang);
       }
 
       if (_sortOption == _SortOption.random) {
@@ -195,6 +186,19 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
     } catch (e) {
       print("❌ ERROR loading recipes: $e");
     }
+  }
+
+  Future<List<_TaggedRecipe>> _loadFallbackRecipes(String lang) async {
+    final entries = await RecipeService.loadAllRecipeEntries(lang);
+    if (entries.isEmpty) return [];
+    entries.shuffle();
+    final sliced = entries.take(10).toList();
+    return sliced.map((entry) {
+      final catId =
+          entry.categoryIds.isNotEmpty ? entry.categoryIds.first : 'maincourse';
+      final categoryName = _displayCategoryName(catId);
+      return _TaggedRecipe(entry.recipe, categoryName, catId);
+    }).toList();
   }
 
   // -----------------------------------------------------

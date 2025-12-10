@@ -1,0 +1,74 @@
+[
+  {
+    "id": "maincourse",
+    "image": "assets/images/categories/maincourse.jpg",
+    "translations": {
+      "en": { "name": "Main Course" },
+      "th": { "name": "อาหารจานหลัก" }
+    }
+  },
+  {
+    "id": "dessert",
+    "image": "assets/images/categories/dessert.jpg",
+    "translations": {
+      "en": { "name": "Dessert" },
+      "th": { "name": "ขนมหวาน" }
+    }
+  },
+  {
+    "id": "soap_and_curry",
+    "image": "assets/images/categories/soap_and_curry.jpg",
+    "translations": {
+      "en": { "name": "Soup & Curry" },
+      "th": { "name": "ซุปและแกง" }
+    }
+  },
+  {
+    "id": "drink",
+    "image": "assets/images/categories/drink.jpg",
+    "translations": {
+      "en": { "name": "Drinks" },
+      "th": { "name": "เครื่องดื่ม" }
+    }
+  },
+  {
+    "id": "salad_and_healthy",
+    "image": "assets/images/categories/salad_and_healthy.jpg",
+    "translations": {
+      "en": { "name": "Salad & Healthy" },
+      "th": { "name": "สลัดและอาหารเพื่อสุขภาพ" }
+    }
+  },
+  {
+    "id": "snack_and_appetizers",
+    "image": "assets/images/categories/snack_and_appetizers.jpg",
+    "translations": {
+      "en": { "name": "Snacks" },
+      "th": { "name": "ของว่าง" }
+    }
+  },
+  {
+    "id": "noodles",
+    "image": "assets/images/categories/noodles.jpg",
+    "translations": {
+      "en": { "name": "Noodles" },
+      "th": { "name": "ประเภทเส้น" }
+    }
+  },
+  {
+    "id": "protein",
+    "image": "assets/images/categories/protein.jpg",
+    "translations": {
+      "en": { "name": "Meat" },
+      "th": { "name": "เนื้อสัตว์" }
+    }
+  },
+  {
+    "id": "seafood",
+    "image": "assets/images/categories/seafood.jpg",
+    "translations": {
+      "en": { "name": "Seafood" },
+      "th": { "name": "อาหารทะเล" }
+    }
+  }
+]

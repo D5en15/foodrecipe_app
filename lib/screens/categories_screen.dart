@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +6,8 @@ import 'package:provider/provider.dart';
 import '../l10n/app_localizations.dart';
 import '../app_router.dart';
 import '../theme/app_colors.dart';
+import '../models/category_model.dart';
+import '../services/category_service.dart';
 
 // =============================
 // CATEGORY MODEL
@@ -75,16 +76,19 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     print("LANG = $lang");
 
     try {
-      final jsonString =
-          await rootBundle.loadString('assets/data/categories_$lang.json');
+      final List<CategoryModel> models =
+          await CategoryService.loadCategories(lang);
 
-      final List data = json.decode(jsonString);
-
-      print("CATEGORY COUNT = ${data.length}");
-      print("CATEGORY RAW = $data");
+      print("CATEGORY COUNT = ${models.length}");
 
       setState(() {
-        categories = data.map((e) => CategoryItem.fromJson(e)).toList();
+        categories = models
+            .map((model) => CategoryItem(
+                  id: model.id,
+                  name: model.name,
+                  image: model.image,
+                ))
+            .toList();
       });
     } catch (e) {
       print("ERROR LOADING categories: $e");
