@@ -1,16 +1,42 @@
-# foodrecipe_app
+# FoodRecipe App (CookEasy)
 
-A new Flutter project.
+Flutter app for browsing multi-cuisine recipes with EN/TH localization.
+Includes category and country discovery, favorites, completed history, and
+an in-recipe cooking timer with alerts.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Home with hero search, random countries, categories, popular picks, favorites,
+  and completed recipes.
+- Country list (cuisines) and category list with localized labels.
+- Recipe list with search, sorting, and tags for country + category.
+- Recipe details with ingredient/step checklist, finish flow, and cooking timer.
+- Favorites and completed history stored locally (SQLite).
+- Local notifications, sound, and vibration on timer completion.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `lib/` app source (screens, services, models, theme, localization).
+- `assets/` data, images, and translations.
+- `assets/data/country/` per-cuisine recipe JSON files.
+- `assets/data/cuisines.json` list of cuisines shown in UI.
+- `assets/data/categories.json` category definitions (ids + translations).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Data & Localization
+
+- EN/TH strings: `assets/lang/en.json`, `assets/lang/th.json`.
+- Category/cuisine names map to IDs for filtering and tags.
+- Recipe categories should use category IDs from `assets/data/categories.json`.
+
+## Running
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Notes
+
+- Images for cuisines should live in `assets/images/cuisines/{id}/`.
+- If adding a new cuisine, add its entry in `assets/data/cuisines.json` and
+  a corresponding recipe file in `assets/data/country/`.
