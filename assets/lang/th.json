@@ -54,6 +54,7 @@
   "recipe_ingredients": "วัตถุดิบ",
   "recipe_select_all_ingredients": "เตรียมวัตถุดิบครบแล้ว",
   "recipe_steps": "ขั้นตอน",
+  "recipe_select_all_steps": "ทำขั้นตอนครบแล้ว",
   "detail_button_finish": "เสร็จสิ้น",
   "detail_exit_title": "ออกจากหน้านี้ใช่ไหม",
   "detail_exit_message": "คุณเช็คไว้บางรายการแล้ว ต้องการออกหรือไม่",
@@ -72,6 +73,7 @@
   "common_add_item": "เพิ่มรายการ",
   "common_ok": "ตกลง"
 }
+
 
 
 

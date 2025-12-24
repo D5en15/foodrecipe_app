@@ -10,7 +10,6 @@ import 'screens/favorites_screen.dart';
 import 'screens/cooking_complete_screen.dart';
 import 'screens/finishcook_screen.dart';
 import 'screens/loading_screen.dart';
-import 'screens/countdown_screen.dart';
 
 class Routes {
   static const String welcome = '/';
@@ -23,7 +22,6 @@ class Routes {
   static const String cookingComplete = '/cooking-complete';
   static const String finishCook = '/finish-cook';
   static const String loading = '/loading';
-  static const String countdown = '/countdown';
 }
 
 class AppRouter {
@@ -65,9 +63,6 @@ class AppRouter {
 
       case Routes.finishCook:
         return MaterialPageRoute(builder: (_) => const FinishCookScreen());
-
-      case Routes.countdown:
-        return MaterialPageRoute(builder: (_) => const CountdownScreen());
 
       default:
         return MaterialPageRoute(

@@ -133,6 +133,28 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     return _checkedIngredients.length == ingTotal;
   }
 
+  bool get _isStepsComplete {
+    if (_isCompleted) return true;
+    final stepTotal = recipe?.steps.length ?? 0;
+    if (stepTotal == 0) return true;
+    return _checkedSteps.length == stepTotal;
+  }
+
+  void _toggleAllSteps() {
+    if (recipe == null) return;
+    final total = recipe!.steps.length;
+    if (total == 0) return;
+    setState(() {
+      if (_checkedSteps.length == total) {
+        _checkedSteps = {};
+      } else {
+        _checkedSteps = Set<int>.from(
+          List.generate(total, (i) => i),
+        );
+      }
+    });
+  }
+
   void _toggleAllIngredients() {
     if (recipe == null) return;
     final total = recipe!.ingredients.length;
@@ -454,15 +476,49 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                             )
                             .toList(),
                         const SizedBox(height: 24),
-                        Text(
-                          strings.t('recipe_steps'),
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.primary,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              strings.t('recipe_steps'),
+                              style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: AppColors.primary,
+                              ),
+                            ),
+                            const Spacer(),
+                            InkWell(
+                              onTap: recipe!.steps.isEmpty
+                                  ? null
+                                  : _toggleAllSteps,
+                              borderRadius: BorderRadius.circular(16),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    strings.t('recipe_select_all_steps'),
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 13,
+                                      color: AppColors.primary,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Checkbox(
+                                    value: _isStepsComplete,
+                                    onChanged: recipe!.steps.isEmpty
+                                        ? null
+                                        : (_) => _toggleAllSteps(),
+                                    activeColor: AppColors.primary,
+                                    checkColor: AppColors.background,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 8),
                         ...recipe!.steps
                             .asMap()
                             .entries
@@ -930,6 +986,7 @@ class _InlineActiveTimerState extends State<_InlineActiveTimer> {
   }
 
   void _startCountdown() {
+    if (_remaining.inSeconds <= 0) return;
     _timer?.cancel();
     setState(() {
       _isRunning = true;
@@ -950,6 +1007,7 @@ class _InlineActiveTimerState extends State<_InlineActiveTimer> {
     _timer?.cancel();
     unawaited(AlarmFeedbackService.instance.stopAlert());
     setState(() {
+      _isRunning = false;
       _isPaused = true;
     });
   }
@@ -983,10 +1041,9 @@ class _InlineActiveTimerState extends State<_InlineActiveTimer> {
     unawaited(AlarmFeedbackService.instance.stopAlert());
     setState(() {
       _remaining = widget.initialDuration;
-      _isRunning = true;
+      _isRunning = false;
       _isPaused = false;
     });
-    _startCountdown();
   }
 
   String _format(Duration d) {
@@ -1085,9 +1142,9 @@ class _InlineActiveTimerState extends State<_InlineActiveTimer> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                onPressed: _isPaused ? _resume : _pause,
+                onPressed: _isRunning ? _pause : _startCountdown,
                 child: Text(
-                  _isPaused ? strings.t('resume') : strings.t('pause'),
+                  _isRunning ? strings.t('pause') : strings.t('start'),
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,

@@ -54,6 +54,7 @@
   "recipe_ingredients": "Ingredients",
   "recipe_select_all_ingredients": "Ingredients ready",
   "recipe_steps": "Instructions",
+  "recipe_select_all_steps": "Steps completed",
   "detail_button_finish": "Finish Cooking",
   "detail_exit_title": "Leave this recipe?",
   "detail_exit_message": "You have checked some items. Do you want to leave this page?",
