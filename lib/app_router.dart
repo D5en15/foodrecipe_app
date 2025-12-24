@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/categories_screen.dart';
+import 'screens/countries_screen.dart';
 import 'screens/recipes_list_screen.dart';
 import 'screens/recipe_detail_screen.dart';
 import 'screens/favorites_screen.dart';
@@ -15,6 +16,7 @@ class Routes {
   static const String welcome = '/';
   static const String home = '/home';
   static const String categories = '/categories';
+  static const String countries = '/countries';
   static const String recipes = '/recipes';
   static const String recipeDetail = '/recipe-detail';
   static const String favorites = '/favorites';
@@ -39,6 +41,9 @@ class AppRouter {
 
       case Routes.categories:
         return MaterialPageRoute(builder: (_) => const CategoriesScreen());
+
+      case Routes.countries:
+        return MaterialPageRoute(builder: (_) => const CountriesScreen());
 
       case Routes.recipes:
         return MaterialPageRoute(

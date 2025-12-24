@@ -1,0 +1,182 @@
+﻿[
+    {
+        "id":  "butter_chicken",
+        "title":  "Butter Chicken (Murgh Makhani)",
+        "prep_time":  "30 mins (plus 2 hours marinating)",
+        "cook_time":  "30 mins",
+        "total_time":  "60 mins",
+        "image":  "assets/images/cuisines/indian/butter_chicken.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "800g Chicken thighs, boneless, cut into chunks",
+                            "For marinade: 1 cup Plain yogurt",
+                            "2 tbsp Lemon juice",
+                            "2 tsp Garam masala",
+                            "1 tsp Turmeric powder",
+                            "1 tsp Chili powder",
+                            "2 tsp Ginger-garlic paste",
+                            "Salt to taste",
+                            "For sauce: 4 tbsp Butter",
+                            "1 large Onion, finely chopped",
+                            "2 tsp Ginger-garlic paste",
+                            "400g Tomato puree",
+                            "1 cup Heavy cream",
+                            "2 tsp Garam masala",
+                            "1 tsp Kashmiri chili powder",
+                            "1 tbsp Honey",
+                            "Fresh cilantro for garnish"
+                        ],
+        "steps":  [
+                      "Mix yogurt, lemon juice, garam masala, turmeric, chili powder, ginger-garlic paste, and salt in a bowl. Add chicken chunks and coat well. Cover and marinate in the refrigerator for at least 2 hours, preferably overnight.",
+                      "Heat a grill pan or skillet over high heat. Cook the marinated chicken for 3-4 minutes per side until charred and cooked through. Set aside.",
+                      "In a large pan, melt 4 tablespoons butter over medium heat. Add finely chopped onion and sauté for 5-7 minutes until soft and golden.",
+                      "Add ginger-garlic paste and cook for 1 minute until fragrant. Add tomato puree and cook for 10 minutes, stirring occasionally, until the sauce thickens and oil separates.",
+                      "Add garam masala, Kashmiri chili powder, and honey. Stir well and cook for 2 minutes.",
+                      "Lower the heat and stir in the heavy cream. Mix until smooth and creamy. Simmer for 5 minutes.",
+                      "Add the grilled chicken pieces to the sauce. Simmer for 5-7 minutes, allowing the chicken to absorb the flavors.",
+                      "Garnish with fresh cilantro. Serve hot with naan bread or basmati rice. The dish should be rich, creamy, and perfectly balanced between tangy and sweet."
+                  ]
+    },
+    {
+        "id":  "biryani",
+        "title":  "Chicken Biryani",
+        "prep_time":  "40 mins",
+        "cook_time":  "45 mins",
+        "total_time":  "85 mins",
+        "image":  "assets/images/cuisines/indian/biryani.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "500g Chicken, cut into pieces",
+                            "2 cups Basmati rice",
+                            "3 Onions, thinly sliced",
+                            "1 cup Plain yogurt",
+                            "2 Tomatoes, chopped",
+                            "2 tbsp Ginger-garlic paste",
+                            "1/2 cup Fresh mint leaves",
+                            "1/2 cup Fresh cilantro",
+                            "4 Green chilies, slit",
+                            "1 tsp Turmeric powder",
+                            "2 tsp Biryani masala",
+                            "1 tsp Red chili powder",
+                            "4 tbsp Ghee or oil",
+                            "Whole spices: 4 cloves, 2 bay leaves, 1 cinnamon stick, 4 cardamom pods",
+                            "Saffron soaked in 1/4 cup warm milk",
+                            "Salt to taste"
+                        ],
+        "steps":  [
+                      "Wash and soak basmati rice in water for 30 minutes. Drain and set aside.",
+                      "Heat 2 tablespoons ghee in a large pot. Fry sliced onions until golden brown and crispy. Remove half for garnish.",
+                      "To the remaining onions, add ginger-garlic paste and sauté for 1 minute. Add chicken pieces and cook for 5 minutes until sealed.",
+                      "Add yogurt, tomatoes, turmeric, biryani masala, chili powder, and salt. Cook for 15 minutes until chicken is tender and oil separates. Add mint, cilantro, and green chilies.",
+                      "In a separate large pot, boil 6 cups of water with whole spices and salt. Add the soaked rice and cook until 70% done (rice should still have a bite). Drain immediately.",
+                      "Layer the biryani: Spread half the chicken gravy in a heavy-bottomed pot. Top with half the rice. Add the remaining chicken and cover with the remaining rice.",
+                      "Drizzle saffron milk and remaining ghee over the top. Sprinkle the reserved fried onions.",
+                      "Cover the pot tightly with aluminum foil, then the lid. Cook on high heat for 3 minutes, then reduce to low and cook for 25 minutes (dum cooking).",
+                      "Turn off heat and let it rest for 5 minutes. Gently mix before serving. Serve hot with raita and pickle. The rice should be fragrant, fluffy, and each grain separate."
+                  ]
+    },
+    {
+        "id":  "palak_paneer",
+        "title":  "Palak Paneer (Spinach with Cottage Cheese)",
+        "prep_time":  "20 mins",
+        "cook_time":  "25 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/indian/palak_paneer.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "500g Fresh spinach, washed",
+                            "250g Paneer, cubed",
+                            "2 Onions, chopped",
+                            "2 Tomatoes, chopped",
+                            "2 tbsp Ginger-garlic paste",
+                            "2 Green chilies",
+                            "1 tsp Cumin seeds",
+                            "1 tsp Garam masala",
+                            "1/2 tsp Turmeric powder",
+                            "1/2 cup Heavy cream",
+                            "3 tbsp Oil or ghee",
+                            "Salt to taste"
+                        ],
+        "steps":  [
+                      "Blanch spinach in boiling water for 2 minutes. Immediately transfer to ice water to preserve the green color. Drain and blend to a smooth puree with green chilies. Set aside.",
+                      "Heat 2 tablespoons oil in a pan. Lightly fry paneer cubes until golden on all sides. Remove and soak in warm water to keep soft.",
+                      "In the same pan, heat remaining oil. Add cumin seeds and let them splutter. Add chopped onions and sauté until golden brown.",
+                      "Add ginger-garlic paste and cook for 1 minute. Add chopped tomatoes, turmeric, and salt. Cook until tomatoes are soft and oil separates, about 8 minutes.",
+                      "Add the spinach puree and mix well. Cook for 5 minutes on medium heat, stirring occasionally.",
+                      "Add garam masala and cream. Mix well and simmer for 3 minutes.",
+                      "Gently add the fried paneer cubes. Simmer for 2-3 minutes to let the paneer absorb the flavors.",
+                      "Serve hot with naan or roti. The dish should be vibrant green, creamy, and the paneer should be soft and flavorful."
+                  ]
+    },
+    {
+        "id":  "samosas",
+        "title":  "Vegetable Samosas",
+        "prep_time":  "40 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "60 mins",
+        "image":  "assets/images/cuisines/indian/samosas.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "For dough: 2 cups All-purpose flour",
+                            "4 tbsp Oil",
+                            "1/2 tsp Salt",
+                            "Water as needed",
+                            "For filling: 3 Potatoes, boiled and mashed",
+                            "1/2 cup Green peas",
+                            "1 tsp Cumin seeds",
+                            "1 tsp Garam masala",
+                            "1 tsp Coriander powder",
+                            "1/2 tsp Turmeric",
+                            "1 Green chili, chopped",
+                            "1 tbsp Ginger, grated",
+                            "2 tbsp Fresh cilantro, chopped",
+                            "Oil for deep frying",
+                            "Tamarind chutney for serving"
+                        ],
+        "steps":  [
+                      "Make the dough: Mix flour, salt, and oil until crumbly. Gradually add water and knead into a firm dough. Cover and rest for 30 minutes.",
+                      "Make the filling: Heat 2 tablespoons oil. Add cumin seeds and let splutter. Add ginger, green chili, and peas. Cook for 3 minutes.",
+                      "Add mashed potatoes, garam masala, coriander powder, turmeric, and salt. Mix well and cook for 5 minutes. Add cilantro and let cool.",
+                      "Divide dough into 8 balls. Roll each into an oval, cut in half to make 2 semi-circles.",
+                      "Form a cone with each semi-circle, sealing the edge with water. Fill with 2 tablespoons of potato filling. Seal the top edge firmly.",
+                      "Heat oil for deep frying to 170°C (340°F). Fry samosas in batches for 8-10 minutes until golden and crispy, turning occasionally.",
+                      "Drain on paper towels. Serve hot with tamarind chutney and mint chutney. The samosas should be crispy outside with a flavorful, spiced potato filling."
+                  ]
+    },
+    {
+        "id":  "mango_lassi",
+        "title":  "Mango Lassi",
+        "prep_time":  "5 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "5 mins",
+        "image":  "assets/images/cuisines/indian/mango_lassi.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "2 Ripe mangoes, peeled and chopped",
+                            "1 cup Plain yogurt",
+                            "1/2 cup Milk",
+                            "3 tbsp Sugar (adjust to taste)",
+                            "1/4 tsp Cardamom powder",
+                            "Ice cubes",
+                            "Saffron strands for garnish (optional)"
+                        ],
+        "steps":  [
+                      "Add chopped mangoes, yogurt, milk, sugar, and cardamom powder to a blender.",
+                      "Blend on high speed for 1-2 minutes until smooth and creamy. The mixture should be thick but pourable.",
+                      "Taste and adjust sweetness if needed. If too thick, add more milk.",
+                      "Add ice cubes and blend again for 30 seconds until frothy.",
+                      "Pour into tall glasses. Garnish with saffron strands if desired.",
+                      "Serve immediately. Mango lassi should be cold, creamy, and refreshing with the perfect balance of sweet mango and tangy yogurt."
+                  ]
+    }
+]

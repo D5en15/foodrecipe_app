@@ -31,6 +31,7 @@ class _CountdownScreenState extends State<CountdownScreen> {
   @override
   void dispose() {
     _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
     _hourController.dispose();
     _minuteController.dispose();
     _secondController.dispose();
@@ -38,6 +39,7 @@ class _CountdownScreenState extends State<CountdownScreen> {
   }
 
   void _start() {
+    unawaited(AlarmFeedbackService.instance.stopAlert());
     _isPaused = false;
     final hours = _hourController.selectedItem;
     final minutes = _minuteController.selectedItem;
@@ -66,6 +68,7 @@ class _CountdownScreenState extends State<CountdownScreen> {
 
   void _pause() {
     _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
     setState(() {
       _isPaused = true;
     });
@@ -97,6 +100,7 @@ class _CountdownScreenState extends State<CountdownScreen> {
 
   void _reset() {
     _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
     setState(() {
       _isRunning = false;
       _isPaused = false;
@@ -138,7 +142,7 @@ class _CountdownScreenState extends State<CountdownScreen> {
   void _notifyCountdownComplete() {
     if (!mounted) return;
     final strings = AppLocalizations.of(context)!;
-    unawaited(AlarmFeedbackService.instance.playAlertAndVibrate());
+    unawaited(AlarmFeedbackService.instance.startAlertLoop());
     unawaited(
       NotificationService.instance.showTimerDoneNotification(
         title: strings.t('timer_done_title'),
@@ -166,7 +170,10 @@ class _CountdownScreenState extends State<CountdownScreen> {
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
+            onPressed: () {
+              unawaited(AlarmFeedbackService.instance.stopAlert());
+              Navigator.of(dialogContext).pop();
+            },
             child: Text(
               strings.t('common_ok'),
               style: GoogleFonts.poppins(

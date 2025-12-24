@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 
 import '../app_router.dart';
 import '../l10n/app_localizations.dart';
@@ -20,10 +23,18 @@ class RecipesListScreen extends StatefulWidget {
 
 class _TaggedRecipe {
   final RecipeModel recipe;
-  final String categoryName;
-  final String categoryId;
+  final List<String> categoryNames;
+  final List<String> categoryIds;
+  final String cuisineName;
+  final String cuisineId;
 
-  _TaggedRecipe(this.recipe, this.categoryName, this.categoryId);
+  _TaggedRecipe(
+    this.recipe,
+    this.categoryNames,
+    this.categoryIds,
+    this.cuisineName,
+    this.cuisineId,
+  );
 }
 
 enum _SortOption {
@@ -40,10 +51,15 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
   Locale _currentLocale = const Locale('th');
 
   String? categoryId;
+  String? cuisineId;
   String? initialSearchText;
   bool _didInitArgs = false;
   Map<String, String> _categoryNames = {};
   String? _categoryNamesLang;
+  Map<String, String> _cuisineNames = {};
+  String? _cuisineNamesLang;
+  List<_TaggedRecipe> _allRecipes = [];
+  String? _allRecipesLang;
   _SortOption _sortOption = _SortOption.random;
 
   @override
@@ -57,7 +73,6 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
       final args = ModalRoute.of(context)?.settings.arguments;
 
       String? incomingSearch;
-      String? incomingCategoryName;
 
       if (args is String) {
         categoryId = args;
@@ -69,21 +84,28 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
         } else if (args["id"] != null) {
           categoryId = args["id"];
         }
+        if (args["cuisine"] != null) {
+          cuisineId = args["cuisine"];
+        } else if (args["cuisineId"] != null) {
+          cuisineId = args["cuisineId"];
+        }
 
         incomingSearch = args["search"] as String?;
-        incomingCategoryName = args["categoryName"] as String?;
       }
 
       final hasSpecificCategory =
           categoryId != null && categoryId!.isNotEmpty && categoryId != "all";
+      final hasSpecificCuisine =
+          cuisineId != null && cuisineId!.isNotEmpty && cuisineId != "all";
 
-      if (hasSpecificCategory &&
-          (incomingCategoryName == null || incomingCategoryName.trim().isEmpty)) {
-        incomingCategoryName = fileNameToCategoryName(categoryId!);
+      if (!hasSpecificCategory &&
+          !hasSpecificCuisine &&
+          incomingSearch != null &&
+          incomingSearch.trim().isNotEmpty) {
+        initialSearchText = incomingSearch;
+      } else {
+        initialSearchText = null;
       }
-
-      initialSearchText =
-          incomingSearch ?? (hasSpecificCategory ? incomingCategoryName : null);
 
       if (initialSearchText != null && initialSearchText!.isNotEmpty) {
         _searchController.text = initialSearchText!;
@@ -124,8 +146,80 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
     }
   }
 
+  Future<void> _loadCuisineNames(String lang) async {
+    if (_cuisineNamesLang == lang && _cuisineNames.isNotEmpty) return;
+    try {
+      final jsonString =
+          await rootBundle.loadString("assets/data/cuisines.json");
+      final List<dynamic> data = json.decode(jsonString) as List<dynamic>;
+
+      String localizedNameFor(
+          Map<String, dynamic> json, String languageCode) {
+        final translations =
+            json['translations'] as Map<String, dynamic>? ?? const {};
+        final langEntry = translations[languageCode];
+        if (langEntry is Map && langEntry['name'] is String) {
+          return langEntry['name'] as String;
+        }
+        final enEntry = translations['en'];
+        if (enEntry is Map && enEntry['name'] is String) {
+          return enEntry['name'] as String;
+        }
+        for (final entry in translations.values) {
+          if (entry is Map && entry['name'] is String) {
+            return entry['name'] as String;
+          }
+        }
+        return json['name']?.toString() ?? json['id']?.toString() ?? '';
+      }
+
+      _cuisineNames = {
+        for (final item in data)
+          (item as Map<String, dynamic>)['id'].toString():
+              localizedNameFor(item as Map<String, dynamic>, lang),
+      };
+      _cuisineNamesLang = lang;
+    } catch (e) {
+      print("Г?O ERROR loading cuisine names: $e");
+      _cuisineNames = {};
+      _cuisineNamesLang = null;
+    }
+  }
+
   String _displayCategoryName(String id) {
     return _categoryNames[id] ?? fileNameToCategoryName(id);
+  }
+
+  List<String> _displayCategoryNames(List<String> ids) {
+    return ids
+        .map(_displayCategoryName)
+        .map((name) => name.trim())
+        .where((name) => name.isNotEmpty)
+        .toList();
+  }
+
+  String _displayCuisineName(String id) {
+    return _cuisineNames[id] ?? id;
+  }
+
+  Future<void> _loadAllRecipesForSearch(String lang) async {
+    if (_allRecipesLang == lang && _allRecipes.isNotEmpty) return;
+    await _loadCategoryNames(lang);
+    await _loadCuisineNames(lang);
+
+    final entries = await RecipeService.loadAllRecipeEntries(lang);
+    _allRecipes = entries.map((entry) {
+      final categoryNames = _displayCategoryNames(entry.categoryIds);
+      final cuisineName = _displayCuisineName(entry.cuisineId);
+      return _TaggedRecipe(
+        entry.recipe,
+        categoryNames,
+        entry.categoryIds,
+        cuisineName,
+        entry.cuisineId,
+      );
+    }).toList();
+    _allRecipesLang = lang;
   }
 
   Future<void> loadRecipes() async {
@@ -133,26 +227,57 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
 
     try {
       await _loadCategoryNames(lang);
+      await _loadCuisineNames(lang);
 
       List<_TaggedRecipe> loaded = [];
 
-      if (categoryId == null || categoryId == "all") {
+      final hasSpecificCategory =
+          categoryId != null && categoryId!.isNotEmpty && categoryId != "all";
+      final hasSpecificCuisine =
+          cuisineId != null && cuisineId!.isNotEmpty && cuisineId != "all";
+
+      if (!hasSpecificCategory && !hasSpecificCuisine) {
         final all = await RecipeService.loadAllRecipesWithCategories(lang);
 
         loaded = all.map((entry) {
           final catId = entry["categoryId"] as String;
+          final cuisineId = entry["cuisineId"] as String? ?? '';
           final recipe = entry["recipe"] as RecipeModel;
-          final categoryName = _displayCategoryName(catId);
-          return _TaggedRecipe(recipe, categoryName, catId);
+          final cuisineName = _displayCuisineName(cuisineId);
+          final categoryNames = _displayCategoryNames([catId]);
+          return _TaggedRecipe(
+            recipe,
+            categoryNames,
+            [catId],
+            cuisineName,
+            cuisineId,
+          );
         }).toList();
       } else {
-        final items = await RecipeService.loadRecipes(
-          languageCode: lang,
-          categoryId: categoryId!,
-        );
-        final catName = _displayCategoryName(categoryId!);
-        loaded =
-            items.map((r) => _TaggedRecipe(r, catName, categoryId!)).toList();
+        final entries = await RecipeService.loadAllRecipeEntries(lang);
+        loaded = entries
+            .where((entry) {
+              final matchesCategory = hasSpecificCategory
+                  ? entry.categoryIds.contains(categoryId!)
+                  : true;
+              final matchesCuisine =
+                  hasSpecificCuisine ? entry.cuisineId == cuisineId : true;
+              return matchesCategory && matchesCuisine;
+            })
+            .map((entry) {
+              final categoryIds =
+                  entry.categoryIds.isNotEmpty ? entry.categoryIds : <String>[];
+              final categoryNames = _displayCategoryNames(categoryIds);
+              final cuisineName = _displayCuisineName(entry.cuisineId);
+              return _TaggedRecipe(
+                entry.recipe,
+                categoryNames,
+                categoryIds,
+                cuisineName,
+                entry.cuisineId,
+              );
+            })
+            .toList();
       }
 
       if (loaded.isEmpty) {
@@ -163,11 +288,7 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
         loaded.shuffle();
       }
 
-      final effectiveInitial = (initialSearchText ??
-              (categoryId != null && categoryId!.isNotEmpty
-                  ? _displayCategoryName(categoryId!)
-                  : null))
-          ?.trim();
+      final effectiveInitial = initialSearchText?.trim();
 
       final shouldApplyInitial =
           effectiveInitial != null && effectiveInitial.isNotEmpty;
@@ -196,15 +317,22 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
     return sliced.map((entry) {
       final catId =
           entry.categoryIds.isNotEmpty ? entry.categoryIds.first : 'maincourse';
-      final categoryName = _displayCategoryName(catId);
-      return _TaggedRecipe(entry.recipe, categoryName, catId);
+      final categoryNames = _displayCategoryNames([catId]);
+      final cuisineName = _displayCuisineName(entry.cuisineId);
+      return _TaggedRecipe(
+        entry.recipe,
+        categoryNames,
+        [catId],
+        cuisineName,
+        entry.cuisineId,
+      );
     }).toList();
   }
 
   // -----------------------------------------------------
   // Search Function
   // -----------------------------------------------------
-  void filterRecipes(String query) {
+  void filterRecipes(String query) async {
     final trimmed = query.trim();
     if (trimmed.isEmpty) {
       setState(() {
@@ -215,16 +343,20 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
 
     final q = trimmed.toLowerCase();
 
+    await _loadAllRecipesForSearch(_currentLocale.languageCode);
+    final searchBase = _allRecipes.isNotEmpty ? _allRecipes : recipes;
+
     setState(() {
       filtered =
-          _sortRecipes(recipes.where((item) => _matchesQuery(item, q)).toList());
+          _sortRecipes(searchBase.where((item) => _matchesQuery(item, q)).toList());
     });
   }
 
   bool _matchesQuery(_TaggedRecipe item, String q) {
     final titleMatch =
         item.recipe.displayTitle(_currentLocale).toLowerCase().contains(q);
-    final categoryMatch = item.categoryName.toLowerCase().contains(q);
+    final categoryMatch =
+        item.categoryNames.any((name) => name.toLowerCase().contains(q));
     final ingredientMatch = item.recipe.ingredients
         .any((ingredient) => ingredient.toLowerCase().contains(q));
     return titleMatch || categoryMatch || ingredientMatch;
@@ -345,21 +477,6 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      floatingActionButton: FloatingActionButton(
-        heroTag: "recipes_back_home",
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.background,
-        shape: const CircleBorder(),
-        onPressed: () {
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            Routes.home,
-            (route) => false,
-          );
-        },
-        child: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
-      ),
       body: Column(
         children: [
           _HeaderSection(
@@ -367,6 +484,13 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
             onSearch: filterRecipes,
             controller: _searchController,
             onFilterTap: _openSortSheet,
+            onBackTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                Routes.home,
+                (route) => false,
+              );
+            },
           ),
 
           Expanded(
@@ -396,7 +520,7 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
                         imagePath: item.recipe.image,
                         title: displayTitle,
                         subtitle: "Recipe",
-                        tagName: item.categoryName,
+                        tags: _buildTags(item),
                         timeText:
                             "${strings.t('detail_time_total')} : ${item.recipe.totalTime ?? '-'}",
                         onTap: () {
@@ -405,7 +529,9 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
                             Routes.recipeDetail,
                             arguments: {
                               "id": item.recipe.id,
-                              "category": item.categoryId,
+                              "category": item.categoryIds.isNotEmpty
+                                  ? item.categoryIds.first
+                                  : null,
                             },
                           );
                         },
@@ -419,6 +545,23 @@ class _RecipesListScreenState extends State<RecipesListScreen> {
   }
 }
 
+List<String> _buildTags(_TaggedRecipe item) {
+  final tags = <String>[];
+  final cuisine = item.cuisineName.trim();
+  if (cuisine.isNotEmpty) {
+    tags.add(cuisine);
+  }
+  for (final category in item.categoryNames) {
+    final trimmed = category.trim();
+    if (trimmed.isEmpty) continue;
+    if (trimmed.toLowerCase() == cuisine.toLowerCase()) continue;
+    if (!tags.any((tag) => tag.toLowerCase() == trimmed.toLowerCase())) {
+      tags.add(trimmed);
+    }
+  }
+  return tags;
+}
+
 // -----------------------------------------------------
 // Header Section (Search Bar + Tabs)
 // -----------------------------------------------------
@@ -427,12 +570,14 @@ class _HeaderSection extends StatelessWidget {
   final Function(String) onSearch;
   final TextEditingController controller;
   final VoidCallback onFilterTap;
+  final VoidCallback onBackTap;
 
   const _HeaderSection({
     required this.strings,
     required this.onSearch,
     required this.controller,
     required this.onFilterTap,
+    required this.onBackTap,
   });
 
   @override
@@ -451,6 +596,30 @@ class _HeaderSection extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: onBackTap,
+                    borderRadius: BorderRadius.circular(24),
+                    child: Container(
+                      height: 48,
+                      width: 48,
+                      decoration: BoxDecoration(
+                        color: AppColors.background,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: AppColors.primary.withOpacity(0.2),
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: AppColors.primary,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
                 Expanded(
                   child: Container(
                     height: 48,
@@ -611,7 +780,7 @@ class _RecipeListItem extends StatelessWidget {
   final String imagePath;
   final String title;
   final String subtitle;
-  final String tagName;
+  final List<String> tags;
   final String timeText;
   final VoidCallback onTap;
 
@@ -619,7 +788,7 @@ class _RecipeListItem extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.subtitle,
-    required this.tagName,
+    required this.tags,
     required this.timeText,
     required this.onTap,
   });
@@ -674,21 +843,30 @@ class _RecipeListItem extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(12),
+                if (tags.isNotEmpty)
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 6,
+                    children: tags.map((tag) {
+                      return Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.primary,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          tag,
+                          style: GoogleFonts.poppins(
+                            color: AppColors.background,
+                            fontSize: 10,
+                          ),
+                        ),
+                      );
+                    }).toList(),
                   ),
-                  child: Text(
-                    tagName,
-                    style: GoogleFonts.poppins(
-                      color: AppColors.background,
-                      fontSize: 10,
-                    ),
-                  ),
-                ),
 
                 const SizedBox(height: 8),
 

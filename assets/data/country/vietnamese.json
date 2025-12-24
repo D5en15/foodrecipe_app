@@ -1,0 +1,174 @@
+﻿[
+    {
+        "id":  "pho_bo",
+        "title":  "Pho Bo (Beef Noodle Soup)",
+        "prep_time":  "30 mins",
+        "cook_time":  "3 hours",
+        "total_time":  "3.5 hours",
+        "image":  "assets/images/cuisines/vietnamese/pho_bo.jpg",
+        "categories":  [
+                           "soap_and_curry",
+                           "noodles"
+                       ],
+        "ingredients":  [
+                            "1kg Beef bones",
+                            "500g Beef brisket",
+                            "2 Onions, halved",
+                            "10cm Ginger, halved lengthwise",
+                            "3 Star anise",
+                            "2 Cinnamon sticks",
+                            "5 Cloves",
+                            "1 tbsp Coriander seeds",
+                            "3 tbsp Fish sauce",
+                            "1 tbsp Sugar",
+                            "400g Fresh rice noodles (banh pho)",
+                            "200g Beef sirloin, thinly sliced",
+                            "Bean sprouts, Thai basil, lime wedges, chili for serving",
+                            "Hoisin sauce and Sriracha"
+                        ],
+        "steps":  [
+                      "Parboil the beef bones in boiling water for 5 minutes. Drain and rinse to remove impurities. This ensures a clear broth.",
+                      "Char the onions and ginger directly over a gas flame or under a broiler until blackened on all sides, about 5 minutes. This adds depth to the broth.",
+                      "Toast star anise, cinnamon, cloves, and coriander seeds in a dry pan over medium heat for 2-3 minutes until fragrant.",
+                      "In a large pot, add the cleaned bones, beef brisket, charred onions and ginger, and toasted spices. Cover with 4 liters of water. Bring to a boil, then reduce to a gentle simmer.",
+                      "Skim off any foam that rises to the surface for the first 30 minutes. Simmer uncovered for 3 hours, adding water if needed to keep bones covered.",
+                      "Remove the brisket after 1.5 hours when tender. Let cool, then slice thinly against the grain. Continue simmering the broth.",
+                      "Strain the broth through a fine-mesh sieve. Season with fish sauce and sugar. Taste and adjust - the broth should be savory, slightly sweet, and aromatic.",
+                      "Cook fresh rice noodles according to package instructions (usually 1-2 minutes in boiling water). Drain and divide among bowls.",
+                      "Top noodles with sliced cooked brisket and raw beef sirloin slices. Ladle the piping hot broth over - it will cook the raw beef.",
+                      "Serve immediately with a plate of bean sprouts, Thai basil, lime wedges, sliced chilies, hoisin sauce, and Sriracha. Diners add these to taste. The broth should be clear, fragrant, and deeply flavorful."
+                  ]
+    },
+    {
+        "id":  "banh_mi",
+        "title":  "Banh Mi (Vietnamese Sandwich)",
+        "prep_time":  "30 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/vietnamese/banh_mi.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "4 Vietnamese baguettes",
+                            "400g Pork shoulder, thinly sliced",
+                            "For marinade: 2 tbsp Soy sauce",
+                            "1 tbsp Fish sauce",
+                            "2 cloves Garlic, minced",
+                            "1 tbsp Sugar",
+                            "For pickles: 1 Carrot, julienned",
+                            "1 Daikon radish, julienned",
+                            "1/4 cup Rice vinegar",
+                            "2 tbsp Sugar",
+                            "Mayonnaise, Pâté, Fresh cilantro",
+                            "Cucumber slices, Jalapeño slices"
+                        ],
+        "steps":  [
+                      "Make the pickles: Mix rice vinegar, sugar, and a pinch of salt until sugar dissolves. Add julienned carrot and daikon. Let sit for at least 30 minutes.",
+                      "Marinate the pork: Combine soy sauce, fish sauce, minced garlic, and sugar. Add sliced pork and marinate for 15 minutes.",
+                      "Heat a skillet over high heat. Cook the marinated pork for 3-4 minutes per side until caramelized and cooked through.",
+                      "Slice the baguettes lengthwise, leaving one side attached. Lightly toast if desired.",
+                      "Spread mayonnaise on one side and pâté on the other (optional but traditional).",
+                      "Layer with cooked pork, drained pickled vegetables, cucumber slices, jalapeño slices, and fresh cilantro.",
+                      "Serve immediately. The banh mi should have a crispy crust, soft interior, and a perfect balance of savory, sweet, sour, and spicy flavors."
+                  ]
+    },
+    {
+        "id":  "spring_rolls",
+        "title":  "Fresh Spring Rolls (Goi Cuon)",
+        "prep_time":  "30 mins",
+        "cook_time":  "10 mins",
+        "total_time":  "40 mins",
+        "image":  "assets/images/cuisines/vietnamese/spring_rolls.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "12 Rice paper wrappers",
+                            "200g Cooked shrimp, halved lengthwise",
+                            "100g Rice vermicelli, cooked",
+                            "1 cup Lettuce, shredded",
+                            "1 cup Fresh mint leaves",
+                            "1 cup Fresh cilantro",
+                            "1 cup Thai basil",
+                            "For peanut sauce: 3 tbsp Peanut butter",
+                            "2 tbsp Hoisin sauce",
+                            "1 tbsp Soy sauce",
+                            "1 tsp Sriracha",
+                            "Water to thin"
+                        ],
+        "steps":  [
+                      "Make the peanut sauce: Mix peanut butter, hoisin sauce, soy sauce, and Sriracha. Add water gradually until you reach a dipping consistency. Set aside.",
+                      "Prepare all ingredients and arrange on a plate for easy assembly.",
+                      "Fill a large shallow dish with warm water. Dip one rice paper wrapper for 2-3 seconds until just softened (it will continue to soften). Lay flat on a clean surface.",
+                      "On the bottom third of the wrapper, layer lettuce, vermicelli, mint, cilantro, and basil.",
+                      "Fold the bottom edge over the filling, then fold in the sides. Place 2-3 shrimp halves cut-side down on top (they\u0027ll be visible through the wrapper).",
+                      "Roll tightly to the top. The wrapper should be translucent, showing the colorful ingredients inside.",
+                      "Repeat with remaining wrappers and ingredients. Serve immediately with peanut sauce. The rolls should be fresh, light, and bursting with herbs."
+                  ]
+    },
+    {
+        "id":  "bun_cha",
+        "title":  "Bun Cha (Grilled Pork with Noodles)",
+        "prep_time":  "30 mins (plus 1 hour marinating)",
+        "cook_time":  "15 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/vietnamese/bun_cha.jpg",
+        "categories":  [
+                           "noodles",
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "500g Ground pork",
+                            "300g Pork belly, sliced",
+                            "3 tbsp Fish sauce",
+                            "2 tbsp Sugar",
+                            "3 cloves Garlic, minced",
+                            "2 Shallots, minced",
+                            "Black pepper",
+                            "400g Rice vermicelli",
+                            "For dipping sauce: 1/2 cup Fish sauce",
+                            "1/2 cup Sugar",
+                            "1 cup Water",
+                            "2 tbsp Lime juice",
+                            "Garlic and chili",
+                            "Fresh herbs, lettuce, pickled vegetables"
+                        ],
+        "steps":  [
+                      "Mix ground pork with 2 tablespoons fish sauce, 1 tablespoon sugar, minced garlic, shallots, and black pepper. Form into small patties. Refrigerate for 1 hour.",
+                      "Marinate pork belly slices with 1 tablespoon fish sauce, 1 tablespoon sugar, and black pepper for 1 hour.",
+                      "Make the dipping sauce: Dissolve sugar in warm water. Add fish sauce, lime juice, minced garlic, and sliced chili. Adjust to taste - it should be sweet, salty, sour, and spicy.",
+                      "Grill the pork patties and pork belly slices over high heat (or broil) for 3-4 minutes per side until charred and caramelized.",
+                      "Cook rice vermicelli according to package instructions. Drain and rinse with cold water.",
+                      "Serve in bowls: Place vermicelli in individual bowls. Add grilled pork patties and belly slices. Pour dipping sauce over or serve on the side.",
+                      "Accompany with fresh herbs (mint, cilantro, perilla), lettuce, and pickled vegetables. Diners mix everything together. The dish should be smoky, sweet, and refreshing."
+                  ]
+    },
+    {
+        "id":  "vietnamese_coffee",
+        "title":  "Vietnamese Iced Coffee (Ca Phe Sua Da)",
+        "prep_time":  "5 mins",
+        "cook_time":  "5 mins",
+        "total_time":  "10 mins",
+        "image":  "assets/images/cuisines/vietnamese/vietnamese_coffee.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "3 tbsp Vietnamese ground coffee (dark roast)",
+                            "2 tbsp Sweetened condensed milk",
+                            "Ice cubes",
+                            "Boiling water"
+                        ],
+        "steps":  [
+                      "Add 2 tablespoons sweetened condensed milk to a glass.",
+                      "Place a Vietnamese coffee filter (phin) on top of the glass. Add 3 tablespoons ground coffee to the filter.",
+                      "Gently press down the filter insert to compress the coffee slightly - not too tight or water won\u0027t drip through.",
+                      "Pour a small amount of boiling water (about 2 tablespoons) over the coffee to bloom it. Wait 30 seconds.",
+                      "Fill the filter with boiling water to the top. Cover with the lid and let it drip slowly - this should take 4-5 minutes. The slow drip is essential for the strong, rich flavor.",
+                      "Once all the water has dripped through, remove the filter. Stir the coffee and condensed milk together well.",
+                      "Fill a separate glass with ice cubes. Pour the coffee mixture over the ice.",
+                      "Serve immediately. Vietnamese iced coffee should be strong, sweet, and incredibly smooth with a beautiful caramel color."
+                  ]
+    }
+]

@@ -43,8 +43,8 @@
     "id": "snack_and_appetizers",
     "image": "assets/images/categories/snack_and_appetizers.jpg",
     "translations": {
-      "en": { "name": "Snacks" },
-      "th": { "name": "ของว่าง" }
+      "en": { "name": "Snacks & Appetizers" },
+      "th": { "name": "ของว่างและของกินเล็กๆ" }
     }
   },
   {
@@ -59,7 +59,7 @@
     "id": "protein",
     "image": "assets/images/categories/protein.jpg",
     "translations": {
-      "en": { "name": "Meat" },
+      "en": { "name": "Protein" },
       "th": { "name": "เนื้อสัตว์" }
     }
   },

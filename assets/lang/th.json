@@ -1,4 +1,4 @@
-{
+﻿{
   "welcome_title": "ยินดีต้อนรับ",
   "welcome_message": "ค้นหาสูตรอาหารมากมายได้ที่นี่",
   "welcome_button_start": "เริ่มต้น",
@@ -7,6 +7,7 @@
   "home_hero_count": "1000 เมนู",
   "home_hero_subtitle": "ค้นหาเมนูอาหารที่ชื่นชอบได้เลย!",
   "home_search_hint": "ค้นหาสูตรอาหารและเครื่องดื่ม",
+  "home_section_countries": "ประเทศ",
   
   "home_section_categories": "ประเภท",
   "home_section_popular": "รายการอาหาร",
@@ -17,6 +18,8 @@
   "language_en": "อังกฤษ",
   "home_section_completed": "ทำเสร็จแล้ว",
   "timer": "จับเวลา",
+  "timer_hide": "ปิดนาฬิกา",
+  "timer_close": "ปิด",
   "start": "เริ่ม",
   "pause": "พัก",
   "reset": "รีเซ็ต",
@@ -26,11 +29,13 @@
   "hours": "ชั่วโมง",
   "resume": "ต่อ",
   "detail_timer_label": "จับเวลาทำอาหาร",
+  "detail_timer_locked": "เช็ควัตถุดิบให้ครบก่อนเริ่มตั้งเวลา",
   "timer_done_title": "หมดเวลาแล้ว",
   "timer_done_body": "ตัวจับเวลาสิ้นสุดแล้ว",
   "completed_page_title": "ทำเสร็จแล้ว",
 
   "category_page_title": "ประเภท",
+  "country_page_title": "ประเทศ",
 
   "list_tab_all": "ทั้งหมด",
   "list_tab_recipes": "สูตรอาหาร",
@@ -47,8 +52,13 @@
   "detail_time_prep": "เวลาเตรียม",
   "detail_time_cooking": "เวลาทำ",
   "recipe_ingredients": "วัตถุดิบ",
+  "recipe_select_all_ingredients": "เตรียมวัตถุดิบครบแล้ว",
   "recipe_steps": "ขั้นตอน",
   "detail_button_finish": "เสร็จสิ้น",
+  "detail_exit_title": "ออกจากหน้านี้ใช่ไหม",
+  "detail_exit_message": "คุณเช็คไว้บางรายการแล้ว ต้องการออกหรือไม่",
+  "detail_exit_stay": "อยู่ต่อ",
+  "detail_exit_leave": "ออก",
 
   "completion_title": "ยินดีด้วย!",
   "completion_message": "คุณทำอาหารเสร็จเรียบร้อยแล้ว",
@@ -62,3 +72,10 @@
   "common_add_item": "เพิ่มรายการ",
   "common_ok": "ตกลง"
 }
+
+
+
+
+
+
+

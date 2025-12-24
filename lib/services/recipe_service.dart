@@ -9,10 +9,12 @@ import 'category_service.dart';
 class RecipeWithCategories {
   final RecipeModel recipe;
   final List<String> categoryIds;
+  final String cuisineId;
 
   RecipeWithCategories({
     required this.recipe,
     required this.categoryIds,
+    required this.cuisineId,
   });
 }
 
@@ -66,6 +68,11 @@ class RecipeService {
         return fallbackData;
       }
     }
+    final legacy = '$_countryPrefix${cuisineId}.json';
+    final legacyData = await _tryLoadCountryFile(legacy);
+    if (legacyData != null) {
+      return legacyData;
+    }
     print('⚠️ Missing recipe file for cuisine "$cuisineId" (lang: $languageCode)');
     return null;
   }
@@ -101,6 +108,7 @@ class RecipeService {
           RecipeWithCategories(
             recipe: recipe,
             categoryIds: categoryIds,
+            cuisineId: cuisineId,
           ),
         );
       }
@@ -137,6 +145,7 @@ class RecipeService {
       for (final categoryId in entry.categoryIds) {
         all.add({
           "categoryId": categoryId,
+          "cuisineId": entry.cuisineId,
           "recipe": entry.recipe,
         });
       }
@@ -153,6 +162,7 @@ class RecipeService {
           (entry) => RecipeWithCategories(
             recipe: entry.recipe,
             categoryIds: List<String>.from(entry.categoryIds),
+            cuisineId: entry.cuisineId,
           ),
         )
         .toList();

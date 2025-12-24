@@ -160,7 +160,6 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                   arguments: {
                     "category": item.id,
                     "categoryName": item.name,
-                    "search": item.name,
                   },
                 );
               },

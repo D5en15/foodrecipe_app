@@ -1,0 +1,135 @@
+﻿[
+    {
+        "id":  "kebab",
+        "title":  "Turkish Kebab (Adana Kebab)",
+        "prep_time":  "30 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/turkish/kebab.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "800g Ground lamb (or beef)",
+                            "1 Onion, grated",
+                            "3 cloves Garlic, minced",
+                            "2 tbsp Paprika",
+                            "1 tbsp Cumin",
+                            "1 tsp Red pepper flakes",
+                            "1 tsp Black pepper",
+                            "Salt to taste",
+                            "Flatbread, Grilled vegetables, Yogurt"
+                        ],
+        "steps":  [
+                      "In a bowl, combine ground lamb, grated onion (squeeze out excess liquid), garlic, paprika, cumin, red pepper flakes, black pepper, and salt. Mix well and knead for 5 minutes until sticky.",
+                      "Divide mixture into portions. Mold each portion around flat metal skewers, forming long, thin kebabs.",
+                      "Refrigerate for 30 minutes to firm up.",
+                      "Preheat grill to high heat. Grill kebabs for 12-15 minutes, turning occasionally, until cooked through and slightly charred.",
+                      "Serve with flatbread, grilled vegetables, and yogurt. Turkish kebabs should be juicy, spicy, and smoky."
+                  ]
+    },
+    {
+        "id":  "meze_platter",
+        "title":  "Turkish Meze Platter",
+        "prep_time":  "30 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "30 mins",
+        "image":  "assets/images/cuisines/turkish/meze.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "Hummus, Baba ganoush, Stuffed grape leaves",
+                            "Feta cheese, Olives, Cherry tomatoes",
+                            "Cucumber slices, Pita bread",
+                            "For cacik: 2 cups Yogurt",
+                            "1 Cucumber, grated",
+                            "2 cloves Garlic, minced",
+                            "2 tbsp Olive oil",
+                            "1 tbsp Mint, chopped",
+                            "Salt"
+                        ],
+        "steps":  [
+                      "Make cacik (Turkish tzatziki): Mix yogurt, grated cucumber (drained), garlic, olive oil, mint, and salt. Refrigerate.",
+                      "Arrange hummus, baba ganoush, stuffed grape leaves, feta cheese, olives, cherry tomatoes, and cucumber on a large platter.",
+                      "Add the cacik in a small bowl. Serve with warm pita bread. Meze should offer a variety of flavors and textures for sharing."
+                  ]
+    },
+    {
+        "id":  "baklava_turkish",
+        "title":  "Turkish Baklava",
+        "prep_time":  "40 mins",
+        "cook_time":  "50 mins",
+        "total_time":  "90 mins",
+        "image":  "assets/images/cuisines/turkish/baklava.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "1 package Phyllo dough",
+                            "2 cups Pistachios, finely chopped",
+                            "1 cup Butter, melted",
+                            "For syrup: 2 cups Sugar",
+                            "1 cup Water",
+                            "1 tbsp Lemon juice",
+                            "1 tbsp Rose water"
+                        ],
+        "steps":  [
+                      "Preheat oven to 175°C (350°F). Layer 10 phyllo sheets in a buttered pan, brushing each with butter.",
+                      "Sprinkle half the pistachios. Add 5 phyllo sheets (buttering each), remaining pistachios, then 10 more phyllo sheets.",
+                      "Cut into diamonds. Bake 50 minutes until golden.",
+                      "Make syrup: Boil sugar, water, and lemon juice for 10 minutes. Add rose water. Pour hot syrup over warm baklava.",
+                      "Cool completely before serving. Turkish baklava is known for its pistachio filling and rose water syrup."
+                  ]
+    },
+    {
+        "id":  "turkish_coffee",
+        "title":  "Turkish Coffee",
+        "prep_time":  "2 mins",
+        "cook_time":  "5 mins",
+        "total_time":  "7 mins",
+        "image":  "assets/images/cuisines/turkish/turkish_coffee.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "1 cup Cold water",
+                            "1 tbsp Finely ground Turkish coffee",
+                            "1 tsp Sugar (optional)",
+                            "Cardamom (optional)"
+                        ],
+        "steps":  [
+                      "Add water, coffee, and sugar (if using) to a cezve (Turkish coffee pot). Stir once.",
+                      "Heat over low heat. As it begins to foam, remove from heat before it boils over. Let foam settle.",
+                      "Return to heat and let foam rise again. Repeat once more.",
+                      "Pour into small cups, allowing grounds to settle. Turkish coffee should be strong, thick, and served with the grounds."
+                  ]
+    },
+    {
+        "id":  "turkish_delight",
+        "title":  "Turkish Delight (Lokum)",
+        "prep_time":  "15 mins",
+        "cook_time":  "60 mins",
+        "total_time":  "75 mins (plus setting)",
+        "image":  "assets/images/cuisines/turkish/turkish_delight.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "4 cups Sugar",
+                            "4.5 cups Water",
+                            "1 cup Cornstarch",
+                            "1 tsp Cream of tartar",
+                            "2 tbsp Rose water",
+                            "Food coloring (optional)",
+                            "1 cup Powdered sugar",
+                            "Pistachios (optional)"
+                        ],
+        "steps":  [
+                      "Grease a 9x9 pan. In a pot, combine 1.5 cups water with cornstarch and cream of tartar. Whisk until smooth.",
+                      "In another pot, boil sugar with 3 cups water until sugar dissolves. Add to cornstarch mixture.",
+                      "Cook over medium heat, stirring constantly, for 45-60 minutes until thick and golden. Add rose water and food coloring.",
+                      "Pour into prepared pan. Let set overnight. Cut into squares and roll in powdered sugar mixed with cornstarch. Turkish delight should be soft, chewy, and fragrant."
+                  ]
+    }
+]

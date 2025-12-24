@@ -101,6 +101,7 @@ class CategoryService {
       }
 
       addName(_localizedNameFor(json, languageCode));
+      addName(id);
       for (final value in translations.values) {
         if (value is Map && value['name'] is String) {
           addName(value['name'] as String);

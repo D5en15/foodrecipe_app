@@ -1,0 +1,175 @@
+﻿[
+    {
+        "id":  "tacos_al_pastor",
+        "title":  "Tacos al Pastor",
+        "prep_time":  "30 mins (plus 2 hours marinating)",
+        "cook_time":  "15 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/mexican/tacos_al_pastor.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "800g Pork shoulder, thinly sliced",
+                            "3 Dried guajillo chilies",
+                            "2 Dried ancho chilies",
+                            "1/2 cup Pineapple juice",
+                            "1/4 cup White vinegar",
+                            "4 cloves Garlic",
+                            "1 tsp Ground cumin",
+                            "1 tsp Dried oregano",
+                            "1/2 tsp Ground cinnamon",
+                            "Salt and pepper to taste",
+                            "12 Corn tortillas",
+                            "1 cup Fresh pineapple, diced",
+                            "1 White onion, finely chopped",
+                            "1/2 cup Fresh cilantro, chopped",
+                            "2 Limes, cut into wedges",
+                            "Salsa verde or salsa roja"
+                        ],
+        "steps":  [
+                      "Remove stems and seeds from the dried guajillo and ancho chilies. Toast them in a dry skillet over medium heat for 1-2 minutes until fragrant, turning frequently to avoid burning. Soak in hot water for 15 minutes until softened.",
+                      "Drain the chilies and add to a blender with pineapple juice, white vinegar, garlic, cumin, oregano, cinnamon, salt, and pepper. Blend until completely smooth, about 2 minutes. This is your adobo marinade.",
+                      "Place the thinly sliced pork in a large bowl or zip-lock bag. Pour the adobo marinade over the pork, making sure every piece is well coated. Cover and refrigerate for at least 2 hours, preferably overnight for maximum flavor.",
+                      "Heat a large skillet or griddle over high heat. Working in batches, cook the marinated pork for 3-4 minutes per side until charred and caramelized at the edges. The sugars in the marinade will create a beautiful crust. Remove and let rest for 5 minutes, then chop into small pieces.",
+                      "Warm the corn tortillas on the same griddle for about 30 seconds per side until pliable and slightly charred. Keep warm wrapped in a clean kitchen towel.",
+                      "To assemble: Place 2-3 tortillas on a plate. Add a generous amount of chopped pork to each tortilla. Top with diced fresh pineapple, finely chopped white onion, and fresh cilantro.",
+                      "Serve immediately with lime wedges and your choice of salsa verde or salsa roja on the side. Squeeze lime juice over the tacos before eating. The combination of savory, spicy pork with sweet pineapple is the signature of authentic tacos al pastor."
+                  ]
+    },
+    {
+        "id":  "chicken_enchiladas",
+        "title":  "Chicken Enchiladas",
+        "prep_time":  "25 mins",
+        "cook_time":  "30 mins",
+        "total_time":  "55 mins",
+        "image":  "assets/images/cuisines/mexican/chicken_enchiladas.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "500g Cooked chicken breast, shredded",
+                            "12 Corn tortillas",
+                            "For the sauce: 4 Dried ancho chilies",
+                            "2 cups Chicken stock",
+                            "3 cloves Garlic",
+                            "1 tsp Ground cumin",
+                            "1/2 tsp Dried oregano",
+                            "2 tbsp Vegetable oil",
+                            "Salt to taste",
+                            "For filling: 1 cup Queso fresco, crumbled",
+                            "1/2 cup Sour cream",
+                            "1 cup Monterey Jack cheese, shredded",
+                            "1/2 White onion, diced",
+                            "Fresh cilantro for garnish"
+                        ],
+        "steps":  [
+                      "Make the enchilada sauce: Remove stems and seeds from ancho chilies. Toast in a dry pan for 1 minute until fragrant. Soak in hot chicken stock for 15 minutes until soft.",
+                      "Transfer the softened chilies and stock to a blender. Add garlic, cumin, oregano, and salt. Blend until completely smooth. Strain through a fine-mesh sieve to remove any bits.",
+                      "Heat 2 tablespoons oil in a saucepan over medium heat. Pour in the sauce (it will sizzle) and simmer for 10 minutes, stirring occasionally, until thickened and darkened. Taste and adjust seasoning.",
+                      "Preheat oven to 180°C (350°F). Lightly grease a 9x13 inch baking dish.",
+                      "Mix the shredded chicken with half the queso fresco, diced onion, and 1/2 cup of the enchilada sauce in a bowl.",
+                      "Warm tortillas briefly on a griddle or microwave to make them pliable. Dip each tortilla in the enchilada sauce to coat lightly.",
+                      "Place about 1/4 cup of chicken filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish. Repeat with remaining tortillas.",
+                      "Pour the remaining enchilada sauce over the rolled enchiladas, making sure they\u0027re well covered. Sprinkle shredded Monterey Jack cheese on top.",
+                      "Bake for 25-30 minutes until the cheese is melted, bubbly, and lightly golden. The edges should be slightly crispy.",
+                      "Remove from oven and let rest for 5 minutes. Drizzle with sour cream, sprinkle with remaining queso fresco and fresh cilantro. Serve hot with Mexican rice and refried beans."
+                  ]
+    },
+    {
+        "id":  "guacamole",
+        "title":  "Guacamole",
+        "prep_time":  "10 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "10 mins",
+        "image":  "assets/images/cuisines/mexican/guacamole.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "3 Ripe avocados",
+                            "1 Lime, juiced",
+                            "1/2 tsp Salt",
+                            "1/2 cup Diced onion",
+                            "2 Roma tomatoes, diced",
+                            "2 tbsp Fresh cilantro, chopped",
+                            "1 Jalapeño pepper, seeded and minced",
+                            "1 clove Garlic, minced (optional)",
+                            "Tortilla chips for serving"
+                        ],
+        "steps":  [
+                      "Cut the avocados in half, remove the pit, and scoop the flesh into a medium bowl. The avocados should be ripe but not mushy - they should yield to gentle pressure.",
+                      "Add the lime juice and salt immediately. Using a fork or potato masher, mash the avocados to your desired consistency. For traditional guacamole, leave it slightly chunky rather than completely smooth.",
+                      "Add the diced onion, diced tomatoes, chopped cilantro, and minced jalapeño. If using garlic, add it now. Gently fold everything together with a spoon until well combined.",
+                      "Taste and adjust seasoning with more salt or lime juice if needed. The guacamole should be bright, fresh, and balanced.",
+                      "If not serving immediately, press plastic wrap directly onto the surface of the guacamole to prevent browning. Refrigerate for up to 2 hours.",
+                      "Serve with warm tortilla chips. For best flavor, guacamole should be eaten the same day it\u0027s made. The combination of creamy avocado, tangy lime, and fresh vegetables is irresistible!"
+                  ]
+    },
+    {
+        "id":  "churros",
+        "title":  "Churros with Chocolate Sauce",
+        "prep_time":  "15 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/mexican/churros.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "For churros: 1 cup Water",
+                            "2 tbsp Sugar",
+                            "1/2 tsp Salt",
+                            "2 tbsp Vegetable oil",
+                            "1 cup All-purpose flour",
+                            "Oil for frying",
+                            "For coating: 1/2 cup Sugar",
+                            "1 tsp Ground cinnamon",
+                            "For chocolate sauce: 200g Dark chocolate, chopped",
+                            "1 cup Heavy cream",
+                            "1 tsp Vanilla extract"
+                        ],
+        "steps":  [
+                      "Make the churro dough: In a medium saucepan, combine water, 2 tablespoons sugar, salt, and 2 tablespoons vegetable oil. Bring to a boil over medium-high heat.",
+                      "Remove from heat and immediately add all the flour at once. Stir vigorously with a wooden spoon until the mixture forms a ball and pulls away from the sides of the pan.",
+                      "Let the dough cool for 5 minutes. Transfer to a piping bag fitted with a large star tip (this creates the signature ridged texture).",
+                      "Heat 2-3 inches of oil in a deep pot to 190°C (375°F). Use a thermometer for accuracy - this temperature is crucial for crispy churros.",
+                      "Pipe 4-5 inch strips of dough directly into the hot oil, using scissors to cut the dough. Fry 3-4 churros at a time to avoid crowding. Fry for 2-3 minutes per side until deep golden brown and crispy.",
+                      "Remove with a slotted spoon and drain on paper towels for 30 seconds.",
+                      "Mix 1/2 cup sugar with cinnamon in a shallow dish. While still warm, roll each churro in the cinnamon sugar to coat completely.",
+                      "Make the chocolate sauce: Heat the heavy cream in a small saucepan until it just begins to simmer. Remove from heat and add the chopped chocolate. Let sit for 1 minute, then stir until smooth and glossy. Add vanilla extract.",
+                      "Serve churros warm with the chocolate sauce for dipping. Churros are best eaten fresh and hot - the outside should be crispy and the inside soft and slightly chewy."
+                  ]
+    },
+    {
+        "id":  "horchata",
+        "title":  "Horchata (Rice Drink)",
+        "prep_time":  "10 mins (plus 4 hours soaking)",
+        "cook_time":  "0 mins",
+        "total_time":  "10 mins",
+        "image":  "assets/images/cuisines/mexican/horchata.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "1 cup Long-grain white rice",
+                            "5 cups Water, divided",
+                            "1 Cinnamon stick",
+                            "1/2 cup Granulated sugar (adjust to taste)",
+                            "1 tsp Vanilla extract",
+                            "1/2 tsp Ground cinnamon",
+                            "Ice cubes for serving",
+                            "Ground cinnamon for garnish"
+                        ],
+        "steps":  [
+                      "Rinse the rice under cold water until the water runs clear. This removes excess starch.",
+                      "In a large bowl, combine the rinsed rice, cinnamon stick, and 2 cups of hot water. Cover and let soak at room temperature for at least 4 hours, or preferably overnight. The rice will soften and absorb the cinnamon flavor.",
+                      "Remove and discard the cinnamon stick. Transfer the rice and soaking water to a blender. Add 1 cup of fresh water. Blend on high speed for 2-3 minutes until the rice is completely broken down and the mixture is smooth and milky.",
+                      "Strain the mixture through a fine-mesh sieve or cheesecloth into a large pitcher, pressing on the solids to extract as much liquid as possible. Discard the rice solids.",
+                      "Add the remaining 2 cups of cold water, sugar, vanilla extract, and ground cinnamon to the strained liquid. Stir well until the sugar is completely dissolved.",
+                      "Taste and adjust sweetness if needed. Refrigerate for at least 1 hour until well chilled.",
+                      "Before serving, stir well as the mixture may settle. Serve over ice in tall glasses. Garnish with a light dusting of ground cinnamon on top.",
+                      "Horchata is best consumed within 2-3 days. Stir before each serving. This refreshing, creamy drink is perfect for hot days and pairs wonderfully with spicy Mexican food."
+                  ]
+    }
+]

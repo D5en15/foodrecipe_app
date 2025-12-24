@@ -1,3 +1,5 @@
+﻿import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,6 +10,8 @@ import '../services/recipe_service.dart';
 import '../theme/app_colors.dart';
 import '../database/app_database.dart';
 import '../services/category_service.dart';
+import '../services/alarm_feedback_service.dart';
+import '../services/notification_service.dart';
 
 class RecipeDetailScreen extends StatefulWidget {
   const RecipeDetailScreen({super.key});
@@ -26,18 +30,25 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
   bool _isCompleted = false;
   Set<int> _checkedIngredients = {};
   Set<int> _checkedSteps = {};
+  bool _showInlineTimer = false;
+  Duration _inlineInitial = Duration.zero;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    final args =
-        ModalRoute.of(context)?.settings.arguments as Map?;
+    final args = ModalRoute.of(context)?.settings.arguments as Map?;
 
-    recipeId = args?['id'];
-    categoryId = args?['category'];
+    final incomingId = args?['id'] as String?;
+    final incomingCategory = args?['category'] as String?;
+    final isSameRecipe = recipeId == incomingId && recipe != null;
 
-    loadRecipe();
+    recipeId = incomingId;
+    categoryId = incomingCategory;
+
+    if (!isSameRecipe) {
+      loadRecipe();
+    }
   }
 
   Future<void> _loadStatuses(String recipeId) async {
@@ -72,6 +83,8 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
   void _resetChecklistForRecipe() {
     _checkedIngredients = {};
     _checkedSteps = {};
+    _showInlineTimer = false;
+    _inlineInitial = Duration.zero;
   }
 
   void _toggleIngredient(int index) {
@@ -113,10 +126,32 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     return ingDone && stepDone;
   }
 
+  bool get _isIngredientsComplete {
+    if (_isCompleted) return true;
+    final ingTotal = recipe?.ingredients.length ?? 0;
+    if (ingTotal == 0) return true;
+    return _checkedIngredients.length == ingTotal;
+  }
+
+  void _toggleAllIngredients() {
+    if (recipe == null) return;
+    final total = recipe!.ingredients.length;
+    if (total == 0) return;
+    setState(() {
+      if (_checkedIngredients.length == total) {
+        _checkedIngredients = {};
+      } else {
+        _checkedIngredients = Set<int>.from(
+          List.generate(total, (i) => i),
+        );
+      }
+    });
+  }
+
   Future<void> loadRecipe() async {
     if (recipeId == null) return;
 
-    final lang = AppLocalizations.of(context)?.locale.languageCode ?? "th";
+    final lang = AppLocalizations.of(context)?.locale.languageCode ?? 'th';
     await _loadCategoryNames(lang);
 
     RecipeModel? found;
@@ -139,16 +174,16 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
       if (found == null) {
         final all = await RecipeService.loadAllRecipesWithCategories(lang);
         for (final entry in all) {
-          final r = entry["recipe"] as RecipeModel;
+          final r = entry['recipe'] as RecipeModel;
           if (r.id == recipeId) {
             found = r;
-            resolvedCategoryId = entry["categoryId"] as String?;
+            resolvedCategoryId = entry['categoryId'] as String?;
             break;
           }
         }
       }
     } catch (e) {
-      print("❌ ERROR loading recipe: $e");
+      print('ERROR loading recipe: $e');
     }
 
     if (!mounted) return;
@@ -163,6 +198,92 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     }
   }
 
+  bool get _hasChecklistProgress {
+    return _checkedIngredients.isNotEmpty || _checkedSteps.isNotEmpty;
+  }
+
+  Future<bool> _confirmExitIfNeeded() async {
+    if (!_hasChecklistProgress || !mounted) return true;
+    final strings = AppLocalizations.of(context)!;
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          strings.t('detail_exit_title'),
+          style: GoogleFonts.poppins(
+            color: AppColors.primary,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        content: Text(
+          strings.t('detail_exit_message'),
+          style: GoogleFonts.poppins(
+            color: AppColors.primary.withOpacity(0.8),
+            fontSize: 14,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: Text(
+              strings.t('detail_exit_stay'),
+              style: GoogleFonts.poppins(
+                color: AppColors.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: Text(
+              strings.t('detail_exit_leave'),
+              style: GoogleFonts.poppins(
+                color: AppColors.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+    final shouldLeave = result ?? false;
+    if (shouldLeave) {
+      unawaited(AlarmFeedbackService.instance.stopAlert());
+    }
+    return shouldLeave;
+  }
+
+  void _handleTimerFinished() {
+    if (!mounted) return;
+    setState(() {
+      _showInlineTimer = false;
+      _inlineInitial = Duration.zero;
+    });
+  }
+
+  Future<void> _openInlineTimer() async {
+    if (!_isIngredientsComplete) return;
+    final selected = await showModalBottomSheet<Duration>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (sheetContext) {
+        return _TimerPickerSheet(
+          onStart: (duration) => Navigator.of(sheetContext).pop(duration),
+        );
+      },
+    );
+    if (!mounted) return;
+    if (selected != null && selected.inSeconds > 0) {
+      setState(() {
+        _inlineInitial = selected;
+        _showInlineTimer = true;
+      });
+    }
+    unawaited(AlarmFeedbackService.instance.stopAlert());
+  }
+
   @override
   Widget build(BuildContext context) {
     if (recipe == null) {
@@ -173,27 +294,34 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
 
     final strings = AppLocalizations.of(context)!;
     final locale = strings.locale;
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      body: Column(
-        children: [
-          Expanded(
-            child: CustomScrollView(
-              slivers: [
-                SliverToBoxAdapter(
-                  child: _HeaderImage(
-                    imagePath: recipe!.image,
-                    isFavorite: _isFavorite,
-                    onBack: () => Navigator.pop(context),
-                    onFavoriteToggle: _toggleFavoriteState,
+    return WillPopScope(
+      onWillPop: _confirmExitIfNeeded,
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        body: Column(
+          children: [
+            Expanded(
+              child: CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: _HeaderImage(
+                      imagePath: recipe!.image,
+                      isFavorite: _isFavorite,
+                      onBack: () async {
+                        final ok = await _confirmExitIfNeeded();
+                        if (ok && context.mounted) {
+                          Navigator.pop(context);
+                        }
+                      },
+                      onFavoriteToggle: _toggleFavoriteState,
+                    ),
                   ),
-                ),
-                SliverToBoxAdapter(
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                         const SizedBox(height: 12),
                         Text(
                           recipe!.displayTitle(locale),
@@ -221,47 +349,98 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                                 ),
                               ),
                               const SizedBox(height: 10),
-                              OutlinedButton.icon(
-                                style: OutlinedButton.styleFrom(
-                                  side:
-                                      const BorderSide(color: AppColors.primary),
-                                  backgroundColor:
-                                      AppColors.accent.withOpacity(0.6),
-                                  foregroundColor: AppColors.primary,
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 16,
-                                    vertical: 12,
+                              if (_showInlineTimer)
+                                _InlineActiveTimer(
+                                  initialDuration: _inlineInitial,
+                                  onFinished: _handleTimerFinished,
+                                  onClose: _handleTimerFinished,
+                                )
+                              else
+                                OutlinedButton.icon(
+                                  style: OutlinedButton.styleFrom(
+                                    side: const BorderSide(
+                                        color: AppColors.primary),
+                                    backgroundColor:
+                                        AppColors.accent.withOpacity(0.6),
+                                    foregroundColor: AppColors.primary,
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 16,
+                                      vertical: 12,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
+                                  onPressed: _isIngredientsComplete
+                                      ? _openInlineTimer
+                                      : null,
+                                  icon: const Icon(Icons.timer),
+                                  label: Text(
+                                    strings.t('timer'),
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, Routes.countdown);
-                                },
-                                icon: const Icon(Icons.timer),
-                                label: Text(
-                                  strings.t('timer'),
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
+                              if (!_isIngredientsComplete && !_showInlineTimer)
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8),
+                                  child: Text(
+                                    strings.t('detail_timer_locked'),
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 12,
+                                      color: AppColors.primary.withOpacity(0.7),
+                                    ),
                                   ),
                                 ),
-                              ),
                             ],
                           ),
                         ),
                         const SizedBox(height: 28),
-                        Text(
-                          strings.t('recipe_ingredients'),
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.primary,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              strings.t('recipe_ingredients'),
+                              style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: AppColors.primary,
+                              ),
+                            ),
+                            const Spacer(),
+                            InkWell(
+                              onTap: recipe!.ingredients.isEmpty
+                                  ? null
+                                  : _toggleAllIngredients,
+                              borderRadius: BorderRadius.circular(16),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    strings.t('recipe_select_all_ingredients'),
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 13,
+                                      color: AppColors.primary,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Checkbox(
+                                    value: _isIngredientsComplete,
+                                    onChanged: recipe!.ingredients.isEmpty
+                                        ? null
+                                        : (_) => _toggleAllIngredients(),
+                                    activeColor: AppColors.primary,
+                                    checkColor: AppColors.background,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 8),
                         ...recipe!.ingredients
                             .asMap()
                             .entries
@@ -269,8 +448,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               (e) => _ChecklistTile(
                                 index: e.key,
                                 text: e.value,
-                                checked:
-                                    _checkedIngredients.contains(e.key),
+                                checked: _checkedIngredients.contains(e.key),
                                 onToggle: () => _toggleIngredient(e.key),
                               ),
                             )
@@ -297,27 +475,28 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               ),
                             )
                             .toList(),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
-          ),
-          _BottomDoneButton(
-            label: strings.t('detail_button_finish'),
-            recipe: recipe!,
-            categoryId: categoryId,
-            enabled: _isChecklistComplete,
-            onCompleted: () async {
-              await AppDatabase.instance.debugCheckDatabase();
-              setState(() {
-                _isCompleted = true;
-              });
-              _loadStatuses(recipe!.id);
-            },
-          ),
-        ],
+            _BottomDoneButton(
+              label: strings.t('detail_button_finish'),
+              recipe: recipe!,
+              categoryId: categoryId,
+              enabled: _isChecklistComplete,
+              onCompleted: () async {
+                await AppDatabase.instance.debugCheckDatabase();
+                setState(() {
+                  _isCompleted = true;
+                });
+                _loadStatuses(recipe!.id);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -495,9 +674,9 @@ class _TimeChipsRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = [
-      (strings.t('detail_time_total'), recipe.totalTime ?? "-"),
-      (strings.t('detail_time_prep'), recipe.prepTime ?? "-"),
-      (strings.t('detail_time_cooking'), recipe.cookTime ?? "-"),
+      (strings.t('detail_time_total'), recipe.totalTime ?? '-'),
+      (strings.t('detail_time_prep'), recipe.prepTime ?? '-'),
+      (strings.t('detail_time_cooking'), recipe.cookTime ?? '-'),
     ];
 
     return Row(
@@ -508,7 +687,7 @@ class _TimeChipsRow extends StatelessWidget {
         return Expanded(
           child: Container(
             margin: EdgeInsets.only(right: i == items.length - 1 ? 0 : 12),
-            padding: const EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 5),
             decoration: BoxDecoration(
               color: AppColors.accent,
               borderRadius: BorderRadius.circular(16),
@@ -517,6 +696,7 @@ class _TimeChipsRow extends StatelessWidget {
               children: [
                 Text(
                   item.$1,
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
@@ -526,6 +706,7 @@ class _TimeChipsRow extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   item.$2,
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontSize: 13,
                     color: AppColors.primary,
@@ -587,6 +768,456 @@ class _BottomDoneButton extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _TimerPickerSheet extends StatefulWidget {
+  final ValueChanged<Duration> onStart;
+
+  const _TimerPickerSheet({
+    required this.onStart,
+  });
+
+  @override
+  State<_TimerPickerSheet> createState() => _TimerPickerSheetState();
+}
+
+class _TimerPickerSheetState extends State<_TimerPickerSheet> {
+  final FixedExtentScrollController _hourController =
+      FixedExtentScrollController();
+  final FixedExtentScrollController _minuteController =
+      FixedExtentScrollController();
+  final FixedExtentScrollController _secondController =
+      FixedExtentScrollController();
+
+  @override
+  void dispose() {
+    _hourController.dispose();
+    _minuteController.dispose();
+    _secondController.dispose();
+    super.dispose();
+  }
+
+  Duration _selectedDuration() {
+    final hours = _hourController.selectedItem;
+    final minutes = _minuteController.selectedItem;
+    final seconds = _secondController.selectedItem;
+    return Duration(hours: hours, minutes: minutes, seconds: seconds);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final strings = AppLocalizations.of(context)!;
+    return SafeArea(
+      top: false,
+      child: Container(
+        decoration: const BoxDecoration(
+          color: AppColors.background,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        ),
+        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 40,
+              height: 4,
+              margin: const EdgeInsets.only(bottom: 16),
+              decoration: BoxDecoration(
+                color: AppColors.primary.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(999),
+              ),
+            ),
+            _TimerWheelTimeDisplay(
+              hourController: _hourController,
+              minuteController: _minuteController,
+              secondController: _secondController,
+            ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(color: AppColors.primary),
+                      foregroundColor: AppColors.primary,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: Text(
+                      strings.t('timer_close'),
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary,
+                      foregroundColor: AppColors.background,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    onPressed: () {
+                      final duration = _selectedDuration();
+                      if (duration.inSeconds == 0) return;
+                      widget.onStart(duration);
+                    },
+                    child: Text(
+                      strings.t('start'),
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _InlineActiveTimer extends StatefulWidget {
+  final Duration initialDuration;
+  final VoidCallback onFinished;
+  final VoidCallback onClose;
+
+  const _InlineActiveTimer({
+    required this.initialDuration,
+    required this.onFinished,
+    required this.onClose,
+  });
+
+  @override
+  State<_InlineActiveTimer> createState() => _InlineActiveTimerState();
+}
+
+class _InlineActiveTimerState extends State<_InlineActiveTimer> {
+  Duration _remaining = const Duration();
+  Timer? _timer;
+  bool _isRunning = false;
+  bool _isPaused = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _remaining = widget.initialDuration;
+    if (_remaining.inSeconds > 0) {
+      _startCountdown();
+    }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
+    super.dispose();
+  }
+
+  void _startCountdown() {
+    _timer?.cancel();
+    setState(() {
+      _isRunning = true;
+      _isPaused = false;
+    });
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_remaining.inSeconds <= 1) {
+        _finishCountdown();
+      } else {
+        setState(() {
+          _remaining -= const Duration(seconds: 1);
+        });
+      }
+    });
+  }
+
+  void _pause() {
+    _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
+    setState(() {
+      _isPaused = true;
+    });
+  }
+
+  void _resume() {
+    if (_remaining.inSeconds <= 0) {
+      setState(() {
+        _isRunning = false;
+        _isPaused = false;
+      });
+      return;
+    }
+    _timer?.cancel();
+    setState(() {
+      _isRunning = true;
+      _isPaused = false;
+    });
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_remaining.inSeconds <= 1) {
+        _finishCountdown();
+      } else {
+        setState(() {
+          _remaining -= const Duration(seconds: 1);
+        });
+      }
+    });
+  }
+
+  void _reset() {
+    _timer?.cancel();
+    unawaited(AlarmFeedbackService.instance.stopAlert());
+    setState(() {
+      _remaining = widget.initialDuration;
+      _isRunning = true;
+      _isPaused = false;
+    });
+    _startCountdown();
+  }
+
+  String _format(Duration d) {
+    final hours = d.inHours.remainder(100).toString().padLeft(2, '0');
+    final minutes = d.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final seconds = d.inSeconds.remainder(60).toString().padLeft(2, '0');
+    return "$hours:$minutes:$seconds";
+  }
+
+  Future<void> _finishCountdown() async {
+    if (!mounted) return;
+    _timer?.cancel();
+    setState(() {
+      _remaining = Duration.zero;
+      _isRunning = false;
+      _isPaused = false;
+    });
+    await _notifyCountdownComplete();
+    if (mounted) {
+      widget.onFinished();
+    }
+  }
+
+  Future<void> _notifyCountdownComplete() async {
+    if (!mounted) return;
+    final strings = AppLocalizations.of(context)!;
+    unawaited(AlarmFeedbackService.instance.startAlertLoop());
+    unawaited(
+      NotificationService.instance.showTimerDoneNotification(
+        title: strings.t('timer_done_title'),
+        body: strings.t('timer_done_body'),
+      ),
+    );
+
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          strings.t('timer_done_title'),
+          style: GoogleFonts.poppins(
+            color: AppColors.primary,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        content: Text(
+          strings.t('timer_done_body'),
+          style: GoogleFonts.poppins(
+            color: AppColors.primary.withOpacity(0.8),
+            fontSize: 14,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              unawaited(AlarmFeedbackService.instance.stopAlert());
+              Navigator.of(dialogContext).pop();
+            },
+            child: Text(
+              strings.t('common_ok'),
+              style: GoogleFonts.poppins(
+                color: AppColors.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+    unawaited(AlarmFeedbackService.instance.stopAlert());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final strings = AppLocalizations.of(context)!;
+    return Column(
+      children: [
+        Text(
+          _format(_remaining),
+          style: GoogleFonts.poppins(
+            color: AppColors.primary,
+            fontSize: 36,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.accent,
+                  foregroundColor: AppColors.primary,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                onPressed: _isPaused ? _resume : _pause,
+                child: Text(
+                  _isPaused ? strings.t('resume') : strings.t('pause'),
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(color: AppColors.primary),
+                  foregroundColor: AppColors.primary,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                onPressed: _reset,
+                child: Text(
+                  strings.t('reset'),
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: AppColors.primary),
+                foregroundColor: AppColors.primary,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              onPressed: () {
+                _timer?.cancel();
+                unawaited(AlarmFeedbackService.instance.stopAlert());
+                widget.onClose();
+              },
+              child: Text(
+                strings.t('timer_close'),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _TimerWheelPicker extends StatelessWidget {
+  final FixedExtentScrollController controller;
+  final int max;
+
+  const _TimerWheelPicker({
+    required this.controller,
+    required this.max,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListWheelScrollView.useDelegate(
+      controller: controller,
+      itemExtent: 48,
+      physics: const FixedExtentScrollPhysics(),
+      childDelegate: ListWheelChildBuilderDelegate(
+        builder: (context, index) {
+          if (index < 0 || index >= max) return null;
+          return Center(
+            child: Text(
+              index.toString().padLeft(2, '0'),
+              style: GoogleFonts.poppins(
+                fontSize: 32,
+                fontWeight: FontWeight.w700,
+                color: AppColors.primary,
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _TimerWheelTimeDisplay extends StatelessWidget {
+  final FixedExtentScrollController hourController;
+  final FixedExtentScrollController minuteController;
+  final FixedExtentScrollController secondController;
+
+  const _TimerWheelTimeDisplay({
+    required this.hourController,
+    required this.minuteController,
+    required this.secondController,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 140,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(child: _TimerWheelPicker(controller: hourController, max: 24)),
+          Text(
+            ":",
+            style: GoogleFonts.poppins(
+              color: AppColors.primary,
+              fontSize: 28,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          Expanded(child: _TimerWheelPicker(controller: minuteController, max: 60)),
+          Text(
+            ":",
+            style: GoogleFonts.poppins(
+              color: AppColors.primary,
+              fontSize: 28,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          Expanded(child: _TimerWheelPicker(controller: secondController, max: 60)),
+        ],
       ),
     );
   }

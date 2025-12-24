@@ -1,0 +1,191 @@
+﻿[
+    {
+        "id":  "bibimbap",
+        "title":  "Bibimbap (Mixed Rice Bowl)",
+        "prep_time":  "30 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "50 mins",
+        "image":  "assets/images/cuisines/korean/bibimbap.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "2 cups Cooked white rice",
+                            "200g Beef sirloin, thinly sliced",
+                            "1 cup Spinach, blanched",
+                            "1 cup Bean sprouts, blanched",
+                            "1 Carrot, julienned",
+                            "1 Zucchini, julienned",
+                            "4 Shiitake mushrooms, sliced",
+                            "2 Eggs, fried sunny-side up",
+                            "2 tbsp Gochujang (Korean chili paste)",
+                            "2 tbsp Soy sauce",
+                            "1 tbsp Sesame oil",
+                            "2 cloves Garlic, minced",
+                            "1 tbsp Sugar",
+                            "Sesame seeds",
+                            "Vegetable oil for cooking"
+                        ],
+        "steps":  [
+                      "In a bowl, combine the thinly sliced beef with 1 tablespoon soy sauce, 1 teaspoon sesame oil, and minced garlic. Mix well to coat the beef evenly. Let marinate for 15 minutes at room temperature to enhance the flavor and tenderize the meat.",
+                      "Prepare each vegetable separately for the best flavor and texture: Heat a small amount of oil in a pan over medium-high heat. Stir-fry the spinach with a pinch of salt for 1-2 minutes until wilted. Remove and squeeze out excess water. Season with a little sesame oil. Repeat this process separately for bean sprouts, julienned carrot, julienned zucchini, and sliced shiitake mushrooms. Set each aside in separate piles.",
+                      "In the same pan, add a little more oil and stir-fry the marinated beef over high heat for 3-4 minutes until fully cooked and slightly caramelized. Set aside.",
+                      "Divide the hot cooked rice among 4 serving bowls, filling each bowl about halfway.",
+                      "Arrange the cooked vegetables and beef artfully on top of the rice in separate sections, creating a colorful wheel pattern. Each ingredient should be visible and distinct.",
+                      "Top each bowl with a sunny-side up fried egg in the center. The yolk should be runny.",
+                      "Prepare the bibimbap sauce: Mix 2 tablespoons gochujang with the remaining soy sauce, sesame oil, and sugar. Stir until smooth and well combined.",
+                      "Serve each bowl with the sauce on the side and a sprinkle of toasted sesame seeds on top. Provide the sauce in small dishes so diners can add as much as they like.",
+                      "Before eating, instruct diners to mix everything together vigorously, breaking the egg yolk and combining all ingredients with the sauce. The rice should be evenly coated with the spicy-sweet sauce. Bibimbap means \u0027mixed rice\u0027 - the mixing is essential!"
+                  ]
+    },
+    {
+        "id":  "bulgogi",
+        "title":  "Bulgogi (Korean BBQ Beef)",
+        "prep_time":  "20 mins",
+        "cook_time":  "10 mins",
+        "total_time":  "30 mins",
+        "image":  "assets/images/cuisines/korean/bulgogi.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "600g Beef ribeye, thinly sliced",
+                            "1/4 cup Soy sauce",
+                            "2 tbsp Sugar",
+                            "2 tbsp Sesame oil",
+                            "4 cloves Garlic, minced",
+                            "1 tbsp Ginger, grated",
+                            "1/2 Pear, grated",
+                            "1/4 cup Spring onions, chopped",
+                            "2 tbsp Mirin",
+                            "1 tbsp Toasted sesame seeds",
+                            "1/4 tsp Black pepper",
+                            "1 Onion, sliced",
+                            "Lettuce leaves for serving"
+                        ],
+        "steps":  [
+                      "Prepare the bulgogi marinade: In a large bowl, combine 1/4 cup soy sauce, 2 tablespoons sugar, 2 tablespoons sesame oil, 4 cloves minced garlic, 1 tablespoon grated ginger, 1/2 grated pear, 1/4 cup chopped spring onions, 2 tablespoons mirin, and 1/4 teaspoon black pepper. Whisk everything together until the sugar dissolves and the marinade is well blended. The pear contains enzymes that help tenderize the meat.",
+                      "Add the thinly sliced beef ribeye to the marinade. Using your hands, massage the marinade into the meat, ensuring every slice is well coated. Cover the bowl with plastic wrap.",
+                      "Refrigerate and marinate for at least 2 hours, but preferably overnight (up to 24 hours). The longer marination time allows the flavors to penetrate deeply and the meat to become incredibly tender. Stir once or twice during marination.",
+                      "When ready to cook, heat a grill pan or large skillet over high heat until very hot - you should see wisps of smoke. Don\u0027t add oil; the marinade has enough.",
+                      "Add the sliced onion to the hot pan. Cook for 2-3 minutes, stirring occasionally, until slightly softened and starting to caramelize at the edges.",
+                      "Add the marinated beef to the pan in a single layer (work in batches if necessary - don\u0027t overcrowd). Stir-fry for 3-4 minutes, tossing and stirring frequently, until the beef is cooked through and caramelized. The sugars in the marinade should create a beautiful glaze. The beef should have some charred edges.",
+                      "Sprinkle the toasted sesame seeds over the cooked bulgogi and give it a final toss.",
+                      "Transfer to a serving platter. Serve hot with lettuce leaves, steamed rice, and kimchi on the side. Ssamjang (Korean dipping sauce) is also a great accompaniment.",
+                      "To eat Korean-style: Take a lettuce leaf, place a spoonful of rice in it, add some bulgogi, a dab of ssamjang if desired, and wrap it up like a little package. Pop the whole thing in your mouth - it\u0027s called ssam!"
+                  ]
+    },
+    {
+        "id":  "kimchi_jjigae",
+        "title":  "Kimchi Jjigae (Kimchi Stew)",
+        "prep_time":  "10 mins",
+        "cook_time":  "25 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/korean/kimchi_jjigae.jpg",
+        "categories":  [
+                           "soap_and_curry"
+                       ],
+        "ingredients":  [
+                            "2 cups Kimchi, chopped",
+                            "200g Pork belly, sliced",
+                            "1 block Firm tofu, cubed",
+                            "1/2 Onion, sliced",
+                            "2 Spring onions, chopped",
+                            "2 cloves Garlic, minced",
+                            "1 tbsp Gochugaru (Korean chili flakes)",
+                            "1 tbsp Gochujang",
+                            "1 tbsp Soy sauce",
+                            "1 tsp Sugar",
+                            "3 cups Water or anchovy stock",
+                            "1 tbsp Vegetable oil",
+                            "1 tsp Sesame oil"
+                        ],
+        "steps":  [
+                      "Heat 1 tablespoon of vegetable oil in a large pot or Korean earthenware pot (ttukbaegi) over medium-high heat. Add the sliced pork belly and stir-fry for 4-5 minutes until the pork is browned and some of the fat has rendered out. The pork should be slightly crispy at the edges.",
+                      "Add the minced garlic and sliced onion to the pot. Stir-fry for 1-2 minutes until the garlic is fragrant and the onion begins to soften.",
+                      "Add the chopped kimchi to the pot. Stir-fry everything together for 3-4 minutes. This step is crucial - cooking the kimchi brings out its deep, complex flavors and reduces some of its raw tanginess.",
+                      "Add 1 tablespoon gochugaru (Korean chili flakes) and 1 tablespoon gochujang. Stir well to coat the kimchi and pork with the spicy paste. Cook for another minute until very fragrant.",
+                      "Pour in 3 cups of water or anchovy stock (anchovy stock adds more depth). Stir everything together and bring to a vigorous boil over high heat.",
+                      "Once boiling, add 1 tablespoon soy sauce and 1 teaspoon sugar. Stir to dissolve. Reduce heat to medium-low and let the stew simmer uncovered for 15 minutes. The flavors will meld together and the broth will develop a rich, spicy flavor.",
+                      "Gently add the cubed firm tofu to the stew. Try not to break the tofu pieces. Simmer for another 5 minutes to heat the tofu through and allow it to absorb the flavors of the stew.",
+                      "Add the chopped spring onions and drizzle with 1 teaspoon sesame oil. Stir gently and turn off the heat.",
+                      "Serve the kimchi jjigae bubbling hot in the pot or transfer to individual bowls. Serve with steamed white rice and additional side dishes (banchan). The stew should be spicy, tangy, and deeply savory. It\u0027s even better the next day!"
+                  ]
+    },
+    {
+        "id":  "tteokbokki",
+        "title":  "Tteokbokki (Spicy Rice Cakes)",
+        "prep_time":  "10 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "25 mins",
+        "image":  "assets/images/cuisines/korean/tteokbokki.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "400g Korean rice cakes (tteok)",
+                            "2 cups Water",
+                            "4 tbsp Gochujang",
+                            "1 tbsp Gochugaru",
+                            "2 tbsp Sugar",
+                            "1 tbsp Soy sauce",
+                            "2 cloves Garlic, minced",
+                            "1/2 Onion, sliced",
+                            "2 Spring onions, cut 2-inch",
+                            "100g Fish cakes, sliced",
+                            "2 Hard-boiled eggs, halved",
+                            "1 tbsp Sesame seeds",
+                            "1 tsp Sesame oil"
+                        ],
+        "steps":  [
+                      "If using frozen rice cakes, soak them in warm water for 10 minutes to soften. If using fresh rice cakes, you can use them directly. Drain well before using.",
+                      "In a large, wide pan or skillet, combine 2 cups water, 4 tablespoons gochujang, 1 tablespoon gochugaru, 2 tablespoons sugar, 1 tablespoon soy sauce, and 2 cloves minced garlic. Whisk everything together until the gochujang is fully dissolved and the sauce is smooth.",
+                      "Place the pan over medium-high heat and bring the sauce to a rolling boil. The sauce should be bubbling vigorously.",
+                      "Add the sliced onion and drained rice cakes to the boiling sauce. Stir to coat everything evenly. Cook for 8-10 minutes, stirring occasionally to prevent sticking. The rice cakes will soften and become chewy, and the sauce will reduce and thicken.",
+                      "Add the sliced fish cakes to the pan. Stir them in and cook for another 3 minutes until heated through. The fish cakes will absorb some of the spicy sauce.",
+                      "The sauce should now be thick enough to coat the rice cakes with a glossy, clingy coating. If it\u0027s too thin, cook for another 1-2 minutes. If too thick, add a splash of water.",
+                      "Add the 2-inch cut spring onions and drizzle with 1 teaspoon sesame oil. Stir everything together and cook for just 30 seconds more.",
+                      "Transfer to a serving plate or shallow bowl. Top with the halved hard-boiled eggs and sprinkle generously with toasted sesame seeds.",
+                      "Serve hot as a popular Korean street food snack or as a meal. Tteokbokki should be spicy, sweet, and chewy. It\u0027s best enjoyed while still hot and the rice cakes are soft. Be careful - it\u0027s addictively delicious!"
+                  ]
+    },
+    {
+        "id":  "japchae",
+        "title":  "Japchae (Stir-Fried Glass Noodles)",
+        "prep_time":  "25 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/korean/japchae.jpg",
+        "categories":  [
+                           "noodles",
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "200g Sweet potato glass noodles (dangmyeon)",
+                            "200g Beef sirloin, thinly sliced",
+                            "1 Carrot, julienned",
+                            "1 Onion, thinly sliced",
+                            "5 Shiitake mushrooms, sliced",
+                            "2 cups Spinach",
+                            "1 Bell pepper, julienned",
+                            "3 tbsp Soy sauce",
+                            "2 tbsp Sugar",
+                            "2 tbsp Sesame oil",
+                            "2 cloves Garlic, minced",
+                            "2 tbsp Vegetable oil",
+                            "Sesame seeds",
+                            "Salt and pepper"
+                        ],
+        "steps":  [
+                      "Bring a large pot of water to a boil. Add the sweet potato glass noodles (dangmyeon) and cook according to package directions (usually 6-7 minutes). The noodles should be translucent and chewy but not mushy. Drain well and rinse under cold water. Using kitchen scissors, cut the noodles into shorter, more manageable lengths (about 6-8 inches). Set aside.",
+                      "Prepare the beef marinade: In a bowl, mix the thinly sliced beef with 1 tablespoon soy sauce, 1 teaspoon sesame oil, and half of the minced garlic. Let marinate for 10-15 minutes.",
+                      "Heat 1 tablespoon of vegetable oil in a large pan or wok over high heat. Add the marinated beef and stir-fry for 2-3 minutes until cooked through and slightly caramelized. Remove from pan and set aside.",
+                      "Bring a pot of water to a boil. Blanch the spinach for 30-40 seconds until just wilted. Drain and immediately rinse under cold water to stop cooking and preserve the green color. Squeeze out as much water as possible. Season the spinach with a pinch of salt and a few drops of sesame oil. Set aside.",
+                      "Using the same large pan, stir-fry each vegetable separately with a small amount of oil over high heat: julienned carrot (2 minutes), sliced onion (2 minutes), sliced shiitake mushrooms (2-3 minutes), and julienned bell pepper (1-2 minutes). Each should be cooked but still slightly crisp. Season each lightly with salt. Set each aside separately.",
+                      "In a very large pan or wok (or use the largest bowl you have), combine the cooked glass noodles, stir-fried beef, and all the cooked vegetables including the seasoned spinach.",
+                      "Add the remaining 2 tablespoons soy sauce, 2 tablespoons sugar, and remaining sesame oil to the noodle mixture. Using tongs or your hands (if cool enough), toss and mix everything together thoroughly for 2-3 minutes. Make sure the seasonings are evenly distributed.",
+                      "If the pan is large enough, you can briefly heat everything together over medium heat for 2-3 minutes while tossing, to warm through and help the flavors meld. Otherwise, serve at room temperature - japchae is delicious both ways.",
+                      "Transfer to a large serving platter. Sprinkle generously with toasted sesame seeds. Japchae can be served warm or at room temperature. It\u0027s a popular dish for celebrations and gatherings. The noodles should be glossy, slightly sweet-savory, and each ingredient should be distinct yet harmonious."
+                  ]
+    }
+]

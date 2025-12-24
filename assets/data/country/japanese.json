@@ -1,0 +1,182 @@
+﻿[
+    {
+        "id":  "chicken_teriyaki",
+        "title":  "Chicken Teriyaki",
+        "prep_time":  "15 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "30 mins",
+        "image":  "assets/images/cuisines/japanese/chicken_teriyaki.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "4 Chicken thighs, boneless and skinless",
+                            "3 tbsp Soy sauce",
+                            "3 tbsp Mirin",
+                            "2 tbsp Sake",
+                            "2 tbsp Sugar",
+                            "1 tbsp Vegetable oil",
+                            "1 tsp Ginger, grated",
+                            "1 clove Garlic, minced",
+                            "1 tbsp Cornstarch mixed with 2 tbsp water",
+                            "Sesame seeds for garnish",
+                            "Spring onions, chopped"
+                        ],
+        "steps":  [
+                      "In a small bowl, combine 3 tablespoons soy sauce, 3 tablespoons mirin, 2 tablespoons sake, and 2 tablespoons sugar. Stir well until the sugar dissolves completely. This is your teriyaki sauce. Set aside.",
+                      "Heat 1 tablespoon of vegetable oil in a large pan or skillet over medium-high heat until it shimmers.",
+                      "Place the chicken thighs in the pan, skin-side down if they have skin. Cook for 5-6 minutes without moving them until the bottom is golden brown and releases easily from the pan. Flip and cook the other side for another 5-6 minutes until golden and the internal temperature reaches 75°C (165°F). Remove chicken and set aside on a plate.",
+                      "In the same pan (don\u0027t clean it - the browned bits add flavor), add the grated ginger and minced garlic. Sauté over medium heat for 20-30 seconds until fragrant but not browned.",
+                      "Pour the prepared teriyaki sauce into the pan. Bring to a simmer, stirring to scrape up any browned bits from the bottom of the pan.",
+                      "Mix 1 tablespoon cornstarch with 2 tablespoons water to create a slurry. Slowly add it to the simmering sauce while stirring constantly. Cook for 1-2 minutes until the sauce thickens to a glossy, syrupy consistency that coats the back of a spoon.",
+                      "Return the chicken thighs to the pan. Spoon the sauce over the chicken repeatedly for about 1 minute to coat evenly and create a beautiful glaze.",
+                      "Transfer the chicken to serving plates. Pour any remaining sauce over the top. Garnish with sesame seeds and chopped spring onions. Serve hot with steamed white rice and vegetables. The chicken should be tender, juicy, and coated with a sweet-savory glaze."
+                  ]
+    },
+    {
+        "id":  "ramen",
+        "title":  "Shoyu Ramen",
+        "prep_time":  "30 mins",
+        "cook_time":  "60 mins",
+        "total_time":  "90 mins",
+        "image":  "assets/images/cuisines/japanese/ramen.jpg",
+        "categories":  [
+                           "noodles",
+                           "soap_and_curry"
+                       ],
+        "ingredients":  [
+                            "4 portions Fresh ramen noodles",
+                            "4 cups Chicken stock",
+                            "2 cups Pork stock",
+                            "1/4 cup Soy sauce",
+                            "2 tbsp Mirin",
+                            "1 tbsp Sake",
+                            "2 cloves Garlic, minced",
+                            "1 tbsp Ginger, sliced",
+                            "2 Soft-boiled eggs, halved",
+                            "200g Chashu pork, sliced",
+                            "1 cup Bamboo shoots",
+                            "2 Spring onions, chopped",
+                            "Nori sheets",
+                            "Sesame oil"
+                        ],
+        "steps":  [
+                      "In a large pot, combine 4 cups chicken stock and 2 cups pork stock. Add the minced garlic and sliced ginger. Bring to a rolling boil over high heat.",
+                      "Once boiling, reduce heat to medium-low and let the broth simmer gently for 30 minutes. This allows the aromatics to infuse deeply into the broth. Skim off any foam or impurities that rise to the surface.",
+                      "Strain the broth through a fine-mesh sieve to remove the garlic and ginger solids. Return the clear, aromatic broth to the pot.",
+                      "Add 1/4 cup soy sauce, 2 tablespoons mirin, and 1 tablespoon sake to the broth. Stir well and taste. Adjust the seasoning if needed - the broth should be savory with a hint of sweetness. Keep the broth hot over low heat.",
+                      "Bring a separate large pot of water to a boil. Cook the fresh ramen noodles according to the package instructions (usually 2-3 minutes for fresh noodles). They should be al dente - tender but still with a slight chew. Drain immediately and rinse briefly under cold water to stop the cooking.",
+                      "Divide the cooked noodles evenly among 4 serving bowls. Arrange them neatly in the center of each bowl.",
+                      "Ladle the hot broth over the noodles, filling each bowl about 3/4 full. The broth should be steaming hot.",
+                      "Arrange the toppings artfully on top: place slices of chashu pork on one side, halved soft-boiled eggs on another, bamboo shoots, chopped spring onions, and nori sheets. Each bowl should look beautiful and balanced.",
+                      "Finish with a light drizzle of sesame oil over each bowl for aroma. Serve immediately while the broth is piping hot. Instruct diners to mix everything together before eating. The ramen should be slurped enthusiastically!"
+                  ]
+    },
+    {
+        "id":  "sushi_rolls",
+        "title":  "California Roll",
+        "prep_time":  "40 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "60 mins",
+        "image":  "assets/images/cuisines/japanese/sushi_rolls.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "2 cups Sushi rice",
+                            "2.5 cups Water",
+                            "1/4 cup Rice vinegar",
+                            "2 tbsp Sugar",
+                            "1 tsp Salt",
+                            "4 sheets Nori (seaweed)",
+                            "1 Avocado, sliced",
+                            "1 Cucumber, julienned",
+                            "200g Imitation crab sticks",
+                            "2 tbsp Tobiko (flying fish roe)",
+                            "Soy sauce for serving",
+                            "Wasabi",
+                            "Pickled ginger"
+                        ],
+        "steps":  [
+                      "Rinse 2 cups of sushi rice under cold water in a fine-mesh strainer, gently rubbing the grains together, until the water runs clear (about 5-7 rinses). This removes excess starch. Combine the rinsed rice with 2.5 cups water in a rice cooker or pot. Cook according to your rice cooker instructions, or bring to a boil, then reduce to low, cover, and simmer for 15 minutes. Once done, let it steam covered for 10 minutes off heat.",
+                      "While the rice cooks, prepare the sushi vinegar: In a small bowl, mix 1/4 cup rice vinegar, 2 tablespoons sugar, and 1 teaspoon salt. Stir until the sugar and salt dissolve completely. You can gently warm it to help dissolve, but don\u0027t boil.",
+                      "Transfer the hot cooked rice to a large, wide bowl (traditionally a wooden hangiri). Pour the vinegar mixture evenly over the rice. Using a rice paddle or wooden spoon, fold the vinegar into the rice with a cutting motion - don\u0027t stir or mash. Fan the rice while folding to cool it quickly and give it a glossy sheen. Continue until the rice reaches room temperature.",
+                      "Place a sheet of nori shiny-side down on a bamboo rolling mat (makisu). With wet hands, spread about 3/4 cup of sushi rice evenly over the nori, leaving a 1-inch strip bare at the top edge. Press gently but don\u0027t compress too much.",
+                      "Carefully flip the nori sheet over so the rice is now on the bottom, touching the mat. This is the uramaki (inside-out roll) style.",
+                      "Arrange strips of imitation crab, sliced avocado, and julienned cucumber in a line across the center of the nori.",
+                      "Using the bamboo mat, lift the edge closest to you and roll it over the filling, tucking it in tightly. Continue rolling away from you, using the mat to keep the roll tight and even. Squeeze gently but firmly as you roll. Remove the mat.",
+                      "Sprinkle tobiko (flying fish roe) over the outside of the roll, pressing gently so it adheres to the rice.",
+                      "Using a sharp knife dipped in water (wipe and re-wet between cuts), slice the roll into 8 equal pieces. Cut with a gentle sawing motion to avoid squashing the roll.",
+                      "Arrange the pieces on a serving plate. Serve with small dishes of soy sauce, a dab of wasabi, and pickled ginger on the side. To eat, lightly dip the fish side (not the rice) into soy sauce mixed with a tiny bit of wasabi."
+                  ]
+    },
+    {
+        "id":  "tempura",
+        "title":  "Mixed Tempura",
+        "prep_time":  "20 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/japanese/tempura.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "8 Large shrimp, peeled with tail on",
+                            "1 Sweet potato, sliced thin",
+                            "1 Zucchini, sliced",
+                            "8 Shiitake mushrooms",
+                            "1 cup All-purpose flour",
+                            "1 Egg yolk",
+                            "1 cup Ice-cold water",
+                            "Oil for deep frying",
+                            "1/2 cup Dashi stock",
+                            "2 tbsp Soy sauce",
+                            "2 tbsp Mirin",
+                            "Grated daikon radish",
+                            "Grated ginger"
+                        ],
+        "steps":  [
+                      "Prepare the dipping sauce first: In a small saucepan, combine 1/2 cup dashi stock, 2 tablespoons soy sauce, and 2 tablespoons mirin. Bring to a gentle simmer over medium heat for 2 minutes, then remove from heat and set aside to cool slightly. This is your tentsuyu dipping sauce.",
+                      "Heat oil for deep frying in a wok or deep pot to exactly 180°C (350°F). Use a thermometer for accuracy - this temperature is crucial for light, crispy tempura. The oil should be at least 3 inches deep.",
+                      "Prepare the tempura batter just before frying (never in advance): In a bowl, lightly beat 1 egg yolk with 1 cup of ice-cold water. The water must be very cold - add ice cubes if needed.",
+                      "Add 1 cup of all-purpose flour to the egg mixture. Using chopsticks or a fork, mix very lightly with just a few strokes - about 10-12 stirs maximum. The batter should be lumpy with visible streaks of flour. Overmixing will make the tempura heavy and greasy. Some lumps are perfect.",
+                      "Pat the vegetables completely dry with paper towels. Dip the sweet potato slices, zucchini, and shiitake mushrooms one at a time into the batter, letting excess drip off. Gently slide them into the hot oil. Fry for 2-3 minutes until light golden and crispy. Don\u0027t overcrowd - fry in batches. Remove with a slotted spoon or spider.",
+                      "For the shrimp, hold them by the tail, dip into the batter (leaving the tail uncoated), and gently lower into the oil. Fry for 2-3 minutes until the batter is light golden and crispy. The shrimp should be pink and just cooked through.",
+                      "As each piece finishes frying, transfer to a wire rack or paper towels to drain excess oil. Keep them in a single layer - don\u0027t stack or they\u0027ll lose their crispness.",
+                      "Serve the tempura immediately while still hot and crispy. Arrange on a plate with the dipping sauce in a small bowl. Provide grated daikon radish and grated ginger on the side - diners can add these to their dipping sauce for extra flavor. Tempura is best eaten within minutes of frying."
+                  ]
+    },
+    {
+        "id":  "tonkatsu",
+        "title":  "Tonkatsu (Pork Cutlet)",
+        "prep_time":  "20 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/japanese/tonkatsu.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "4 Pork loin chops (1-inch thick)",
+                            "Salt and pepper to taste",
+                            "1/2 cup All-purpose flour",
+                            "2 Eggs, beaten",
+                            "2 cups Panko breadcrumbs",
+                            "Oil for deep frying",
+                            "1/2 cup Tonkatsu sauce",
+                            "1/4 head Cabbage, shredded",
+                            "1 Lemon, cut into wedges",
+                            "Cooked white rice"
+                        ],
+        "steps":  [
+                      "Place each pork loin chop between two sheets of plastic wrap. Using a meat mallet or rolling pin, gently pound them to an even thickness of about 3/4 inch. This ensures even cooking. Season both sides generously with salt and freshly ground black pepper.",
+                      "Using a sharp knife, make 4-5 small cuts (about 1/4 inch deep) along the edges where the fat meets the meat. This prevents the pork from curling up during frying.",
+                      "Set up a breading station with three shallow dishes: one with 1/2 cup all-purpose flour, one with 2 beaten eggs, and one with 2 cups panko breadcrumbs. Coat each pork chop first in flour (shake off excess), then dip in beaten egg (let excess drip off), and finally press firmly into the panko to coat completely on both sides. Press the panko on well so it adheres.",
+                      "Heat oil for deep frying in a large, deep pan to 170°C (340°F). The oil should be about 2 inches deep. This slightly lower temperature ensures the pork cooks through without burning the coating.",
+                      "Carefully lower the breaded pork chops into the hot oil. Fry for 6-7 minutes, turning once halfway through, until the coating is deep golden brown and crispy. The internal temperature should reach 63°C (145°F). Don\u0027t overcrowd the pan - fry in batches if needed.",
+                      "Remove the tonkatsu from the oil and place on a wire rack set over paper towels. Let rest for 3 minutes. This resting time allows the juices to redistribute and the coating to set, making it extra crispy.",
+                      "Transfer to a cutting board. Using a sharp knife, slice each tonkatsu into 3/4-inch wide strips. This makes it easier to eat with chopsticks.",
+                      "Arrange the sliced tonkatsu on serving plates with a generous mound of finely shredded cabbage on the side. Drizzle tonkatsu sauce over the pork or serve it in a small dish for dipping. Add lemon wedges and steamed white rice. Squeeze lemon over the tonkatsu before eating for a bright, fresh flavor. The pork should be juicy inside with an incredibly crispy, golden coating."
+                  ]
+    }
+]

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,6 +36,26 @@ class CategoryItem {
   }
 }
 
+class CountryItem {
+  final String id;
+  final String name;
+  final String image;
+
+  CountryItem({
+    required this.id,
+    required this.name,
+    required this.image,
+  });
+
+  factory CountryItem.fromJson(Map<String, dynamic> json) {
+    return CountryItem(
+      id: json['id'],
+      name: json['name'],
+      image: json['image'],
+    );
+  }
+}
+
 // ----------------------
 // HomeScreen
 // ----------------------
@@ -46,6 +68,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<CategoryItem> categories = [];
+  List<CountryItem> countries = [];
   List<_HomeRecipeCardData> _favoriteCards = [];
   List<_HomeRecipeCardData> _popularCards = [];
   List<_HomeRecipeCardData> _completedCards = [];
@@ -58,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       AppDatabase.instance.debugCheckDatabase();
+      loadCountries();
       loadCategories();
       _loadFavoriteCards();
       _loadPopularCards();
@@ -72,10 +96,60 @@ class _HomeScreenState extends State<HomeScreen> {
         AppLocalizations.of(context)?.locale.languageCode ?? _currentLang;
     if (lang != null && lang != _currentLang) {
       _currentLang = lang;
+      loadCountries(localeOverride: Locale(lang));
       loadCategories(localeOverride: Locale(lang));
       _loadFavoriteCards(localeCode: lang);
       _loadPopularCards(localeCode: lang);
       _loadCompletedCards(localeCode: lang);
+    }
+  }
+
+  Future<void> loadCountries({Locale? localeOverride}) async {
+    final lang =
+        (localeOverride ?? context.read<AppLanguage>().appLocale).languageCode;
+
+    try {
+      final jsonString = await rootBundle.loadString(
+        "assets/data/cuisines.json",
+      );
+      final List<dynamic> data = json.decode(jsonString) as List<dynamic>;
+
+      String localizedNameFor(Map<String, dynamic> json, String languageCode) {
+        final translations =
+            json['translations'] as Map<String, dynamic>? ?? const {};
+        final langEntry = translations[languageCode];
+        if (langEntry is Map && langEntry['name'] is String) {
+          return langEntry['name'] as String;
+        }
+        final enEntry = translations['en'];
+        if (enEntry is Map && enEntry['name'] is String) {
+          return enEntry['name'] as String;
+        }
+        for (final entry in translations.values) {
+          if (entry is Map && entry['name'] is String) {
+            return entry['name'] as String;
+          }
+        }
+        return json['name']?.toString() ?? json['id']?.toString() ?? '';
+      }
+
+      var loaded = data
+          .map((item) => item as Map<String, dynamic>)
+          .map(
+            (item) => CountryItem(
+              id: item['id'].toString(),
+              name: localizedNameFor(item, lang),
+              image: item['image']?.toString() ?? '',
+            ),
+          )
+          .toList();
+
+      loaded.shuffle();
+      loaded = loaded.take(4).toList();
+
+      setState(() => countries = loaded);
+    } catch (e) {
+      print("ERROR loading countries: $e");
     }
   }
 
@@ -108,6 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final appLang = context.read<AppLanguage>();
     if (appLang.appLocale == locale) return;
     appLang.changeLanguage(locale);
+    loadCountries(localeOverride: locale);
     loadCategories(localeOverride: locale);
     _loadFavoriteCards(localeCode: locale.languageCode);
     _loadPopularCards(localeCode: locale.languageCode);
@@ -133,19 +208,30 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverList(
             delegate: SliverChildListDelegate([
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 24, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: _CountrySection(
+                  strings: strings,
+                  countries: countries,
+                ),
+              ),
+
+              const SizedBox(height: 24),
+              Container(
+                width: double.infinity,
+                color: AppColors.accent.withOpacity(0.5),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 24),
                 child: _CategorySection(
                   strings: strings,
                   categories: categories,
                 ),
               ),
 
-              const SizedBox(height: 32),
+              const SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                color: AppColors.accent.withOpacity(0.5),
+                color: AppColors.background,
                 padding: const EdgeInsets.only(
-                    top: 20, bottom: 40, left: 20, right: 20),
+                    top: 4, bottom: 20, left: 20, right: 20),
                 child: Column(
                   children: [
                     _SectionTitle(
@@ -169,7 +255,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
-              Padding(
+              Container(
+                color: AppColors.accent.withOpacity(0.5),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 40),
                 child: Column(
                   children: [
@@ -205,9 +292,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               Container(
-                color: AppColors.accent.withOpacity(0.5),
+                color: AppColors.background,
                 width: double.infinity,
-                padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 40),
                 child: _CompletedSection(
                   strings: strings,
                   items: _completedCards,
@@ -660,7 +747,6 @@ class _CategorySection extends StatelessWidget {
                     arguments: {
                       "category": item.id,
                       "categoryName": item.name,
-                      "search": item.name,
                     },
                   );
                 },
@@ -669,6 +755,117 @@ class _CategorySection extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _CountrySection extends StatelessWidget {
+  final AppLocalizations strings;
+  final List<CountryItem> countries;
+
+  const _CountrySection({
+    required this.strings,
+    required this.countries,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final size = (MediaQuery.of(context).size.width - 70) / 4;
+
+    return Column(
+      children: [
+        _SectionTitle(
+          title: strings.t('home_section_countries'),
+          showAllText: strings.t('home_button_view_all_categories'),
+          onTapShowAll: () =>
+              Navigator.pushNamed(context, Routes.countries),
+        ),
+
+        const SizedBox(height: 16),
+
+        SizedBox(
+          height: size,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: countries.length,
+            itemBuilder: (context, index) {
+              final item = countries[index];
+              return _CountryCard(
+                name: item.name,
+                imagePath: item.image,
+                isLast: index == countries.length - 1,
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    Routes.recipes,
+                    arguments: {
+                      "cuisine": item.id,
+                      "cuisineName": item.name,
+                    },
+                  );
+                },
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _CountryCard extends StatelessWidget {
+  final String name;
+  final String imagePath;
+  final bool isLast;
+  final VoidCallback onTap;
+
+  const _CountryCard({
+    required this.name,
+    required this.imagePath,
+    required this.isLast,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final size = (MediaQuery.of(context).size.width - 70) / 4;
+
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: size,
+        height: size,
+        margin: EdgeInsets.only(right: isLast ? 0 : 10),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+            Image.asset(
+              imagePath,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) => Container(
+                color: AppColors.background,
+                child: const Icon(Icons.flag,
+                    size: 32, color: AppColors.primary),
+              ),
+            ),
+              Container(color: AppColors.overlayMedium),
+              Center(
+                child: Text(
+                  name,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    color: AppColors.background,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

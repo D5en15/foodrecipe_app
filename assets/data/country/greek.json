@@ -1,0 +1,150 @@
+﻿[
+    {
+        "id":  "moussaka",
+        "title":  "Moussaka",
+        "prep_time":  "40 mins",
+        "cook_time":  "60 mins",
+        "total_time":  "100 mins",
+        "image":  "assets/images/cuisines/greek/moussaka.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "3 large Eggplants, sliced 1cm thick",
+                            "500g Ground lamb or beef",
+                            "1 Onion, chopped",
+                            "3 cloves Garlic, minced",
+                            "400g Canned tomatoes",
+                            "2 tbsp Tomato paste",
+                            "1 tsp Cinnamon",
+                            "1 tsp Oregano",
+                            "1/2 cup Red wine",
+                            "For béchamel: 4 tbsp Butter",
+                            "4 tbsp Flour",
+                            "3 cups Milk",
+                            "2 Egg yolks",
+                            "1/2 cup Parmesan, grated",
+                            "Nutmeg, Salt, Olive oil"
+                        ],
+        "steps":  [
+                      "Sprinkle eggplant slices with salt and let sit for 30 minutes to draw out moisture. Rinse and pat dry. Brush with olive oil and grill or bake at 200°C for 15 minutes until golden. Set aside.",
+                      "Heat olive oil in a pan. Sauté onion and garlic until soft. Add ground meat and cook until browned, breaking it up as it cooks.",
+                      "Add tomatoes, tomato paste, red wine, cinnamon, oregano, salt, and pepper. Simmer for 20 minutes until thickened. Set aside.",
+                      "Make béchamel: Melt butter, add flour, and whisk for 2 minutes. Gradually add milk while whisking constantly until thick and smooth, about 8 minutes. Remove from heat, stir in egg yolks, Parmesan, nutmeg, salt, and pepper.",
+                      "Preheat oven to 180°C (350°F). In a baking dish, layer half the eggplant, all the meat sauce, remaining eggplant, then pour béchamel over the top.",
+                      "Bake for 45 minutes until golden and bubbling. Let rest for 15 minutes before serving. Moussaka should have distinct layers with creamy béchamel on top."
+                  ]
+    },
+    {
+        "id":  "greek_salad",
+        "title":  "Greek Salad (Horiatiki)",
+        "prep_time":  "15 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "15 mins",
+        "image":  "assets/images/cuisines/greek/greek_salad.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "4 Tomatoes, cut into wedges",
+                            "1 Cucumber, sliced thick",
+                            "1 Red onion, sliced thin",
+                            "1 Green bell pepper, sliced",
+                            "200g Feta cheese, in one block",
+                            "1 cup Kalamata olives",
+                            "1 tsp Dried oregano",
+                            "1/4 cup Extra virgin olive oil",
+                            "2 tbsp Red wine vinegar",
+                            "Salt and pepper"
+                        ],
+        "steps":  [
+                      "In a large bowl, combine tomato wedges, cucumber slices, red onion, and bell pepper.",
+                      "Add Kalamata olives. Drizzle with olive oil and red wine vinegar. Sprinkle with oregano, salt, and pepper.",
+                      "Toss gently to combine. Place the block of feta cheese on top (traditional Greek salad doesn\u0027t crumble the feta).",
+                      "Drizzle a little more olive oil over the feta. Serve immediately. The salad should be fresh, simple, and let the quality ingredients shine."
+                  ]
+    },
+    {
+        "id":  "souvlaki",
+        "title":  "Chicken Souvlaki",
+        "prep_time":  "20 mins (plus 2 hours marinating)",
+        "cook_time":  "15 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/greek/souvlaki.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "800g Chicken breast, cubed",
+                            "1/4 cup Olive oil",
+                            "3 tbsp Lemon juice",
+                            "3 cloves Garlic, minced",
+                            "1 tbsp Oregano",
+                            "1 tsp Paprika",
+                            "Salt and pepper",
+                            "Pita bread, Tzatziki, Tomatoes, Onions, Lettuce"
+                        ],
+        "steps":  [
+                      "Mix olive oil, lemon juice, garlic, oregano, paprika, salt, and pepper. Add chicken cubes and marinate for 2 hours or overnight.",
+                      "Thread chicken onto skewers. Preheat grill to high heat.",
+                      "Grill skewers for 12-15 minutes, turning occasionally, until chicken is cooked through and slightly charred.",
+                      "Serve in warm pita bread with tzatziki sauce, tomatoes, onions, and lettuce. Souvlaki should be juicy, lemony, and smoky from the grill."
+                  ]
+    },
+    {
+        "id":  "baklava",
+        "title":  "Baklava",
+        "prep_time":  "30 mins",
+        "cook_time":  "50 mins",
+        "total_time":  "80 mins (plus cooling)",
+        "image":  "assets/images/cuisines/greek/baklava.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "1 package Phyllo dough (450g)",
+                            "2 cups Walnuts, finely chopped",
+                            "1 cup Butter, melted",
+                            "1 tsp Cinnamon",
+                            "For syrup: 1 cup Sugar",
+                            "1 cup Water",
+                            "1/2 cup Honey",
+                            "1 tsp Vanilla",
+                            "Lemon peel"
+                        ],
+        "steps":  [
+                      "Preheat oven to 175°C (350°F). Mix walnuts with cinnamon.",
+                      "Brush a 9x13 baking dish with butter. Layer 8 sheets of phyllo, brushing each with melted butter.",
+                      "Sprinkle with 1/3 of the nut mixture. Add 4 more phyllo sheets (buttering each), then nuts. Repeat. Top with 8 phyllo sheets, buttering each.",
+                      "Cut into diamond shapes before baking. Bake for 50 minutes until golden and crisp.",
+                      "Make syrup: Boil sugar, water, honey, vanilla, and lemon peel for 10 minutes. Remove lemon peel.",
+                      "Pour hot syrup over warm baklava. Let cool completely (at least 4 hours) before serving. Baklava should be crispy, sweet, and nutty."
+                  ]
+    },
+    {
+        "id":  "tzatziki",
+        "title":  "Tzatziki Sauce",
+        "prep_time":  "15 mins (plus 1 hour draining)",
+        "cook_time":  "0 mins",
+        "total_time":  "15 mins",
+        "image":  "assets/images/cuisines/greek/tzatziki.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "2 cups Greek yogurt",
+                            "1 Cucumber, grated",
+                            "3 cloves Garlic, minced",
+                            "2 tbsp Olive oil",
+                            "1 tbsp Lemon juice",
+                            "1 tbsp Fresh dill, chopped",
+                            "Salt and pepper"
+                        ],
+        "steps":  [
+                      "Grate cucumber and squeeze out excess liquid using a clean kitchen towel. This is crucial for thick tzatziki.",
+                      "In a bowl, combine Greek yogurt, drained cucumber, minced garlic, olive oil, lemon juice, and dill.",
+                      "Season with salt and pepper. Mix well.",
+                      "Refrigerate for at least 1 hour to let flavors meld. Serve with pita bread, grilled meats, or as a dip. Tzatziki should be thick, creamy, and refreshing."
+                  ]
+    }
+]

@@ -1,0 +1,182 @@
+﻿[
+    {
+        "id":  "coq_au_vin",
+        "title":  "Coq au Vin (Chicken in Wine)",
+        "prep_time":  "30 mins",
+        "cook_time":  "90 mins",
+        "total_time":  "120 mins",
+        "image":  "assets/images/cuisines/french/coq_au_vin.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "1 whole Chicken (about 1.5kg), cut into 8 pieces",
+                            "200g Bacon lardons",
+                            "2 cups Red wine (Burgundy or Pinot Noir)",
+                            "2 cups Chicken stock",
+                            "3 tbsp Cognac or brandy",
+                            "2 tbsp Tomato paste",
+                            "3 cloves Garlic, minced",
+                            "2 Bay leaves",
+                            "4 sprigs Fresh thyme",
+                            "20 Pearl onions, peeled",
+                            "250g Button mushrooms, halved",
+                            "3 tbsp Butter",
+                            "2 tbsp All-purpose flour",
+                            "2 tbsp Olive oil",
+                            "Salt and black pepper to taste",
+                            "Fresh parsley, chopped for garnish"
+                        ],
+        "steps":  [
+                      "Pat the chicken pieces completely dry with paper towels. Season generously on all sides with salt and freshly ground black pepper. This is crucial for developing a good sear.",
+                      "Heat 2 tablespoons olive oil in a large, heavy-bottomed Dutch oven or casserole over medium-high heat. Working in batches to avoid crowding, sear the chicken pieces skin-side down for 5-6 minutes until deeply golden brown. Flip and sear the other side for another 4-5 minutes. Remove chicken and set aside on a plate.",
+                      "In the same pot, add the bacon lardons. Cook over medium heat for 5-7 minutes, stirring occasionally, until crispy and the fat has rendered. Remove bacon with a slotted spoon and set aside, leaving the fat in the pot.",
+                      "Add the pearl onions to the bacon fat. Cook for 8-10 minutes, shaking the pan occasionally, until golden brown on all sides. Remove and set aside with the bacon.",
+                      "Add 1 tablespoon butter to the pot. Add the halved mushrooms and sauté for 5-6 minutes until golden and their moisture has evaporated. Remove and set aside.",
+                      "Reduce heat to medium. Add the minced garlic to the pot and sauté for 30 seconds until fragrant. Stir in the tomato paste and cook for 1-2 minutes, stirring constantly.",
+                      "Pour in the cognac or brandy. Carefully ignite it with a long match to flambé (or let it cook for 2 minutes to burn off the alcohol). Once the flames die down, add the red wine, scraping up all the browned bits from the bottom of the pot with a wooden spoon.",
+                      "Return the chicken pieces to the pot along with any accumulated juices. Add the chicken stock, bay leaves, and fresh thyme sprigs. The liquid should almost cover the chicken. Bring to a gentle simmer.",
+                      "Cover the pot with a lid and transfer to a preheated oven at 160°C (325°F), or continue simmering on the stovetop over low heat. Cook for 45-50 minutes until the chicken is tender and cooked through.",
+                      "Remove the chicken, bacon, and vegetables from the pot and keep warm. Discard the bay leaves and thyme sprigs. Bring the sauce to a boil over high heat and cook for 10-15 minutes to reduce by about one-third.",
+                      "In a small bowl, mix the remaining 2 tablespoons butter with 2 tablespoons flour to make a beurre manié (kneaded butter). Whisk this into the boiling sauce bit by bit until the sauce thickens to a glossy, coating consistency.",
+                      "Return the chicken, bacon, onions, and mushrooms to the pot. Gently stir to coat everything with the sauce. Simmer for 5 minutes to heat through and meld the flavors.",
+                      "Taste and adjust seasoning with salt and pepper. Garnish with freshly chopped parsley. Serve hot with crusty French bread, mashed potatoes, or buttered egg noodles. The dish should be rich, deeply flavored, and aromatic."
+                  ]
+    },
+    {
+        "id":  "french_onion_soup",
+        "title":  "French Onion Soup",
+        "prep_time":  "20 mins",
+        "cook_time":  "60 mins",
+        "total_time":  "80 mins",
+        "image":  "assets/images/cuisines/french/french_onion_soup.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "6 large Yellow onions, thinly sliced",
+                            "4 tbsp Butter",
+                            "2 tbsp Olive oil",
+                            "1 tsp Sugar",
+                            "4 cloves Garlic, minced",
+                            "1/2 cup Dry white wine",
+                            "6 cups Beef stock (preferably homemade)",
+                            "2 Bay leaves",
+                            "4 sprigs Fresh thyme",
+                            "Salt and black pepper to taste",
+                            "8 slices French baguette, 1-inch thick",
+                            "2 cups Gruyère cheese, grated",
+                            "1/2 cup Parmesan cheese, grated",
+                            "Fresh thyme for garnish"
+                        ],
+        "steps":  [
+                      "In a large, heavy-bottomed pot or Dutch oven, melt 4 tablespoons butter with 2 tablespoons olive oil over medium heat. The combination prevents the butter from burning.",
+                      "Add the thinly sliced onions and stir to coat with the butter and oil. Sprinkle with 1 teaspoon sugar to help with caramelization. Cook, stirring frequently, for 10-15 minutes until the onions begin to soften.",
+                      "Reduce heat to medium-low and continue cooking the onions, stirring every 5-10 minutes, for 40-50 minutes total. The onions should become deeply caramelized, golden brown, and very sweet. This slow caramelization is the key to authentic French onion soup. Be patient and don\u0027t rush this step.",
+                      "Add the minced garlic and cook for 1-2 minutes until fragrant, stirring constantly to prevent burning.",
+                      "Pour in the white wine to deglaze the pot, scraping up all the caramelized bits stuck to the bottom. Let the wine simmer for 3-4 minutes until reduced by half.",
+                      "Add the beef stock, bay leaves, and fresh thyme sprigs. Bring to a boil, then reduce heat and simmer uncovered for 20-25 minutes to allow the flavors to meld. Season with salt and freshly ground black pepper to taste.",
+                      "While the soup simmers, preheat your oven to 200°C (400°F). Arrange the baguette slices on a baking sheet and toast in the oven for 5-7 minutes until golden and crispy on both sides. Set aside.",
+                      "Remove the bay leaves and thyme sprigs from the soup. Taste and adjust seasoning if needed.",
+                      "Ladle the hot soup into oven-safe bowls or crocks, filling them about 3/4 full. Place 1-2 toasted baguette slices on top of each bowl, allowing them to float on the soup.",
+                      "Generously top each bowl with grated Gruyère cheese (about 1/4 cup per bowl), making sure to cover the bread completely. Sprinkle with a little Parmesan cheese for extra flavor.",
+                      "Place the bowls on a baking sheet and transfer to the oven. Bake for 10-15 minutes until the cheese is melted, bubbly, and golden brown on top. For an extra golden crust, you can broil for the last 2-3 minutes, watching carefully to prevent burning.",
+                      "Carefully remove from the oven (the bowls will be very hot!). Garnish with a small sprig of fresh thyme. Let cool for 2-3 minutes before serving. The soup should have a rich, sweet onion flavor with a gloriously melted, stretchy cheese topping."
+                  ]
+    },
+    {
+        "id":  "creme_brulee",
+        "title":  "Crème Brûlée",
+        "prep_time":  "15 mins",
+        "cook_time":  "45 mins",
+        "total_time":  "60 mins (plus 4 hours chilling)",
+        "image":  "assets/images/cuisines/french/creme_brulee.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "2 cups Heavy cream",
+                            "1 Vanilla bean (or 2 tsp vanilla extract)",
+                            "5 Egg yolks",
+                            "1/2 cup Granulated sugar (plus extra for topping)",
+                            "Pinch of salt",
+                            "6 tbsp Superfine sugar for caramelizing"
+                        ],
+        "steps":  [
+                      "Preheat your oven to 150°C (300°F). Place 6 ramekins (4-6 oz each) in a large roasting pan. Boil water in a kettle for the water bath.",
+                      "Pour the heavy cream into a medium saucepan. Split the vanilla bean lengthwise and scrape out the seeds with the back of a knife. Add both the seeds and the pod to the cream (or add vanilla extract if using). Heat over medium heat until the cream just begins to simmer around the edges. Remove from heat immediately and let steep for 10-15 minutes to infuse the vanilla flavor. Remove the vanilla pod.",
+                      "In a large mixing bowl, whisk together the egg yolks, 1/2 cup granulated sugar, and a pinch of salt for 2-3 minutes until the mixture becomes pale yellow and slightly thick. Don\u0027t overbeat or you\u0027ll incorporate too much air.",
+                      "Slowly pour the warm cream into the egg mixture in a thin stream, whisking constantly. This process, called tempering, prevents the eggs from scrambling. Whisk gently to avoid creating bubbles.",
+                      "Strain the custard mixture through a fine-mesh sieve into a large measuring cup or bowl with a spout. This removes any cooked egg bits and ensures a silky smooth texture.",
+                      "Carefully pour the custard into the ramekins, dividing it evenly. Fill each ramekin to about 1/4 inch from the top. If there are any bubbles on the surface, gently skim them off with a spoon or pop them with a kitchen torch.",
+                      "Place the roasting pan with the ramekins in the oven. Carefully pour the hot water from the kettle into the roasting pan until it reaches halfway up the sides of the ramekins. This water bath (bain-marie) ensures gentle, even cooking.",
+                      "Bake for 40-45 minutes. The custards are done when the edges are set but the centers still jiggle slightly when gently shaken, like soft jello. They will continue to set as they cool. Don\u0027t overbake or the texture will be grainy.",
+                      "Carefully remove the roasting pan from the oven. Use tongs to lift each ramekin out of the water bath and place on a wire rack. Let cool to room temperature for about 30 minutes.",
+                      "Once cooled, cover each ramekin with plastic wrap and refrigerate for at least 4 hours, or preferably overnight. The custards must be completely cold before caramelizing the sugar.",
+                      "Just before serving, remove the custards from the refrigerator. Blot any condensation from the surface with a paper towel. Sprinkle 1 tablespoon of superfine sugar evenly over each custard, tilting to coat the entire surface.",
+                      "Using a kitchen torch, hold the flame 2-3 inches from the sugar and move it in circular motions until the sugar melts and caramelizes to a deep amber color. Work quickly and evenly. Let the sugar harden for 1-2 minutes to form a crisp shell. Alternatively, place under a very hot broiler for 2-3 minutes, watching constantly. Serve immediately. The contrast between the crisp, caramelized sugar top and the silky, creamy custard underneath is the hallmark of perfect crème brûlée."
+                  ]
+    },
+    {
+        "id":  "chocolate_mousse",
+        "title":  "Chocolate Mousse",
+        "prep_time":  "20 mins",
+        "cook_time":  "5 mins",
+        "total_time":  "25 mins (plus 2 hours chilling)",
+        "image":  "assets/images/cuisines/french/chocolate_mousse.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "200g Dark chocolate (70% cocoa), chopped",
+                            "3 tbsp Butter, cubed",
+                            "3 Eggs, separated",
+                            "1/4 cup Granulated sugar",
+                            "1 cup Heavy cream",
+                            "1 tsp Vanilla extract",
+                            "Pinch of salt",
+                            "Whipped cream for topping",
+                            "Chocolate shavings for garnish"
+                        ],
+        "steps":  [
+                      "Place the chopped dark chocolate and cubed butter in a heatproof bowl. Set the bowl over a saucepan of barely simmering water (make sure the bottom of the bowl doesn\u0027t touch the water). Stir occasionally until the chocolate and butter are completely melted and smooth. Remove from heat and let cool for 5-10 minutes until lukewarm.",
+                      "While the chocolate cools, separate the eggs. Place the egg whites in a clean, dry mixing bowl (any trace of fat will prevent them from whipping properly). Place the egg yolks in a separate bowl.",
+                      "Whisk the egg yolks lightly, then gradually whisk them into the lukewarm chocolate mixture until fully incorporated and smooth. The mixture should be glossy. Set aside.",
+                      "In a clean bowl, beat the heavy cream with the vanilla extract using an electric mixer on medium-high speed for 2-3 minutes until soft peaks form. The cream should hold its shape but still be soft and billowy. Don\u0027t overbeat or it will become grainy. Refrigerate until needed.",
+                      "Using clean beaters, beat the egg whites with a pinch of salt on medium speed until foamy. Gradually add the granulated sugar, 1 tablespoon at a time, while continuing to beat. Increase speed to high and beat for 3-4 minutes until stiff, glossy peaks form. The meringue should stand up straight when you lift the beaters.",
+                      "Gently fold about one-third of the beaten egg whites into the chocolate mixture using a rubber spatula. Use a light folding motion, cutting down through the center and sweeping up the sides. This lightens the chocolate base.",
+                      "Add the remaining egg whites and fold gently until just combined. You should still see a few white streaks - don\u0027t overmix or you\u0027ll deflate the mousse.",
+                      "Finally, fold in the whipped cream in two additions, using the same gentle folding technique. Fold until no white streaks remain, but be careful not to deflate the airy texture.",
+                      "Spoon or pipe the mousse into individual serving glasses or ramekins. Smooth the tops with the back of a spoon.",
+                      "Cover with plastic wrap and refrigerate for at least 2 hours, or up to 24 hours. The mousse needs time to set and develop its full flavor.",
+                      "Just before serving, top each mousse with a dollop of whipped cream and garnish with chocolate shavings or cocoa powder. The mousse should be incredibly light, airy, and intensely chocolatey with a silky smooth texture that melts in your mouth."
+                  ]
+    },
+    {
+        "id":  "cafe_au_lait",
+        "title":  "Café au Lait",
+        "prep_time":  "5 mins",
+        "cook_time":  "5 mins",
+        "total_time":  "10 mins",
+        "image":  "assets/images/cuisines/french/cafe_au_lait.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "1 cup Strong brewed coffee (French press or drip)",
+                            "1 cup Whole milk",
+                            "1-2 tsp Sugar (optional)",
+                            "Cocoa powder or cinnamon for dusting (optional)"
+                        ],
+        "steps":  [
+                      "Brew a strong pot of coffee using your preferred method. French press is traditional and produces a rich, full-bodied coffee perfect for café au lait. Use a medium-coarse grind and a 1:15 coffee-to-water ratio. Alternatively, use a drip coffee maker with a slightly higher coffee-to-water ratio than usual for a stronger brew.",
+                      "While the coffee is brewing, pour the whole milk into a small saucepan. Heat over medium heat, stirring occasionally to prevent scorching, for 4-5 minutes until the milk is hot and steaming but not boiling. You should see small bubbles forming around the edges. The ideal temperature is about 65-70°C (150-160°F).",
+                      "If you want frothy milk, you can use a milk frother, immersion blender, or whisk vigorously for 30-60 seconds to create foam. Alternatively, pour the hot milk into a French press and pump the plunger up and down rapidly for 30 seconds to create froth.",
+                      "Warm your serving cups or bowls by rinsing them with hot water. Traditional café au lait is served in wide, bowl-shaped cups that you can cradle in both hands.",
+                      "Pour the hot coffee and hot milk simultaneously into the cup from opposite sides, creating a beautiful blend. The traditional ratio is 1:1 (equal parts coffee and milk), but you can adjust to your preference. Pour steadily to maintain the temperature.",
+                      "If desired, add 1-2 teaspoons of sugar and stir gently to dissolve. Traditional French café au lait is often enjoyed without sugar to appreciate the pure coffee and milk flavors.",
+                      "For an elegant touch, dust the top lightly with cocoa powder or a pinch of cinnamon using a fine-mesh sieve.",
+                      "Serve immediately while hot. Café au lait is traditionally enjoyed for breakfast, often with a croissant or pain au chocolat. The drink should be smooth, creamy, and comforting, with a perfect balance between the robust coffee and the sweet, creamy milk. Unlike a latte, café au lait uses brewed coffee rather than espresso, giving it a lighter, more delicate flavor."
+                  ]
+    }
+]

@@ -48,6 +48,15 @@ flutter:
     - assets/images/cuisines/japanese/
     - assets/images/cuisines/korean/
     - assets/images/cuisines/thai/
+    - assets/images/cuisines/american/
+    - assets/images/cuisines/french/
+    - assets/images/cuisines/greek/
+    - assets/images/cuisines/indian/
+    - assets/images/cuisines/italian/
+    - assets/images/cuisines/mexican/
+    - assets/images/cuisines/spanish/
+    - assets/images/cuisines/turkish/
+    - assets/images/cuisines/vietnamese/
 
     # 🔥 เสียง
     - assets/sounds/alert.mp3

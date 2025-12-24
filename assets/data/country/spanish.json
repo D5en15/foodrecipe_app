@@ -1,0 +1,188 @@
+﻿[
+    {
+        "id":  "paella",
+        "title":  "Paella Valenciana",
+        "prep_time":  "20 mins",
+        "cook_time":  "40 mins",
+        "total_time":  "60 mins",
+        "image":  "assets/images/cuisines/spanish/paella.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "2 cups Bomba or short-grain rice",
+                            "500g Chicken thighs, cut into pieces",
+                            "300g Rabbit, cut into pieces (optional)",
+                            "200g Green beans, trimmed",
+                            "1 cup Lima beans or butter beans",
+                            "4 cups Chicken stock",
+                            "1 tsp Saffron threads",
+                            "3 Ripe tomatoes, grated",
+                            "4 cloves Garlic, minced",
+                            "1 tsp Sweet paprika",
+                            "1/2 tsp Smoked paprika",
+                            "4 tbsp Olive oil",
+                            "Fresh rosemary sprig",
+                            "Salt to taste",
+                            "Lemon wedges for serving"
+                        ],
+        "steps":  [
+                      "Steep saffron threads in 1/4 cup warm stock for 10 minutes to release color and flavor. Set aside.",
+                      "Heat olive oil in a large paella pan (or wide, shallow pan) over medium-high heat. Season chicken and rabbit pieces with salt. Brown them for 5-6 minutes until golden on all sides. Remove and set aside.",
+                      "In the same pan, add green beans and lima beans. Sauté for 3-4 minutes until slightly softened. Remove and set aside with the meat.",
+                      "Add minced garlic to the pan and sauté for 30 seconds until fragrant. Add grated tomatoes, sweet paprika, and smoked paprika. Cook for 5 minutes, stirring frequently, until the mixture thickens and darkens.",
+                      "Return the meat to the pan. Add the rice and stir for 2 minutes to coat each grain with the tomato mixture and oil. This toasting step is crucial for proper texture.",
+                      "Pour in the hot chicken stock and saffron with its soaking liquid. Add the rosemary sprig. Stir once to distribute everything evenly, then DO NOT STIR AGAIN - this is essential for authentic paella.",
+                      "Arrange the green beans and lima beans on top in a decorative pattern. Bring to a boil, then reduce heat to medium-low. Cook uncovered for 18-20 minutes without stirring.",
+                      "After 15 minutes, check if the rice is tender and the liquid is absorbed. If the rice needs more time but liquid is gone, sprinkle a little hot water around the edges. In the last 2-3 minutes, increase heat to high to create the socarrat (crispy bottom layer) - you should hear crackling sounds.",
+                      "Remove from heat and cover with a clean kitchen towel. Let rest for 5 minutes. The rice should be tender, slightly al dente, with a golden crispy bottom. Serve directly from the pan with lemon wedges. Authentic paella is eaten with wooden spoons!"
+                  ]
+    },
+    {
+        "id":  "gazpacho",
+        "title":  "Gazpacho (Cold Tomato Soup)",
+        "prep_time":  "15 mins (plus 2 hours chilling)",
+        "cook_time":  "0 mins",
+        "total_time":  "15 mins",
+        "image":  "assets/images/cuisines/spanish/gazpacho.jpg",
+        "categories":  [
+                           "soap_and_curry",
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "1kg Ripe tomatoes, roughly chopped",
+                            "1 Cucumber, peeled and chopped",
+                            "1 Red bell pepper, seeded and chopped",
+                            "1 Green bell pepper, seeded and chopped",
+                            "2 cloves Garlic",
+                            "1 slice Day-old bread, crust removed",
+                            "3 tbsp Sherry vinegar",
+                            "1/2 cup Extra virgin olive oil",
+                            "1 tsp Salt",
+                            "1/2 tsp Cumin (optional)",
+                            "Ice cubes",
+                            "For garnish: Diced cucumber, bell pepper, croutons, hard-boiled egg"
+                        ],
+        "steps":  [
+                      "Soak the bread slice in water for 5 minutes until softened. Squeeze out excess water.",
+                      "In a blender or food processor, combine tomatoes, cucumber, red and green bell peppers, garlic, and soaked bread. Blend on high speed for 2-3 minutes until completely smooth.",
+                      "With the blender running, slowly drizzle in the olive oil in a steady stream. This emulsifies the soup and creates a silky texture. Add sherry vinegar, salt, and cumin if using. Blend for another minute.",
+                      "Taste and adjust seasoning. Gazpacho should be well-balanced - tangy from vinegar, rich from olive oil, and fresh from vegetables.",
+                      "Strain the soup through a fine-mesh sieve for an ultra-smooth texture (traditional), or leave it slightly chunky if preferred. Press on the solids to extract all liquid.",
+                      "Transfer to a container and refrigerate for at least 2 hours, preferably 4 hours or overnight. Gazpacho must be served very cold.",
+                      "Before serving, stir well and check seasoning again - cold temperatures can mute flavors, so you may need to add more salt or vinegar.",
+                      "Serve in chilled bowls or glasses. Add an ice cube to each serving if desired. Garnish with finely diced cucumber, bell peppers, croutons, and chopped hard-boiled egg. Drizzle with extra virgin olive oil. Gazpacho should be refreshing, vibrant, and perfect for hot summer days."
+                  ]
+    },
+    {
+        "id":  "patatas_bravas",
+        "title":  "Patatas Bravas (Spicy Potatoes)",
+        "prep_time":  "15 mins",
+        "cook_time":  "30 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/spanish/patatas_bravas.jpg",
+        "categories":  [
+                           "snack_and_appetizers"
+                       ],
+        "ingredients":  [
+                            "800g Potatoes, peeled and cut into 2cm cubes",
+                            "Oil for frying",
+                            "For Bravas sauce: 2 tbsp Olive oil",
+                            "1 Onion, finely chopped",
+                            "3 cloves Garlic, minced",
+                            "400g Canned tomatoes, crushed",
+                            "1 tsp Sweet paprika",
+                            "1 tsp Hot paprika or cayenne",
+                            "1 tsp Sugar",
+                            "Salt to taste",
+                            "For Aioli: 3 cloves Garlic",
+                            "1 Egg yolk",
+                            "3/4 cup Olive oil",
+                            "1 tbsp Lemon juice",
+                            "Pinch of salt"
+                        ],
+        "steps":  [
+                      "Make the bravas sauce: Heat 2 tablespoons olive oil in a saucepan over medium heat. Add finely chopped onion and cook for 5-7 minutes until soft and translucent. Add minced garlic and cook for 1 minute.",
+                      "Add crushed tomatoes, sweet paprika, hot paprika, sugar, and salt. Simmer for 15-20 minutes, stirring occasionally, until thickened. Blend until smooth if you prefer, or leave chunky. Set aside.",
+                      "Make the aioli: In a food processor or with a mortar and pestle, crush garlic with a pinch of salt to a paste. Add egg yolk and blend. Very slowly drizzle in olive oil while blending continuously - start with drops, then a thin stream. The mixture will emulsify and thicken. Add lemon juice and blend. Refrigerate until needed.",
+                      "Rinse potato cubes in cold water to remove excess starch. Pat completely dry with paper towels - this is crucial for crispy potatoes.",
+                      "Heat 2-3 inches of oil in a deep pot or fryer to 160°C (320°F). Fry potatoes in batches for 8-10 minutes until tender but not colored. Remove and drain on paper towels. Let cool for 10 minutes.",
+                      "Increase oil temperature to 190°C (375°F). Fry the potatoes again in batches for 3-4 minutes until golden brown and crispy. This double-frying technique ensures crispy exterior and fluffy interior. Drain and season immediately with salt.",
+                      "Arrange crispy potatoes on a serving plate. Drizzle generously with warm bravas sauce. Add dollops of aioli on top or serve on the side.",
+                      "Serve immediately while hot and crispy. Patatas bravas should have crispy golden potatoes with spicy tomato sauce and creamy garlic aioli. Perfect tapas!"
+                  ]
+    },
+    {
+        "id":  "churros_chocolate",
+        "title":  "Churros con Chocolate",
+        "prep_time":  "15 mins",
+        "cook_time":  "20 mins",
+        "total_time":  "35 mins",
+        "image":  "assets/images/cuisines/spanish/churros_chocolate.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "For churros: 1 cup Water",
+                            "2 tbsp Sugar",
+                            "1/2 tsp Salt",
+                            "2 tbsp Butter",
+                            "1 cup All-purpose flour",
+                            "1 Egg",
+                            "1/2 tsp Vanilla extract",
+                            "Oil for frying",
+                            "1/2 cup Sugar mixed with 1 tsp cinnamon",
+                            "For chocolate: 200g Dark chocolate, chopped",
+                            "1 cup Whole milk",
+                            "1 tbsp Cornstarch",
+                            "2 tbsp Sugar"
+                        ],
+        "steps":  [
+                      "Make the chocolate sauce: Mix cornstarch with 2 tablespoons of the milk until smooth. Heat remaining milk with sugar in a saucepan over medium heat until steaming. Add chopped chocolate and whisk until melted and smooth.",
+                      "Add the cornstarch mixture and whisk constantly for 2-3 minutes until the chocolate thickens to a pudding-like consistency. Keep warm on very low heat, stirring occasionally.",
+                      "Make churro dough: In a medium saucepan, combine water, 2 tablespoons sugar, salt, and butter. Bring to a boil over medium-high heat, stirring until butter melts.",
+                      "Remove from heat and immediately add all the flour at once. Stir vigorously with a wooden spoon until the mixture forms a smooth ball and pulls away from the sides of the pan.",
+                      "Let cool for 5 minutes. Add the egg and vanilla extract. Beat vigorously until fully incorporated and the dough is smooth and glossy. The dough should be thick but pipeable.",
+                      "Transfer dough to a piping bag fitted with a large star tip (this creates the signature ridges).",
+                      "Heat 2-3 inches of oil in a deep pot to 190°C (375°F). Pipe 4-5 inch strips of dough directly into the hot oil, using scissors to cut. Fry 3-4 churros at a time for 2-3 minutes per side until deep golden brown and crispy.",
+                      "Remove with a slotted spoon and drain on paper towels for 30 seconds. While still hot, roll in cinnamon sugar to coat completely.",
+                      "Serve churros immediately while hot and crispy with the warm thick chocolate sauce for dipping. Spanish churros are typically thicker than Mexican ones and the chocolate should be very thick - almost like pudding. Perfect for breakfast or afternoon merienda!"
+                  ]
+    },
+    {
+        "id":  "sangria",
+        "title":  "Sangria (Spanish Wine Punch)",
+        "prep_time":  "10 mins (plus 4 hours chilling)",
+        "cook_time":  "0 mins",
+        "total_time":  "10 mins",
+        "image":  "assets/images/cuisines/spanish/sangria.jpg",
+        "categories":  [
+                           "drink"
+                       ],
+        "ingredients":  [
+                            "1 bottle (750ml) Spanish red wine (Rioja or Tempranillo)",
+                            "1/4 cup Brandy",
+                            "2 tbsp Orange liqueur (Cointreau or Triple Sec)",
+                            "1/4 cup Sugar",
+                            "1 Orange, sliced",
+                            "1 Lemon, sliced",
+                            "1 Lime, sliced",
+                            "1 Apple, cored and diced",
+                            "1 cup Fresh berries (strawberries, raspberries)",
+                            "1 Cinnamon stick",
+                            "1 cup Orange juice",
+                            "1 cup Sparkling water or lemon soda",
+                            "Ice cubes"
+                        ],
+        "steps":  [
+                      "In a large pitcher, combine the red wine, brandy, and orange liqueur. Stir well.",
+                      "Add sugar and stir until completely dissolved. The amount of sugar can be adjusted based on the sweetness of your wine and personal preference.",
+                      "Add sliced orange, lemon, lime, diced apple, fresh berries, and cinnamon stick to the pitcher. Gently muddle the fruit slightly with a wooden spoon to release some juices, but don\u0027t mash completely.",
+                      "Pour in the orange juice and stir everything together.",
+                      "Cover the pitcher and refrigerate for at least 4 hours, preferably overnight. This allows the flavors to meld and the fruit to infuse the wine. The longer it sits, the better it tastes.",
+                      "Just before serving, add the sparkling water or lemon soda for fizz. Stir gently.",
+                      "Fill glasses with ice cubes. Pour sangria over ice, making sure each glass gets some of the fruit.",
+                      "Serve immediately. Sangria should be fruity, refreshing, and not too sweet. The fruit pieces are meant to be eaten! Perfect for summer gatherings and fiestas. ¡Salud!"
+                  ]
+    }
+]

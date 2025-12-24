@@ -1,0 +1,184 @@
+﻿[
+    {
+        "id":  "bbq_ribs",
+        "title":  "BBQ Ribs (Barbecue Pork Ribs)",
+        "prep_time":  "20 mins",
+        "cook_time":  "3 hours",
+        "total_time":  "3 hours 20 mins",
+        "image":  "assets/images/cuisines/american/bbq_ribs.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "2 racks Baby back ribs (about 2kg)",
+                            "For dry rub: 3 tbsp Brown sugar",
+                            "2 tbsp Paprika",
+                            "1 tbsp Black pepper",
+                            "1 tbsp Salt",
+                            "1 tbsp Chili powder",
+                            "1 tbsp Garlic powder",
+                            "1 tbsp Onion powder",
+                            "1 tsp Cayenne pepper",
+                            "For BBQ sauce: 2 cups Ketchup",
+                            "1/2 cup Apple cider vinegar",
+                            "1/2 cup Brown sugar",
+                            "2 tbsp Worcestershire sauce",
+                            "1 tbsp Mustard",
+                            "1 tsp Liquid smoke"
+                        ],
+        "steps":  [
+                      "Remove the membrane from the back of the ribs: Slide a knife under the membrane at one end, then grab it with a paper towel and pull it off in one piece. This allows seasonings to penetrate and makes ribs more tender.",
+                      "Mix all dry rub ingredients in a bowl. Generously coat both sides of the ribs with the rub, pressing it into the meat. Let sit at room temperature for 30 minutes or refrigerate up to overnight.",
+                      "Preheat oven to 150°C (300°F). Wrap each rack of ribs tightly in aluminum foil, creating a sealed packet. Place on a baking sheet.",
+                      "Bake for 2.5 hours. The ribs should be very tender and the meat should pull away from the bones easily.",
+                      "While ribs cook, make BBQ sauce: Combine ketchup, apple cider vinegar, brown sugar, Worcestershire sauce, mustard, and liquid smoke in a saucepan. Simmer over medium heat for 15 minutes, stirring occasionally, until thickened. Set aside.",
+                      "Preheat grill to medium-high heat or turn on broiler. Carefully unwrap ribs (watch for hot steam). Brush generously with BBQ sauce on both sides.",
+                      "Grill or broil for 5-7 minutes per side, brushing with more sauce every 2 minutes, until the sauce caramelizes and forms a sticky glaze. Watch carefully to prevent burning.",
+                      "Let rest for 5 minutes, then cut between bones into individual ribs. Serve with extra BBQ sauce, coleslaw, and cornbread. The ribs should be fall-off-the-bone tender with a sweet, smoky, sticky glaze."
+                  ]
+    },
+    {
+        "id":  "mac_and_cheese",
+        "title":  "Mac and Cheese (Macaroni and Cheese)",
+        "prep_time":  "15 mins",
+        "cook_time":  "30 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/american/mac_and_cheese.jpg",
+        "categories":  [
+                           "snack_and_appetizers",
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "400g Elbow macaroni",
+                            "4 tbsp Butter",
+                            "4 tbsp All-purpose flour",
+                            "3 cups Whole milk",
+                            "1 cup Heavy cream",
+                            "3 cups Sharp cheddar cheese, shredded",
+                            "1 cup Gruyère cheese, shredded",
+                            "1/2 tsp Mustard powder",
+                            "1/2 tsp Garlic powder",
+                            "Salt and pepper to taste",
+                            "1 cup Breadcrumbs",
+                            "2 tbsp Melted butter",
+                            "Fresh parsley for garnish"
+                        ],
+        "steps":  [
+                      "Preheat oven to 180°C (350°F). Grease a 9x13 inch baking dish.",
+                      "Cook macaroni in salted boiling water until al dente (about 1 minute less than package directions). Drain and set aside.",
+                      "In a large pot, melt 4 tablespoons butter over medium heat. Add flour and whisk constantly for 2 minutes to create a roux. It should be smooth and slightly golden.",
+                      "Gradually pour in milk and cream while whisking constantly to prevent lumps. Continue whisking for 5-7 minutes until the sauce thickens and coats the back of a spoon.",
+                      "Reduce heat to low. Add mustard powder, garlic powder, salt, and pepper. Stir in the shredded cheddar and Gruyère cheese, one handful at a time, stirring until completely melted and smooth before adding more.",
+                      "Add the cooked macaroni to the cheese sauce and stir until every piece is coated. Taste and adjust seasoning.",
+                      "Pour the mac and cheese into the prepared baking dish, spreading evenly.",
+                      "Mix breadcrumbs with 2 tablespoons melted butter. Sprinkle evenly over the top.",
+                      "Bake for 25-30 minutes until the top is golden brown and crispy, and the sauce is bubbling around the edges.",
+                      "Let rest for 5 minutes before serving. Garnish with fresh parsley. The mac and cheese should be ultra-creamy inside with a golden, crunchy topping."
+                  ]
+    },
+    {
+        "id":  "fried_chicken",
+        "title":  "Southern Fried Chicken",
+        "prep_time":  "30 mins (plus 4 hours marinating)",
+        "cook_time":  "25 mins",
+        "total_time":  "55 mins",
+        "image":  "assets/images/cuisines/american/fried_chicken.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "1.5kg Chicken pieces (drumsticks, thighs, breasts)",
+                            "2 cups Buttermilk",
+                            "2 tsp Salt",
+                            "1 tsp Black pepper",
+                            "1 tsp Paprika",
+                            "1/2 tsp Cayenne pepper",
+                            "For coating: 2 cups All-purpose flour",
+                            "1 tbsp Paprika",
+                            "1 tbsp Garlic powder",
+                            "1 tbsp Onion powder",
+                            "2 tsp Salt",
+                            "1 tsp Black pepper",
+                            "1 tsp Cayenne pepper",
+                            "Oil for frying"
+                        ],
+        "steps":  [
+                      "In a large bowl, combine buttermilk, salt, black pepper, paprika, and cayenne. Add chicken pieces and turn to coat. Cover and refrigerate for at least 4 hours, preferably overnight. The buttermilk tenderizes and adds flavor.",
+                      "In a shallow dish, mix flour, paprika, garlic powder, onion powder, salt, black pepper, and cayenne for the coating.",
+                      "Remove chicken from buttermilk, letting excess drip off. Dredge each piece in the seasoned flour, pressing firmly so the coating adheres. Shake off excess. For extra crispy coating, dip back in buttermilk and flour again (double dredge).",
+                      "Let coated chicken rest on a wire rack for 15 minutes. This helps the coating stick during frying.",
+                      "Heat 2-3 inches of oil in a large, deep skillet or Dutch oven to 175°C (350°F). Use a thermometer for accuracy.",
+                      "Carefully add chicken pieces to the hot oil, skin-side down, without crowding (fry in batches). The oil temperature will drop - adjust heat to maintain 160-165°C (325-330°F).",
+                      "Fry for 12-15 minutes per side, turning once, until deep golden brown and the internal temperature reaches 75°C (165°F). Larger pieces like breasts may need a few extra minutes.",
+                      "Remove chicken and drain on a wire rack set over paper towels. Let rest for 5 minutes before serving.",
+                      "Serve hot with mashed potatoes, gravy, and biscuits. The chicken should have an incredibly crispy, well-seasoned crust and juicy, tender meat inside."
+                  ]
+    },
+    {
+        "id":  "apple_pie",
+        "title":  "Classic Apple Pie",
+        "prep_time":  "30 mins",
+        "cook_time":  "50 mins",
+        "total_time":  "80 mins (plus chilling)",
+        "image":  "assets/images/cuisines/american/apple_pie.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "For crust: 2.5 cups All-purpose flour",
+                            "1 tsp Salt",
+                            "1 tbsp Sugar",
+                            "1 cup Cold butter, cubed",
+                            "6-8 tbsp Ice water",
+                            "For filling: 6-7 Granny Smith apples, peeled and sliced",
+                            "3/4 cup Sugar",
+                            "2 tbsp All-purpose flour",
+                            "1 tsp Cinnamon",
+                            "1/4 tsp Nutmeg",
+                            "2 tbsp Lemon juice",
+                            "2 tbsp Butter",
+                            "1 Egg, beaten (for egg wash)"
+                        ],
+        "steps":  [
+                      "Make the crust: In a large bowl, mix flour, salt, and sugar. Add cold cubed butter and use a pastry cutter or your fingers to work it in until the mixture resembles coarse crumbs with pea-sized butter pieces.",
+                      "Sprinkle ice water, 1 tablespoon at a time, mixing gently until the dough just comes together. Divide into 2 disks, wrap in plastic, and refrigerate for at least 1 hour.",
+                      "Make the filling: In a large bowl, toss sliced apples with sugar, flour, cinnamon, nutmeg, and lemon juice. Let sit for 15 minutes.",
+                      "Preheat oven to 220°C (425°F). Roll out one disk of dough on a floured surface to a 12-inch circle. Transfer to a 9-inch pie dish, letting excess hang over the edges.",
+                      "Pour apple filling into the crust, mounding slightly in the center. Dot with butter pieces.",
+                      "Roll out the second disk of dough. Place over the filling. Trim excess dough to 1 inch beyond the edge. Fold the top crust under the bottom crust edge and crimp decoratively. Cut several slits in the top for steam to escape.",
+                      "Brush the top crust with beaten egg for a golden finish. Sprinkle with a little sugar if desired.",
+                      "Place pie on a baking sheet (to catch drips). Bake at 220°C for 20 minutes, then reduce temperature to 180°C (350°F) and bake for 30-40 minutes more until the crust is golden and the filling is bubbling through the slits.",
+                      "Let cool for at least 2 hours before slicing - this allows the filling to set. Serve warm or at room temperature with vanilla ice cream or whipped cream. The pie should have a flaky, buttery crust and tender, spiced apples."
+                  ]
+    },
+    {
+        "id":  "milkshake",
+        "title":  "Classic Vanilla Milkshake",
+        "prep_time":  "5 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "5 mins",
+        "image":  "assets/images/cuisines/american/milkshake.jpg",
+        "categories":  [
+                           "drink",
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "3 cups Vanilla ice cream",
+                            "1 cup Whole milk",
+                            "1 tsp Vanilla extract",
+                            "2 tbsp Sugar (optional)",
+                            "Whipped cream for topping",
+                            "Maraschino cherry",
+                            "Chocolate syrup (optional)"
+                        ],
+        "steps":  [
+                      "Chill a tall glass in the freezer for 10 minutes for the best experience.",
+                      "Add vanilla ice cream, milk, and vanilla extract to a blender. If you like it sweeter, add sugar.",
+                      "Blend on medium speed for 30-45 seconds until smooth and creamy. The consistency should be thick but pourable. If too thick, add a splash more milk. If too thin, add more ice cream.",
+                      "Pour into the chilled glass. The milkshake should be thick enough to require a straw but smooth enough to drink.",
+                      "Top with a generous swirl of whipped cream. Add a maraschino cherry on top.",
+                      "For a chocolate drizzle, squeeze chocolate syrup around the inside of the glass before pouring, or drizzle on top of the whipped cream.",
+                      "Serve immediately with a straw and a long spoon. A classic American milkshake should be thick, creamy, and indulgent - perfect with burgers and fries!"
+                  ]
+    }
+]

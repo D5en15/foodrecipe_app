@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "thai",
     "image": "assets/images/cuisines/thai/main.jpg",
@@ -29,6 +29,78 @@
     "translations": {
       "en": { "name": "Chinese" },
       "th": { "name": "จีน" }
+    }
+  },
+  {
+    "id": "american",
+    "image": "assets/images/cuisines/american/main.jpg",
+    "translations": {
+      "en": { "name": "American" },
+      "th": { "name": "อเมริกัน" }
+    }
+  },
+  {
+    "id": "french",
+    "image": "assets/images/cuisines/french/main.jpg",
+    "translations": {
+      "en": { "name": "French" },
+      "th": { "name": "ฝรั่งเศส" }
+    }
+  },
+  {
+    "id": "greek",
+    "image": "assets/images/cuisines/greek/main.jpg",
+    "translations": {
+      "en": { "name": "Greek" },
+      "th": { "name": "กรีก" }
+    }
+  },
+  {
+    "id": "indian",
+    "image": "assets/images/cuisines/indian/main.jpg",
+    "translations": {
+      "en": { "name": "Indian" },
+      "th": { "name": "อินเดีย" }
+    }
+  },
+  {
+    "id": "italian",
+    "image": "assets/images/cuisines/italian/main.jpg",
+    "translations": {
+      "en": { "name": "Italian" },
+      "th": { "name": "อิตาเลียน" }
+    }
+  },
+  {
+    "id": "mexican",
+    "image": "assets/images/cuisines/mexican/main.jpg",
+    "translations": {
+      "en": { "name": "Mexican" },
+      "th": { "name": "เม็กซิกัน" }
+    }
+  },
+  {
+    "id": "spanish",
+    "image": "assets/images/cuisines/spanish/main.jpg",
+    "translations": {
+      "en": { "name": "Spanish" },
+      "th": { "name": "สเปน" }
+    }
+  },
+  {
+    "id": "turkish",
+    "image": "assets/images/cuisines/turkish/main.jpg",
+    "translations": {
+      "en": { "name": "Turkish" },
+      "th": { "name": "ตุรกี" }
+    }
+  },
+  {
+    "id": "vietnamese",
+    "image": "assets/images/cuisines/vietnamese/main.jpg",
+    "translations": {
+      "en": { "name": "Vietnamese" },
+      "th": { "name": "เวียดนาม" }
     }
   }
 ]

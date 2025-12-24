@@ -1,0 +1,181 @@
+﻿[
+    {
+        "id":  "spaghetti_carbonara",
+        "title":  "Spaghetti Carbonara",
+        "prep_time":  "10 mins",
+        "cook_time":  "15 mins",
+        "total_time":  "25 mins",
+        "image":  "assets/images/cuisines/italian/spaghetti_carbonara.jpg",
+        "categories":  [
+                           "maincourse",
+                           "noodles"
+                       ],
+        "ingredients":  [
+                            "400g Spaghetti",
+                            "200g Guanciale or pancetta, diced",
+                            "4 large Egg yolks",
+                            "1 whole Egg",
+                            "100g Pecorino Romano cheese, finely grated",
+                            "50g Parmesan cheese, finely grated",
+                            "Black pepper, freshly ground",
+                            "Salt for pasta water"
+                        ],
+        "steps":  [
+                      "Bring a large pot of water to a rolling boil. Add a generous amount of salt (about 1-2 tablespoons) - the water should taste like the sea. This is your only chance to season the pasta itself.",
+                      "While the water heats, place the diced guanciale or pancetta in a large, cold skillet. Turn the heat to medium and cook for 8-10 minutes, stirring occasionally, until the fat renders out and the meat becomes crispy and golden. The slow rendering is key to crispy guanciale. Remove from heat and set aside, keeping the rendered fat in the pan.",
+                      "In a large mixing bowl, whisk together the egg yolks, whole egg, grated Pecorino Romano, and grated Parmesan until smooth and creamy. Add a generous amount of freshly ground black pepper (at least 1 teaspoon). The mixture should be thick and pale yellow.",
+                      "Once the water is boiling, add the spaghetti and cook according to package directions until al dente (usually 8-10 minutes). The pasta should be tender but still have a slight bite in the center. Before draining, reserve 1 cup of the starchy pasta cooking water - this is crucial for creating the creamy sauce.",
+                      "When the pasta is almost done, return the skillet with guanciale to low heat to warm the fat slightly. You want it warm, not hot, or the eggs will scramble.",
+                      "Drain the pasta (do not rinse) and immediately add it to the warm skillet with the guanciale. Toss quickly to coat the pasta with the rendered fat. Remove the skillet from heat completely.",
+                      "Working quickly, pour the egg and cheese mixture over the hot pasta. Toss vigorously and continuously for 1-2 minutes. The residual heat from the pasta will gently cook the eggs, creating a silky, creamy sauce. If the sauce seems too thick, add the reserved pasta water 1-2 tablespoons at a time, tossing constantly, until you achieve a glossy, coating consistency.",
+                      "Taste and adjust seasoning with more black pepper if desired. The cheese is salty, so you likely won\u0027t need additional salt. Serve immediately in warm bowls, topped with extra grated Pecorino Romano and a generous grinding of black pepper. Carbonara waits for no one - it must be eaten right away while the sauce is creamy and the pasta is hot. The dish should be silky, not scrambled, with each strand of spaghetti coated in the rich, peppery sauce."
+                  ]
+    },
+    {
+        "id":  "margherita_pizza",
+        "title":  "Pizza Margherita",
+        "prep_time":  "90 mins (including dough rising)",
+        "cook_time":  "10 mins",
+        "total_time":  "100 mins",
+        "image":  "assets/images/cuisines/italian/margherita_pizza.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "For the dough: 500g All-purpose flour or 00 flour",
+                            "325ml Warm water (40°C)",
+                            "2 tsp Active dry yeast",
+                            "2 tsp Salt",
+                            "1 tsp Sugar",
+                            "2 tbsp Olive oil",
+                            "For the topping: 400g Canned San Marzano tomatoes",
+                            "2 cloves Garlic, minced",
+                            "2 tbsp Olive oil",
+                            "Salt and pepper to taste",
+                            "250g Fresh mozzarella, sliced or torn",
+                            "Fresh basil leaves",
+                            "Extra virgin olive oil for drizzling"
+                        ],
+        "steps":  [
+                      "Make the dough: In a small bowl, combine warm water (40°C - it should feel warm but not hot to the touch), sugar, and yeast. Stir gently and let sit for 5-10 minutes until foamy. This proves the yeast is active.",
+                      "In a large bowl, mix the flour and salt. Make a well in the center and pour in the yeast mixture and olive oil. Using a wooden spoon or your hands, mix until a shaggy dough forms.",
+                      "Turn the dough out onto a lightly floured surface and knead for 8-10 minutes until smooth, elastic, and slightly tacky but not sticky. The dough should spring back when poked. If too sticky, add flour 1 tablespoon at a time.",
+                      "Place the dough in a lightly oiled bowl, turning to coat all sides. Cover with a damp kitchen towel or plastic wrap. Let rise in a warm, draft-free place for 60-90 minutes until doubled in size. The dough should be puffy and hold an indentation when poked.",
+                      "While the dough rises, make the sauce: Crush the San Marzano tomatoes by hand or pulse briefly in a food processor - you want a chunky texture, not smooth. In a bowl, mix the crushed tomatoes with minced garlic, 2 tablespoons olive oil, salt, and pepper. Don\u0027t cook the sauce - it will cook on the pizza. Set aside.",
+                      "Preheat your oven to the highest temperature possible, ideally 260°C (500°F) or higher. If you have a pizza stone, place it in the oven to preheat for at least 30 minutes. If not, use an inverted baking sheet.",
+                      "Once the dough has risen, punch it down gently and divide into 2 equal portions for two 12-inch pizzas. On a lightly floured surface, take one portion and gently stretch it into a 12-inch circle. Start from the center and work outward, using your fingertips to press and stretch. Leave a slightly thicker rim for the crust. Don\u0027t use a rolling pin - it deflates the air bubbles.",
+                      "Transfer the stretched dough to a piece of parchment paper or a pizza peel dusted with flour or cornmeal. Spread about half the tomato sauce over the dough, leaving a 1-inch border. Don\u0027t overload with sauce or the pizza will be soggy.",
+                      "Tear or slice the fresh mozzarella and distribute it evenly over the sauce. Drizzle lightly with extra virgin olive oil.",
+                      "Carefully transfer the pizza (with parchment if using) to the preheated pizza stone or baking sheet. Bake for 8-12 minutes until the crust is golden brown and slightly charred in spots, the cheese is melted and bubbling, and the bottom is crispy.",
+                      "Remove from the oven and immediately top with fresh basil leaves torn by hand. Drizzle with a little more extra virgin olive oil. Let rest for 1-2 minutes before slicing. The pizza should have a crispy, slightly charred crust, a simple but flavorful tomato sauce, creamy melted mozzarella, and the fresh aroma of basil. Repeat with the second portion of dough."
+                  ]
+    },
+    {
+        "id":  "risotto_funghi",
+        "title":  "Risotto ai Funghi (Mushroom Risotto)",
+        "prep_time":  "15 mins",
+        "cook_time":  "30 mins",
+        "total_time":  "45 mins",
+        "image":  "assets/images/cuisines/italian/risotto_funghi.jpg",
+        "categories":  [
+                           "maincourse"
+                       ],
+        "ingredients":  [
+                            "300g Arborio or Carnaroli rice",
+                            "400g Mixed mushrooms (porcini, cremini, shiitake), sliced",
+                            "1.5 liters Vegetable or chicken stock, hot",
+                            "1 small Onion, finely diced",
+                            "3 cloves Garlic, minced",
+                            "150ml Dry white wine",
+                            "50g Butter",
+                            "3 tbsp Olive oil",
+                            "80g Parmesan cheese, finely grated",
+                            "2 tbsp Fresh parsley, chopped",
+                            "Salt and black pepper to taste"
+                        ],
+        "steps":  [
+                      "Keep the stock simmering in a pot on the stove throughout the cooking process. Hot stock is essential for proper risotto - cold stock will stop the cooking process.",
+                      "Heat 2 tablespoons olive oil in a large skillet over high heat. Add the sliced mushrooms in a single layer (work in batches if needed to avoid crowding). Cook without stirring for 3-4 minutes until golden brown on one side. Flip and cook another 2-3 minutes. Season with salt and pepper. Remove and set aside, reserving a few for garnish.",
+                      "In a large, heavy-bottomed pot or deep sauté pan, heat the remaining 1 tablespoon olive oil and 25g butter over medium heat. Add the finely diced onion and cook for 4-5 minutes, stirring frequently, until soft and translucent but not browned.",
+                      "Add the minced garlic and cook for 30 seconds until fragrant. Add the Arborio rice and stir constantly for 2-3 minutes until the grains are well coated with fat and the edges become translucent. This toasting step is crucial for the right texture.",
+                      "Pour in the white wine and stir constantly until it\u0027s almost completely absorbed by the rice, about 2 minutes. You should hear a gentle sizzle.",
+                      "Begin adding the hot stock one ladleful (about 1/2 cup) at a time. Stir frequently and wait until each addition is almost completely absorbed before adding the next. This gradual addition and constant stirring releases the rice\u0027s starch, creating the creamy texture. The rice should always be just barely covered with liquid.",
+                      "After about 15 minutes of adding stock, stir in most of the cooked mushrooms (reserve some for garnish). Continue adding stock and stirring for another 5-8 minutes. Total cooking time should be 20-25 minutes from when you first added stock.",
+                      "The risotto is done when the rice is al dente - tender but with a slight bite in the center - and the consistency is creamy and flows slowly when you tilt the pan. It should be all\u0027onda (like a wave). If you run out of stock before the rice is done, use hot water.",
+                      "Remove from heat. Add the remaining 25g butter and grated Parmesan. Stir vigorously for 1 minute - this is called mantecatura and creates extra creaminess. Taste and adjust seasoning with salt and pepper.",
+                      "Serve immediately in warm shallow bowls. Top with the reserved mushrooms, a drizzle of olive oil, chopped parsley, and extra Parmesan. Risotto waits for no one - it continues to absorb liquid and will become thick and gluey if left to sit. The perfect risotto should be creamy, flowing, and luxurious with each grain of rice distinct yet bound in a velvety sauce."
+                  ]
+    },
+    {
+        "id":  "tiramisu",
+        "title":  "Tiramisu",
+        "prep_time":  "30 mins",
+        "cook_time":  "0 mins",
+        "total_time":  "30 mins (plus 4 hours chilling)",
+        "image":  "assets/images/cuisines/italian/tiramisu.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "6 large Egg yolks",
+                            "150g Granulated sugar",
+                            "500g Mascarpone cheese, room temperature",
+                            "300ml Heavy cream",
+                            "300ml Strong espresso or coffee, cooled",
+                            "3 tbsp Coffee liqueur (Kahlúa or Marsala)",
+                            "40-45 Ladyfinger cookies (Savoiardi)",
+                            "Unsweetened cocoa powder for dusting",
+                            "Dark chocolate shavings (optional)"
+                        ],
+        "steps":  [
+                      "Brew strong espresso or coffee and let it cool to room temperature. Mix with the coffee liqueur in a shallow dish. Set aside.",
+                      "Create a double boiler: Fill a pot with 2 inches of water and bring to a gentle simmer. Place a heatproof bowl on top, making sure the bottom doesn\u0027t touch the water.",
+                      "In the bowl, whisk together egg yolks and sugar. Place over the simmering water and whisk constantly for 8-10 minutes until the mixture is thick, pale yellow, and reaches 70°C (160°F) on a thermometer. This pasteurizes the eggs. The mixture should fall in thick ribbons from the whisk. Remove from heat and let cool for 10 minutes, whisking occasionally.",
+                      "In a large bowl, beat the mascarpone cheese with a hand mixer on low speed for 1 minute until smooth and creamy. Don\u0027t overbeat or it will become grainy.",
+                      "Gently fold the cooled egg mixture into the mascarpone in three additions, using a rubber spatula with a folding motion. Fold until just combined and smooth.",
+                      "In a separate clean bowl, whip the heavy cream to soft peaks - it should hold its shape but still be soft and billowy. Don\u0027t overwhip.",
+                      "Gently fold the whipped cream into the mascarpone mixture in two additions. Use a light hand to maintain the airiness. The mixture should be smooth, creamy, and mousse-like.",
+                      "Quickly dip each ladyfinger cookie into the coffee mixture - about 1 second per side. They should be moistened but not soggy. Arrange in a single layer in the bottom of a 9x13 inch dish (or individual glasses).",
+                      "Spread half of the mascarpone cream evenly over the ladyfinger layer, smoothing with an offset spatula.",
+                      "Repeat with another layer of coffee-dipped ladyfingers and the remaining mascarpone cream. Smooth the top.",
+                      "Cover tightly with plastic wrap and refrigerate for at least 4 hours, preferably overnight. This allows the flavors to meld and the texture to set properly.",
+                      "Just before serving, dust generously with unsweetened cocoa powder using a fine-mesh sieve. For extra elegance, add dark chocolate shavings on top. Cut into squares or spoon into individual servings. Tiramisu should be creamy, coffee-soaked, and perfectly balanced between sweet and bitter. The name means \u0027pick me up\u0027 - and it certainly will!"
+                  ]
+    },
+    {
+        "id":  "panna_cotta",
+        "title":  "Panna Cotta",
+        "prep_time":  "15 mins",
+        "cook_time":  "10 mins",
+        "total_time":  "25 mins (plus 4 hours chilling)",
+        "image":  "assets/images/cuisines/italian/panna_cotta.jpg",
+        "categories":  [
+                           "dessert"
+                       ],
+        "ingredients":  [
+                            "500ml Heavy cream",
+                            "100ml Whole milk",
+                            "80g Granulated sugar",
+                            "1 Vanilla bean (or 2 tsp vanilla extract)",
+                            "2.5 tsp Powdered gelatin (1 packet)",
+                            "3 tbsp Cold water",
+                            "For berry sauce: 200g Mixed berries",
+                            "2 tbsp Sugar",
+                            "1 tbsp Lemon juice",
+                            "Fresh berries and mint for garnish"
+                        ],
+        "steps":  [
+                      "Lightly oil 6 ramekins (4-6 oz each) or small molds with a neutral oil. Wipe out any excess with a paper towel - you just want a thin film to help with unmolding later.",
+                      "Sprinkle the powdered gelatin over 3 tablespoons cold water in a small bowl. Let it sit for 5 minutes to bloom - it will absorb the water and become spongy. Don\u0027t skip this step or the gelatin won\u0027t dissolve properly.",
+                      "In a medium saucepan, combine the heavy cream, milk, and sugar. Split the vanilla bean lengthwise and scrape out the seeds with the back of a knife. Add both the seeds and the pod to the cream mixture (or add vanilla extract if using).",
+                      "Heat the cream mixture over medium heat, stirring occasionally, until it just begins to simmer around the edges and the sugar has dissolved completely. Don\u0027t let it boil. Remove from heat immediately.",
+                      "Remove the vanilla pod. Add the bloomed gelatin to the hot cream mixture and whisk vigorously for 1-2 minutes until the gelatin is completely dissolved. You shouldn\u0027t see any granules. The mixture should be smooth and homogeneous.",
+                      "Strain the mixture through a fine-mesh sieve into a large measuring cup or bowl with a spout. This removes any undissolved gelatin and ensures a silky texture.",
+                      "Carefully pour the mixture into the prepared ramekins, dividing evenly. Fill each to about 1/4 inch from the top. If any bubbles form on the surface, gently pop them with a toothpick or skim them off.",
+                      "Let the panna cottas cool to room temperature for about 30 minutes. Then cover each with plastic wrap and refrigerate for at least 4 hours, or preferably overnight, until completely set. They should jiggle slightly when gently shaken but hold their shape.",
+                      "While the panna cottas chill, make the berry sauce: In a small saucepan, combine the mixed berries, sugar, and lemon juice. Cook over medium heat for 5-7 minutes, stirring occasionally, until the berries break down and release their juices. Mash slightly with a fork for a chunkier sauce, or blend smooth if preferred. Let cool, then refrigerate.",
+                      "To serve, you can either serve in the ramekins or unmold: To unmold, run a thin knife around the edge of each panna cotta. Dip the bottom of the ramekin in hot water for 5-10 seconds. Place a serving plate on top, invert quickly, and give a gentle shake. The panna cotta should slide out smoothly.",
+                      "Spoon the berry sauce around or over each panna cotta. Garnish with fresh berries and a small mint leaf. The panna cotta should be silky smooth, delicately sweet, and just firm enough to hold its shape while still being creamy and luxurious. It should wobble enticingly when touched - that\u0027s the sign of perfect texture."
+                  ]
+    }
+]
